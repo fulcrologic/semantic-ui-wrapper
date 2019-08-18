@@ -1,15 +1,14 @@
 (ns fulcrologic.semantic-ui.workspaces.button
-  (:require [fulcro.client.primitives :as fp]
-            [fulcro.client.localized-dom :as dom]
+  (:require [com.fulcrologic.fulcro.components :as comp]
+            [com.fulcrologic.fulcro.dom :as dom]
             [nubank.workspaces.core :as ws]
-            [nubank.workspaces.card-types.fulcro :as ct.fulcro]
-            [nubank.workspaces.lib.fulcro-portal :as f.portal]
-            [fulcrologic.semantic-ui.elements.button.ui-button :refer [ui-button]]
-            [fulcrologic.semantic-ui.elements.button.ui-button-group :refer [ui-button-group]]
-            [fulcrologic.semantic-ui.elements.icon.ui-icon :refer [ui-icon]]
-            [fulcrologic.semantic-ui.icons :as i]))
+            [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
+            [com.fulcrologic.semantic-ui.elements.button.ui-button :refer [ui-button]]
+            [com.fulcrologic.semantic-ui.elements.button.ui-button-group :refer [ui-button-group]]
+            [com.fulcrologic.semantic-ui.elements.icon.ui-icon :refer [ui-icon]]
+            [com.fulcrologic.semantic-ui.icons :as i]))
 
-(fp/defsc SomeButtons
+(comp/defsc SomeButtons
   [this {:keys [x]}]
   {:initial-state (fn [_] {:x "x"})
    :ident         (fn [] [::id "singleton"])
@@ -44,5 +43,6 @@
 
 (ws/defcard some-buttons
   (ct.fulcro/fulcro-card
-    {::f.portal/root SomeButtons}))
+    {::ct.fulcro/wrap-root? false
+     ::ct.fulcro/root SomeButtons}))
 

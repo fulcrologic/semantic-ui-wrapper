@@ -7,3 +7,5 @@ target
 componentInfo
 pom.xml.asc
 .cpcache
+.shadow-cljs
+node_modules/

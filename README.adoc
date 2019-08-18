@@ -1,162 +1,46 @@
-Semantic UI Wrapper
-===================
 :toc:
 :toc-placement: preamble
 :toc-levels: 2
 
-A library to interface with https://react.semantic-ui.com[Semantic UI React].
+= Fulcro 3 Semantic UI Wrappers
 
-This library offers improved integration with the semantic-ui-react cljsjs package with predefined React 
+Fulcro 3 convenience wrappers for using https://react.semantic-ui.com[Semantic UI React] components.
+
+This library offers improved integration with the semantic-ui-react package with predefined
 factories and doc strings generated directly from the Semantic-UI source. It also includes symbols for 
-all icon names. Shadow-cljs users also have the choice to include individual modules for reduced build sizes.
+all icon names.
+
+NOTE: This library requires that you use Fulcro 3 and Shadow CLJS as the compiler.
+
+image::https://img.shields.io/clojars/v/com.fulcrologic/semantic-ui-wrappers.svg[link="https://clojars.org/com.fulcrologic/semantic-ui-wrappers"]
 
 == Usage
 
-There are two ways of using this library, depending on whether your project uses the <<#_cljs,clojurescript
-compiler>> or <<#_shadow-cljs,shadow-cljs>>.
-
-=== CLJS
-
-1. Add the dependency to your project. Be sure to include your desired version of cljsjs semantic-ui-react as
-well. The latest version of both are:
-+
-image::https://img.shields.io/clojars/v/fulcrologic/semantic-ui-react-wrappers.svg[link="https://clojars.org/fulcrologic/semantic-ui-react-wrappers"]
-image::https://img.shields.io/clojars/v/cljsjs/semantic-ui-react.svg[link="https://clojars.org/cljsjs/semantic-ui-react"]
-+
-2. Make sure you've include the semantic UI CSS (via CDN or by pulling them from that project)
-```
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"></link>
-```
-3. Use the provided factories and icons!
-+
-```clj
-(ns app.ui
-  (:require [fulcrologic.semantic-ui.factories :as f]
-            [fulcrologic.semantic-ui.icons :as i])
-
-...
-(f/ui-button {:content       "Like"
-                  :icon          i/heart-icon
-                  :label         {:as "a" :basic true :pointing "right" :content "2,000"}
-                  :labelPosition "left"})
-...
-```
-
-==== Using with CLJSJS React
-
-Make sure you have a consistent version of React by analyzing your dependencies. Libraries like fulcro have direct dependencies on React, as does the cljsjs semantic ui package.
-
-==== Using with NPM React
-
-1. Make sure to exclude react from all cljs deps
-2. Add react and react-dom to your npm-deps
-3. Add a foreign lib config to cause the npm version to appear like the cljsjs version
-
-```
-...
-        :dependencies [...
-                       ;; STEP 1: Make sure React isn't pulled in by dependencies
-                       [org.omcljs/om "1.0.0-beta1" :exclusions [cljsjs/react cljsjs/react-dom]]
-                       ...]
-...
-       :cljsbuild    {:builds
-                      [{:id           "blah"
-                        :source-paths ["src/main"]
-                        :compiler     {:asset-path           "js/cards"
-                                       :main                 blah.core
-                                       :optimizations        :none
-                                       :output-dir           "resources/public/js/blah"
-                                       :output-to            "resources/public/js/blah.js"
-                                       ;; STEP 2: Make the NPM react also acts AS IF it were the cljsjs version
-                                       :foreign-libs         [{:provides       ["cljsjs.react"]
-                                                               :file           "node_modules/react/dist/react.js"
-                                                               :global-exports {cljsjs.react React}}
-                                                              {:provides       ["cljsjs.react.dom"]
-                                                               :file           "node_modules/react-dom/dist/react-dom.js"
-                                                               :global-exports {cljsjs.react.dom ReactDOM}}]
-                                       ;; STEP 3: Add in the correct NPM dependencies
-                                       :install-deps         true
-                                       :npm-deps             {:react                             "16.3.0"
-                                                              :react-dom                         "16.3.0"}}}]}
-...
-```
-
-=== Shadow-cljs
-
-Shadow-cljs is highly recommended. It has much better integration with the NPM ecosystem, which allows you to 
-easily upgrade your semantic-ui-react dependency without worrying about cljsjs at all. Simply add 
+Shadow-cljs has much better integration with the NPM ecosystem, which allows you to
+easily upgrade your semantic-ui-react dependency without worrying about cljsjs, and also
+allows you to easily use individual components for a smaller build size. Simply add
 `semantic-ui-react` to your `package.json`:
 
 ```
 $ npm install --save-dev semantic-ui-react
 ```
 
-Projects using the shadow-cljs compiler have a choice of methods for using the semantic-ui-react classes:
-
-==== Monolithic include
-
-Include the semantic-ui-wrappers jar as a dependency and use the factories, exactly as for cljs above.
-
-==== Include individual modules
-
-For a potential reduction in build size, include the `semantic-ui-wrappers-shadow` jar instead:
-
-image::https://img.shields.io/clojars/v/fulcrologic/semantic-ui-react-wrappers-shadow.svg[link="https://clojars.org/fulcrologic/semantic-ui-react-wrappers-shadow"]
+=== Using Components
 
 Individual factories can be found in namespaces that mirror the semantic-ui-react module structure:
 
 e.g. `Collections > Form > FormInput` is available as
 ```
-(:require [fulcrologic.semantic-ui.collections.form.form-input :as form-input])
+(:require [com.fulcrologic.semantic-ui.collections.form.ui-form-input :refer [ui-form-input]])
 ```
 
 and `Elements > Button > Button` is available as
 ```
-(:require [fulcrologic.semantic-ui.button.ui-button :as ui-button])
+(:require [com.fulcrologic.semantic-ui.button.ui-button :refer [ui-button]])
 ```
 
-==== Direct usage
-
-You also have the option of using the NPM modules directly, i.e. not using this library at all. 
-
-```
-(ns your-app
-  (:require
-    [fulcro.client.dom :as dom]
-    ["semantic-ui-react" :refer [Dropdown DropdownItem DropdownMenu]]))
-
-(defn ui-dropdown [& args] (dom/macro-create-element Dropdown args))
-(defn ui-dropdown-menu [& args] (dom/macro-create-element DropdownMenu args))
-(defn ui-dropdown-item [& args] (dom/macro-create-element DropdownItem args))
-
-(defsc SomeComponent [this props]
-  (ui-dropdown {:text "Filter"}
-    (ui-dropdown-menu {}
-      (ui-dropdown-item {} "A")
-      (ui-dropdown-item {} "B"))))
-```
-
-You can also require individual *modules* with this approach by doing require on the *module files* instead of 
-the top-level `semantic-ui-react` name, which  can result in a smaller production build.
-
-```
-(ns your-app
-  (:require
-    [fulcro.client.dom :as dom]
-    ["semantic-ui-react/dist/commonjs/modules/Dropdown/Dropdown" :default Dropdown]
-    ["semantic-ui-react/dist/commonjs/modules/Dropdown/DropdownItem" :default DropdownItem]
-    ["semantic-ui-react/dist/commonjs/modules/Dropdown/DropdownMenu" :default DropdownMenu]))
-
-(defn ui-dropdown [& args] (dom/macro-create-element Dropdown args))
-(defn ui-dropdown-menu [& args] (dom/macro-create-element DropdownMenu args))
-(defn ui-dropdown-item [& args] (dom/macro-create-element DropdownItem args))
-
-(defsc SomeComponent [this props]
-  (ui-dropdown {:text "Filter"}
-    (ui-dropdown-menu {}
-      (ui-dropdown-item {} "A")
-      (ui-dropdown-item {} "B"))))
-```
+While this is a bit tedious in the requires, it ensures that you don't get components in your
+build that you don't use.
 
 == Porting from Semantic UI React Documentation Examples
 
@@ -218,22 +102,11 @@ name as a string instead.
 
 == Examples
 
-There are examples of usage `semantic-ui-wrappers` (using cljs, figwheel and devcards) and 
-`semantic-ui-wrappers-shadow` (using shadow-cljs and workspaces).
-
-Help is welcome in expanding the coverage of the examples!
-
-=== CLJS Cards
-```
-cd semantic-ui-wrappers
-lein run -m clojure.main script/figwheel.clj
-```
-Navigate to http://localhost:8023
-
-=== Shadow-cljs Workspaces
+You can see some example usage in the workspaces of this repository. To play with them live
+clone this repo, and start the compiler:
 
 ```
-cd semantic-ui-wrappers-shadow
+cd semantic-ui-wrapper
 npm install
 npx shadow-cljs server
 ```
@@ -266,11 +139,6 @@ yarn build:docs
 Then using the path to the generated docs/src/componentInfo folder, start a repl and run 
 ```
 (gen-factories "path/to/generated/componentInfo") 
-```
-
-To regenerate the jar files: 
-```
-lein modules jar
 ```
 
 == LICENSE

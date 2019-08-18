@@ -1,24 +1,24 @@
 (ns fulcrologic.semantic-ui.workspaces.dropdown
-  (:require [fulcro.client.primitives :as fp]
-            [fulcro.client.localized-dom :as dom]
+  (:require [com.fulcrologic.fulcro.components :as fp]
+            [com.fulcrologic.fulcro.dom :as dom]
             [nubank.workspaces.core :as ws]
-            [nubank.workspaces.card-types.fulcro :as ct.fulcro]
+            [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
             [nubank.workspaces.lib.fulcro-portal :as f.portal]
-            [fulcrologic.semantic-ui.modules.dropdown.ui-dropdown :refer [ui-dropdown]]
-            [fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-menu :refer [ui-dropdown-menu]]
-            [fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-item :refer [ui-dropdown-item]]
-            [fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-divider :refer [ui-dropdown-divider]]
-            [fulcrologic.semantic-ui.elements.icon.ui-icon :refer [ui-icon]]
-            [fulcrologic.semantic-ui.icons :as i]))
+            [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown :refer [ui-dropdown]]
+            [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-menu :refer [ui-dropdown-menu]]
+            [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-item :refer [ui-dropdown-item]]
+            [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-divider :refer [ui-dropdown-divider]]
+            [com.fulcrologic.semantic-ui.elements.icon.ui-icon :refer [ui-icon]]
+            [com.fulcrologic.semantic-ui.icons :as i]))
 
 (fp/defsc Dropdown
   [this {:keys [x]}]
-  {:initial-state (fn [_] {:x "x"})
+  {:initial-state {:x "x"}
    :ident         (fn [] [::id "singleton"])
    :query         [:x]}
 
   (dom/div {}
-    (ui-dropdown {:text "File"} 
+    (ui-dropdown {:text "File"}
       (ui-dropdown-menu {}
         (ui-dropdown-item {:text "New"})
         (ui-dropdown-item {:text "Open..." :description "ctrl + o"})
@@ -34,4 +34,5 @@
 
 (ws/defcard dropdown
   (ct.fulcro/fulcro-card
-    {::f.portal/root Dropdown}))
+    {::ct.fulcro/wrap-root? false
+     ::ct.fulcro/root       Dropdown}))

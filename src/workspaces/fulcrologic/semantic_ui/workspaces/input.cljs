@@ -1,12 +1,12 @@
 (ns fulcrologic.semantic-ui.workspaces.input
-  (:require [fulcro.client.primitives :as fp]
-            [fulcro.client.localized-dom :as dom]
+  (:require [com.fulcrologic.fulcro.components :as fp]
+            [com.fulcrologic.fulcro.dom :as dom]
+            [com.fulcrologic.fulcro.mutations :as fm]
             [nubank.workspaces.core :as ws]
-            [nubank.workspaces.card-types.fulcro :as ct.fulcro]
+            [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
             [nubank.workspaces.lib.fulcro-portal :as f.portal]
-            [fulcro.client.mutations :as fm]
-            [fulcrologic.semantic-ui.elements.input.ui-input :refer [ui-input]]
-            [fulcrologic.semantic-ui.factory-helpers :as h]))
+            [com.fulcrologic.semantic-ui.elements.input.ui-input :refer [ui-input]]
+            [com.fulcrologic.semantic-ui.factory-helpers :as h]))
 
 (fp/defsc Input
   [this {:keys [my-val]}]
@@ -18,5 +18,6 @@
 
 (ws/defcard input
   (ct.fulcro/fulcro-card
-    {::f.portal/root Input}))
+    {::ct.fulcro/wrap-root? false
+     ::ct.fulcro/root       Input}))
 

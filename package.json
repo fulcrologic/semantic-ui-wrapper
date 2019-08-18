@@ -1,0 +1,22 @@
+{
+  "name": "fulcro3-semantic-ui-wrappers",
+  "version": "1.0.0",
+  "description": "Semantic UI Wrapper =================== :toc: :toc-placement: preamble :toc-levels: 2",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fulcrologic/semantic-ui-wrapper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fulcrologic/semantic-ui-wrapper/issues"
+  },
+  "homepage": "https://github.com/fulcrologic/semantic-ui-wrapper#readme",
+  "devDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "semantic-ui-react": "^0.87.3",
+    "shadow-cljs": "^2.8.50"
+  }
+}

@@ -1,4 +1,4 @@
-{:deps   {:aliases [:provided :dev]}
+{:deps   {:aliases [:dev]}
  :nrepl  {:port 9000}
  :builds {:workspaces {:target     :browser
                        :output-dir "resources/public/js/workspaces"
