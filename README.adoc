@@ -12,7 +12,7 @@ all icon names.
 
 NOTE: This library requires that you use Fulcro 3 and Shadow CLJS as the compiler.
 
-image::https://img.shields.io/clojars/v/com.fulcrologic/semantic-ui-wrappers.svg[link="https://clojars.org/com.fulcrologic/semantic-ui-wrappers"]
+image::https://img.shields.io/clojars/v/com.fulcrologic/semantic-ui-wrapper.svg[link="https://clojars.org/com.fulcrologic/semantic-ui-wrapper"]
 
 == Usage
 
