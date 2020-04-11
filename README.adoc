@@ -6,38 +6,61 @@
 
 Fulcro 3 convenience wrappers for using https://react.semantic-ui.com[Semantic UI React] components.
 
+WARNING: BREAK VERSIONING. This project is just wrappers for a js library which follows break versioning. This means
+they do things like remove and rename code artifacts over time in a way that may break your program.
+
 This library offers improved integration with the semantic-ui-react package with predefined
 factories and doc strings generated directly from the Semantic-UI source. It also includes symbols for 
 all icon names.
 
-NOTE: This library requires that you use Fulcro 3 and Shadow CLJS as the compiler.
+NOTE: This library requires that you use Fulcro 3 and is only tested with Shadow CLJS as the compiler.
 
 image::https://img.shields.io/clojars/v/com.fulcrologic/semantic-ui-wrapper.svg[link="https://clojars.org/com.fulcrologic/semantic-ui-wrapper"]
 
+== Versions/Compatibility
+
+* 1.0.x - Known compatible with Semantic UI React v0.88.2
+* 2.0.1+ - Newer versions match the version of https://react.semantic-ui.com[Semantic UI React] that was
+used to generate the wrappers. *That* project follows BREAK versioning, and this library is just simple
+wrappers. Expect upgrades to possibly break your code.
+
 == Usage
 
-Shadow-cljs has much better integration with the NPM ecosystem, which allows you to
-easily upgrade your semantic-ui-react dependency without worrying about cljsjs, and also
-allows you to easily use individual components for a smaller build size. Simply add
-`semantic-ui-react` to your `package.json`:
+Add this library to your Fulcro project, and add `semantic-ui-react` to your `package.json`:
 
-```
+[source]
+-----
 $ npm install --save-dev semantic-ui-react
-```
+-----
+
+NOTE: Semantic UI CSS supplies the layout of everything. Simpler components like buttons can be created with simple
+factories like `(dom/button :.ui.button ...)`, so using the react wrappers for those bloats your code for no good reason.
 
 === Using Components
 
-Individual factories can be found in namespaces that mirror the semantic-ui-react module structure:
+If you just want everything (which will bloat your advanced compile build), then use:
+
+[source]
+-----
+(:require [com.fulcrologic.semantic-ui.factories :refer [ui-button]]
+-----
+
+But if you'd like to include just what you use in your build then
+individual factories can be found in namespaces that mirror the semantic-ui-react module structure:
 
 e.g. `Collections > Form > FormInput` is available as
-```
+
+[source]
+-----
 (:require [com.fulcrologic.semantic-ui.collections.form.ui-form-input :refer [ui-form-input]])
-```
+-----
 
 and `Elements > Button > Button` is available as
-```
+
+[source]
+-----
 (:require [com.fulcrologic.semantic-ui.button.ui-button :refer [ui-button]])
-```
+-----
 
 While this is a bit tedious in the requires, it ensures that you don't get components in your
 build that you don't use.
@@ -50,7 +73,9 @@ notation become just hyphenated names (e.g. `Button.Group` -> `ui-button-group`,
 and `List.List` -> `ui-list-list`):
 
 React Version:
-```
+
+[source]
+-----
 <Button
   content='Like'
   icon='heart'
@@ -71,11 +96,12 @@ React Version:
      <Icon name='align justify' />
    </Button>
 </Button.Group>
-```
+-----
 
 This library:
 
-```
+[source]
+-----
 (f/ui-button {:content       "Like"
               :icon          i/heart-icon ; or just "heart"
               :label         {:as "a" :basic true :content "2,048"}
@@ -90,7 +116,7 @@ This library:
     (f/ui-icon {:name i/align-right-icon}))
   (f/ui-button {:icon true}
     (f/ui-icon {:name i/align-justify-icon})))
-```
+-----
 
 == Icons
 
@@ -105,11 +131,13 @@ name as a string instead.
 You can see some example usage in the workspaces of this repository. To play with them live
 clone this repo, and start the compiler:
 
-```
+[source]
+-----
 cd semantic-ui-wrapper
 npm install
 npx shadow-cljs server
-```
+-----
+
 Navigate to http://localhost:9630 and start the workspaces build
 
 Then navigate to http://localhost:8023
@@ -126,23 +154,29 @@ source (to automatically get the docstrings). The `user` namespace can be run in
 contains the function to generate the files.
 
 First clone the semantic-ui-react repo:
-```
+
+[source]
+-----
 git clone https://github.com/Semantic-Org/Semantic-UI-React
-```
+-----
 
 In the cloned repository, run:
-```
+
+[source]
+-----
 yarn install
 yarn build:docs 
-```
+-----
 
-Then using the path to the generated docs/src/componentInfo folder, start a repl and run 
-```
+Then using the path to the generated docs/src/componentInfo folder, start a repl and run
+
+[source]
+-----
 (gen-factories "path/to/generated/componentInfo") 
-```
+-----
 
 == LICENSE
 
-Copyright 2017 by Fulcrologic
+Copyright 2017-2020 by Fulcrologic
 
 MIT Public License

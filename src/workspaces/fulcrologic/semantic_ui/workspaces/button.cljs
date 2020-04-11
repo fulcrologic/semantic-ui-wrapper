@@ -3,7 +3,7 @@
             [com.fulcrologic.fulcro.dom :as dom]
             [nubank.workspaces.core :as ws]
             [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
-            [com.fulcrologic.semantic-ui.elements.button.ui-button :refer [ui-button]]
+            [com.fulcrologic.semantic-ui.factories :refer [ui-button]]
             [com.fulcrologic.semantic-ui.elements.button.ui-button-group :refer [ui-button-group]]
             [com.fulcrologic.semantic-ui.elements.icon.ui-icon :refer [ui-icon]]
             [com.fulcrologic.semantic-ui.icons :as i]))
@@ -43,6 +43,6 @@
 
 (ws/defcard some-buttons
   (ct.fulcro/fulcro-card
-    {::ct.fulcro/wrap-root? false
+    {::ct.fulcro/wrap-root? true
      ::ct.fulcro/root SomeButtons}))
 

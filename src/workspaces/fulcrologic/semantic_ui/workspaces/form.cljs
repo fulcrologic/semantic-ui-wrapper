@@ -3,7 +3,6 @@
             [com.fulcrologic.fulcro.dom :as dom]
             [nubank.workspaces.core :as ws]
             [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
-            [nubank.workspaces.lib.fulcro-portal :as f.portal]
             [com.fulcrologic.fulcro.mutations :as fm]
             [com.fulcrologic.semantic-ui.factory-helpers :as h]
             [com.fulcrologic.semantic-ui.elements.input.ui-input :refer [ui-input]]
@@ -26,6 +25,6 @@
 
 (ws/defcard form-input-with-input-control
   (ct.fulcro/fulcro-card
-    {::ct.fulcro/wrap-root? false
+    {::ct.fulcro/wrap-root? true
      ::ct.fulcro/root       FormInput}))
 

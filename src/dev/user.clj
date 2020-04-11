@@ -5,28 +5,10 @@
     [clojure.java.io :refer [as-file file make-parents reader]]))
 
 (def factories-preamble
-  "(ns fulcrologic.semantic-ui.factories
+  "(ns com.fulcrologic.semantic-ui.factories
    (:require
-     cljsjs.semantic-ui-react
-     goog.object
-     [com.fulcrologic.fulcro.dom :as dom]
+     #?(:cljs [semantic-ui-react :as suir])
      [com.fulcrologic.semantic-ui.factory-helpers :as h]))
-
- (defn factory-apply
-   \"DEPRECATED: Use fulcrologic.semantic-ui.factory-helpers/factory-apply instead\"
-   [class]
-   (h/factory-apply class))
-
- (defn wrapped-factory-apply
-   \"DEPRECATED: Use com.fulcrologic.semantic-ui.factory-helpers/wrapped-factory-apply instead\"
-   [class]
-   (h/wrapped-factory-apply class))
-
- (def semantic-ui js/semanticUIReact)
-
- (defn get-sui
-   ([cls]
-    (goog.object/get semantic-ui cls)))
 
  ")
 
@@ -68,20 +50,20 @@
   ([class factory-name docstring]
    (factory-helper-function class factory-name docstring false))
   ([class factory-name docstring get-as-string]
-   (let [class-to-get (if get-as-string
-                        (str "(get-sui \"" class "\")")
-                        class)]
+   (let [class-ref (if get-as-string
+                     (str "suir/" class)
+                     class)]
      (str "(def " factory-name "\n"
        "  \""
        (escaped docstring)
        "\""
        "\n  "
-       " (h/" (factory-helper class) " " class-to-get "))\n"))))
+       " #?(:cljs (h/" (factory-helper class) " " class-ref ")))\n"))))
 
 (defn factory-ns-shadow [ns class factory-name include-file docstring filename]
   (str "(ns " ns "\n"
     "  (:require\n"
-    "    [fulcrologic.semantic-ui.factory-helpers :as h]\n"
+    "    [com.fulcrologic.semantic-ui.factory-helpers :as h]\n"
     "    [\"" include-file "\" :default " class "]))\n\n"
     "  " (factory-helper-function class factory-name docstring)))
 
@@ -92,8 +74,8 @@
           factory-name (str "ui-" (hyphenated class))
           tree         (-> repoPath str/lower-case (str/split #"/"))
           treeparts    (subvec tree 1 (- (count tree) 1))
-          filename     (str out-path "/" (str/join "/" treeparts) "/" (str/replace factory-name #"-" "_") ".cljs")
-          nns          (str "fulcrologic.semantic-ui" "." (str/join "." treeparts) "." factory-name)
+          filename     (str out-path "/" (str/join "/" treeparts) "/" (str/replace factory-name #"-" "_") ".cljc")
+          nns          (str "com.fulcrologic.semantic-ui" "." (str/join "." treeparts) "." factory-name)
           docstring    (gen-docstring doc-data)]
       {:class        class
        :factory-name factory-name
@@ -122,7 +104,7 @@
                             [symbol css-class]))
                     sort
                     distinct)))]
-    (str "(ns fulcrologic.semantic-ui.icons)\n\n" icons)))
+    (str "(ns com.fulcrologic.semantic-ui.icons)\n\n" icons)))
 
 (defn gen-cljs-factories [modules]
   (str factories-preamble (str/join "\n" (map factory-helper-function modules))))
@@ -130,15 +112,15 @@
 (defn gen-factories [component-dir]
   (let [modules (->> (seq (.list (file component-dir)))
                   (map #(read-info component-dir %))
-                  (map (gen-factory-map "semantic-ui-wrappers-shadow/src/main/fulcrologic/semantic_ui/"))
+                  (map (gen-factory-map "src/main/com/fulcrologic/semantic_ui/"))
                   (sort-by :factory-name))]
-    (make-parents "semantic-ui-wrappers/src/main/fulcrologic/semantic_ui/factories.cljs")
-    (spit (as-file "semantic-ui-wrappers/src/main/fulcrologic/semantic_ui/factories.cljs") (gen-cljs-factories modules))
+    ;(make-parents "semantic-ui-wrappers/src/main/com/fulcrologic/semantic_ui/factories.cljc")
+    (spit (as-file "src/main/com/fulcrologic/semantic_ui/factories.cljc") (gen-cljs-factories modules))
     (doseq [{:keys [filename ns class factory-name include-file filename docstring props] :as m} modules]
       (make-parents filename)
       (spit (as-file filename) (factory-ns-shadow ns class factory-name include-file docstring filename))
       (if (= class "Icon")
-        (spit (as-file "semantic-ui-wrappers-common/src/main/fulcrologic/semantic_ui/icons.cljs") (icons-ns (->> props (filter #(= (:name %) "name")) first :value)))))))
+        (spit (as-file "src/main/com/fulcrologic/semantic_ui/icons.cljc") (icons-ns (->> props (filter #(= (:name %) "name")) first :value)))))))
 
 (comment
   ;; to generate the factories files
@@ -149,6 +131,6 @@
   ;; yarn build:docs 
   ;; then using the path to the docs/src/componentInfo folder, start a repl and run 
   ;; 
-  ;; (gen-factories path/to/generated/componentInfo) 
+  (gen-factories "/Users/tonykay/oss/Semantic-UI-React/docs/src/componentInfo")
   )
 

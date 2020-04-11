@@ -3,7 +3,6 @@
             [com.fulcrologic.fulcro.dom :as dom]
             [nubank.workspaces.core :as ws]
             [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
-            [nubank.workspaces.lib.fulcro-portal :as f.portal]
             [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown :refer [ui-dropdown]]
             [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-menu :refer [ui-dropdown-menu]]
             [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-item :refer [ui-dropdown-item]]
@@ -34,5 +33,5 @@
 
 (ws/defcard dropdown
   (ct.fulcro/fulcro-card
-    {::ct.fulcro/wrap-root? false
+    {::ct.fulcro/wrap-root? true
      ::ct.fulcro/root       Dropdown}))

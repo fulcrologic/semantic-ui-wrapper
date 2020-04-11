@@ -4,9 +4,7 @@
             [com.fulcrologic.fulcro.mutations :as fm]
             [nubank.workspaces.core :as ws]
             [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
-            [nubank.workspaces.lib.fulcro-portal :as f.portal]
-            [com.fulcrologic.semantic-ui.elements.input.ui-input :refer [ui-input]]
-            [com.fulcrologic.semantic-ui.factory-helpers :as h]))
+            [com.fulcrologic.semantic-ui.elements.input.ui-input :refer [ui-input]]))
 
 (fp/defsc Input
   [this {:keys [my-val]}]
@@ -18,6 +16,6 @@
 
 (ws/defcard input
   (ct.fulcro/fulcro-card
-    {::ct.fulcro/wrap-root? false
+    {::ct.fulcro/wrap-root? true
      ::ct.fulcro/root       Input}))
 

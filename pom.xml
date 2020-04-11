@@ -1,37 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.fulcrologic</groupId>
-  <artifactId>semantic-ui-wrapper</artifactId>
-  <version>1.0.0</version>
-  <name>semantic-ui-wrapper</name>
-
-  <distributionManagement>
-    <repository>
-      <id>clojars</id>
-      <name>Clojars repository</name>
-      <url>https://clojars.org/repo</url>
-    </repository>
-  </distributionManagement>
-
-  <build>
-    <sourceDirectory>src/main</sourceDirectory>
-
-    <resources>
-      <resource>
-        <directory>src/main</directory>
-      </resource>
-    </resources>
-  </build>
-
-  <repositories>
-    <repository>
-      <id>clojars</id>
-      <url>https://repo.clojars.org/</url>
-    </repository>
-    <repository>
-      <id>sonatype</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-    </repository>
-  </repositories>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.fulcrologic</groupId>
+    <artifactId>semantic-ui-wrapper</artifactId>
+    <version>2.0.1-SNAPSHOT</version>
+    <name>semantic-ui-wrapper</name>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/fulcrologic/semantic-ui-wrappers</url>
+        <connection>scm:git:git://github.com/fulcrologic/semantic-ui-wrappers.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/fulcrologic/semantic-ui-wrappers.git</developerConnection>
+    </scm>
+    <distributionManagement>
+        <repository>
+            <id>clojars</id>
+            <name>Clojars repository</name>
+            <url>https://clojars.org/repo</url>
+        </repository>
+    </distributionManagement>
+    <build>
+        <sourceDirectory>src/main</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <repositories>
+        <repository>
+            <id>clojars</id>
+            <url>https://repo.clojars.org/</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>org.clojure</groupId>
+            <artifactId>clojure</artifactId>
+            <version>1.10.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fulcrologic</groupId>
+            <artifactId>fulcro</artifactId>
+            <version>3.4.4</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>
