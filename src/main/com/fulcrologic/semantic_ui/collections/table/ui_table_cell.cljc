@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.table.ui-table-cell
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Table/TableCell" :default TableCell]))
+    ["semantic-ui-react$TableCell" :as TableCell]))
 
   (def ui-table-cell
   "A table row can have cells.

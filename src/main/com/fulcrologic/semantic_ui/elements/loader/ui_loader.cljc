@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.loader.ui-loader
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Loader/Loader" :default Loader]))
+    ["semantic-ui-react$Loader" :as Loader]))
 
   (def ui-loader
   "A loader alerts a user to wait for an activity to complete.

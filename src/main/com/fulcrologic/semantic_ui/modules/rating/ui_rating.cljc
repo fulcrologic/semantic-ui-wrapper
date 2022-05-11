@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.rating.ui-rating
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Rating/Rating" :default Rating]))
+    ["semantic-ui-react$Rating" :as Rating]))
 
   (def ui-rating
   "A rating indicates user interest in content.

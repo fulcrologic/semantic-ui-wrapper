@@ -1,10 +1,10 @@
 (ns com.fulcrologic.semantic-ui.addons.confirm.ui-confirm
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/addons/Confirm/Confirm" :default Confirm]))
+    ["semantic-ui-react$Confirm" :as Confirm]))
 
   (def ui-confirm
-  "A Confirm modal gives the user a choice to confirm or cancel an action/
+  "A Confirm modal gives the user a choice to confirm or cancel an action.
 
   Props:
     - cancelButton (custom): The cancel button text.

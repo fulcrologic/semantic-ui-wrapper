@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.popup.ui-popup
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Popup/Popup" :default Popup]))
+    ["semantic-ui-react$Popup" :as Popup]))
 
   (def ui-popup
   "A Popup displays additional information on top of a page.

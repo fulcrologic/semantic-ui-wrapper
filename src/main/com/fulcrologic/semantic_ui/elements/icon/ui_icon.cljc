@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.icon.ui-icon
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Icon/Icon" :default Icon]))
+    ["semantic-ui-react$Icon" :as Icon]))
 
   (def ui-icon
   "An icon is a glyph used to represent something else.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.header.ui-header
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Header/Header" :default Header]))
+    ["semantic-ui-react$Header" :as Header]))
 
   (def ui-header
   "A header provides a short summary of content

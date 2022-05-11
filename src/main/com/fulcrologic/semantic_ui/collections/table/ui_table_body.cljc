@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.table.ui-table-body
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Table/TableBody" :default TableBody]))
+    ["semantic-ui-react$TableBody" :as TableBody]))
 
   (def ui-table-body
   "

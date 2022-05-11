@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.statistic.ui-statistic-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Statistic/StatisticGroup" :default StatisticGroup]))
+    ["semantic-ui-react$StatisticGroup" :as StatisticGroup]))
 
   (def ui-statistic-group
   "A group of statistics.

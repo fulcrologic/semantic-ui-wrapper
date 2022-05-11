@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.addons.portal.ui-portal
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/addons/Portal/Portal" :default Portal]))
+    ["semantic-ui-react$Portal" :as Portal]))
 
   (def ui-portal
   "A component that allows you to render children outside their parent.

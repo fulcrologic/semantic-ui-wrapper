@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.table.ui-table-row
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Table/TableRow" :default TableRow]))
+    ["semantic-ui-react$TableRow" :as TableRow]))
 
   (def ui-table-row
   "A table can have rows.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.step.ui-step-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Step/StepContent" :default StepContent]))
+    ["semantic-ui-react$StepContent" :as StepContent]))
 
   (def ui-step-content
   "A step can contain a content.

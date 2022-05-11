@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.comment.ui-comment-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Comment/CommentContent" :default CommentContent]))
+    ["semantic-ui-react$CommentContent" :as CommentContent]))
 
   (def ui-comment-content
   "A comment can contain content.

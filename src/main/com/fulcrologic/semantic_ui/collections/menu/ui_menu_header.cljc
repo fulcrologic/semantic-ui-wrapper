@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.menu.ui-menu-header
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Menu/MenuHeader" :default MenuHeader]))
+    ["semantic-ui-react$MenuHeader" :as MenuHeader]))
 
   (def ui-menu-header
   "A menu item may include a header or may itself be a header.

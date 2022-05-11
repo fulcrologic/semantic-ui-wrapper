@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.comment.ui-comment-avatar
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Comment/CommentAvatar" :default CommentAvatar]))
+    ["semantic-ui-react$CommentAvatar" :as CommentAvatar]))
 
   (def ui-comment-avatar
   "A comment can contain an image or avatar.

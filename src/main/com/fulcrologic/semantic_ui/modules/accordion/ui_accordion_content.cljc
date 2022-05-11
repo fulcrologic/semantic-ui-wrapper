@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.accordion.ui-accordion-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Accordion/AccordionContent" :default AccordionContent]))
+    ["semantic-ui-react$AccordionContent" :as AccordionContent]))
 
   (def ui-accordion-content
   "A content sub-component for Accordion component.

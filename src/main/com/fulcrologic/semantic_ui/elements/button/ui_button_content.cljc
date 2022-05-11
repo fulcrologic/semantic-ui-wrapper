@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.button.ui-button-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Button/ButtonContent" :default ButtonContent]))
+    ["semantic-ui-react$ButtonContent" :as ButtonContent]))
 
   (def ui-button-content
   "Used in some Button types, such as `animated`.

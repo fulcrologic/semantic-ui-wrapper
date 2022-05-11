@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.container.ui-container
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Container/Container" :default Container]))
+    ["semantic-ui-react$Container" :as Container]))
 
   (def ui-container
   "A container limits content to a maximum width.

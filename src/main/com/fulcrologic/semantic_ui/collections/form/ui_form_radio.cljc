@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.form.ui-form-radio
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Form/FormRadio" :default FormRadio]))
+    ["semantic-ui-react$FormRadio" :as FormRadio]))
 
   (def ui-form-radio
   "Sugar for <Form.Field control={Radio} />.

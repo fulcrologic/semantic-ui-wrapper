@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.label.ui-label-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Label/LabelGroup" :default LabelGroup]))
+    ["semantic-ui-react$LabelGroup" :as LabelGroup]))
 
   (def ui-label-group
   "A label can be grouped.

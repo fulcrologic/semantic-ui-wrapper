@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.tab.ui-tab
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Tab/Tab" :default Tab]))
+    ["semantic-ui-react$Tab" :as Tab]))
 
   (def ui-tab
   "A Tab is a hidden section of content activated by a Menu.

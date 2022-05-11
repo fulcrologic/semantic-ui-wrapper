@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.statistic.ui-statistic-value
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Statistic/StatisticValue" :default StatisticValue]))
+    ["semantic-ui-react$StatisticValue" :as StatisticValue]))
 
   (def ui-statistic-value
   "A statistic can contain a numeric, icon, image, or text value.

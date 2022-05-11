@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Dropdown/Dropdown" :default Dropdown]))
+    ["semantic-ui-react$Dropdown" :as Dropdown]))
 
   (def ui-dropdown
   "A dropdown allows a user to select a value from a series of options.

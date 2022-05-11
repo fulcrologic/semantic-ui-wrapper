@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-search-input
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Dropdown/DropdownSearchInput" :default DropdownSearchInput]))
+    ["semantic-ui-react$DropdownSearchInput" :as DropdownSearchInput]))
 
   (def ui-dropdown-search-input
   "A search item sub-component for Dropdown component.

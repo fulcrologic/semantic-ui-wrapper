@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.button.ui-button-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Button/ButtonGroup" :default ButtonGroup]))
+    ["semantic-ui-react$ButtonGroup" :as ButtonGroup]))
 
   (def ui-button-group
   "Buttons can be grouped.

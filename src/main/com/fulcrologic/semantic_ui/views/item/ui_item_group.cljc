@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.item.ui-item-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Item/ItemGroup" :default ItemGroup]))
+    ["semantic-ui-react$ItemGroup" :as ItemGroup]))
 
   (def ui-item-group
   "A group of items.

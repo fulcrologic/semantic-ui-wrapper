@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.checkbox.ui-checkbox
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Checkbox/Checkbox" :default Checkbox]))
+    ["semantic-ui-react$Checkbox" :as Checkbox]))
 
   (def ui-checkbox
   "A checkbox allows a user to select a value from a small set of options, often binary.

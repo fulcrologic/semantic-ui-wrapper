@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.list.ui-list-description
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/List/ListDescription" :default ListDescription]))
+    ["semantic-ui-react$ListDescription" :as ListDescription]))
 
   (def ui-list-description
   "A list item can contain a description.

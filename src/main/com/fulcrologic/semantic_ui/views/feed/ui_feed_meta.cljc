@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.feed.ui-feed-meta
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Feed/FeedMeta" :default FeedMeta]))
+    ["semantic-ui-react$FeedMeta" :as FeedMeta]))
 
   (def ui-feed-meta
   "A feed can contain a meta.

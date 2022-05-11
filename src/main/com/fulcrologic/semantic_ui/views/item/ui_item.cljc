@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.item.ui-item
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Item/Item" :default Item]))
+    ["semantic-ui-react$Item" :as Item]))
 
   (def ui-item
   "An item view presents large collections of site content for display.

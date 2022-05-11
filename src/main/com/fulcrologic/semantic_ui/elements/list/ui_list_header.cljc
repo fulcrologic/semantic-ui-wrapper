@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.list.ui-list-header
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/List/ListHeader" :default ListHeader]))
+    ["semantic-ui-react$ListHeader" :as ListHeader]))
 
   (def ui-list-header
   "A list item can contain a header.

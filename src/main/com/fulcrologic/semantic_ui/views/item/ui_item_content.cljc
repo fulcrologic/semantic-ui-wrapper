@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.item.ui-item-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Item/ItemContent" :default ItemContent]))
+    ["semantic-ui-react$ItemContent" :as ItemContent]))
 
   (def ui-item-content
   "An item can contain content.

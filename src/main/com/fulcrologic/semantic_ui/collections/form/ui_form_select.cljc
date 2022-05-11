@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.form.ui-form-select
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Form/FormSelect" :default FormSelect]))
+    ["semantic-ui-react$FormSelect" :as FormSelect]))
 
   (def ui-form-select
   "Sugar for <Form.Field control={Select} />.

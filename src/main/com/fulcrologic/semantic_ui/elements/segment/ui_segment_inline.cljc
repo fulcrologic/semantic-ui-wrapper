@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.segment.ui-segment-inline
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Segment/SegmentInline" :default SegmentInline]))
+    ["semantic-ui-react$SegmentInline" :as SegmentInline]))
 
   (def ui-segment-inline
   "A placeholder segment can be inline.

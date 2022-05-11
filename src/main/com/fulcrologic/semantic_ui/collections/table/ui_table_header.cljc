@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.table.ui-table-header
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Table/TableHeader" :default TableHeader]))
+    ["semantic-ui-react$TableHeader" :as TableHeader]))
 
   (def ui-table-header
   "A table can have a header.

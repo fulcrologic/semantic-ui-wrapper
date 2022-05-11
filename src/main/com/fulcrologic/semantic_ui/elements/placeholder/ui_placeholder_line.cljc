@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.placeholder.ui-placeholder-line
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Placeholder/PlaceholderLine" :default PlaceholderLine]))
+    ["semantic-ui-react$PlaceholderLine" :as PlaceholderLine]))
 
   (def ui-placeholder-line
   "A placeholder can contain have lines of text.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.progress.ui-progress
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Progress/Progress" :default Progress]))
+    ["semantic-ui-react$Progress" :as Progress]))
 
   (def ui-progress
   "A progress bar shows the progression of a task.

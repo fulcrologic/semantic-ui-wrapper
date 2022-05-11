@@ -1,8 +1,8 @@
 {:paths   ["src/main"]
  :deps    {}
  :aliases {:dev {:extra-paths ["src/workspaces" "src/dev"]
-                 :extra-deps  {org.clojure/clojure         {:mvn/version "1.10.0" :scope "provided"}
-                               org.clojure/clojurescript   {:mvn/version "1.10.773" :scope "provided"}
-                               com.fulcrologic/fulcro      {:mvn/version "3.4.4" :scope "provided"}
-                               thheller/shadow-cljs        {:mvn/version "2.11.8"}
-                               com.github.awkay/workspaces {:mvn/version "1.0.2"}}}}}
+                 :extra-deps  {org.clojure/clojure         {:mvn/version "1.10.3" :scope "provided"}
+                               org.clojure/clojurescript   {:mvn/version "1.10.844" :scope "provided"}
+                               com.fulcrologic/fulcro      {:mvn/version "3.5.20" :scope "provided"}
+                               thheller/shadow-cljs        {:mvn/version "2.12.6"}
+                               com.github.awkay/workspaces {:mvn/version "1.0.3"}}}}}

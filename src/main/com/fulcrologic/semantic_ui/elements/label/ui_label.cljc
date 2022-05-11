@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.label.ui-label
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Label/Label" :default Label]))
+    ["semantic-ui-react$Label" :as Label]))
 
   (def ui-label
   "A label displays content classification.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.card.ui-card-meta
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Card/CardMeta" :default CardMeta]))
+    ["semantic-ui-react$CardMeta" :as CardMeta]))
 
   (def ui-card-meta
   "A card can contain content metadata.

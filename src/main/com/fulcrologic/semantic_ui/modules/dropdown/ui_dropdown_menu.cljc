@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-menu
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Dropdown/DropdownMenu" :default DropdownMenu]))
+    ["semantic-ui-react$DropdownMenu" :as DropdownMenu]))
 
   (def ui-dropdown-menu
   "A dropdown menu can contain a menu.

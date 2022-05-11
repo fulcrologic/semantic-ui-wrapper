@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.feed.ui-feed
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Feed/Feed" :default Feed]))
+    ["semantic-ui-react$Feed" :as Feed]))
 
   (def ui-feed
   "A feed presents user activity chronologically.

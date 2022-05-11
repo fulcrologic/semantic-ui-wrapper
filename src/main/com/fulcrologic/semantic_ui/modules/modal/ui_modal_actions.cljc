@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.modal.ui-modal-actions
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Modal/ModalActions" :default ModalActions]))
+    ["semantic-ui-react$ModalActions" :as ModalActions]))
 
   (def ui-modal-actions
   "A modal can contain a row of actions.

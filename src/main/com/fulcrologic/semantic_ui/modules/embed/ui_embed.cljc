@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.embed.ui-embed
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Embed/Embed" :default Embed]))
+    ["semantic-ui-react$Embed" :as Embed]))
 
   (def ui-embed
   "An embed displays content from other websites like YouTube videos or Google Maps.
@@ -21,7 +21,7 @@
     - icon (custom): Specifies an icon to use with placeholder content.
     - id (string): Specifies an id for source. ()
     - iframe (custom): Shorthand for HTML iframe. ()
-    - onClick (func): Сalled on click.
+    - onClick (func): Called on click.
     - placeholder (string): A placeholder image for embed.
     - source (enum): Specifies a source to use. (youtube, vimeo)
     - url (string): Specifies a url to use for embed. ()"

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.feed.ui-feed-label
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Feed/FeedLabel" :default FeedLabel]))
+    ["semantic-ui-react$FeedLabel" :as FeedLabel]))
 
   (def ui-feed-label
   "An event can contain an image or icon label.

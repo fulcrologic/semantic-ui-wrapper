@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.card.ui-card
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Card/Card" :default Card]))
+    ["semantic-ui-react$Card" :as Card]))
 
   (def ui-card
   "A card displays site content in a manner similar to a playing card.

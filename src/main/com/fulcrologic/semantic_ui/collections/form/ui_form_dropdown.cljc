@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.form.ui-form-dropdown
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Form/FormDropdown" :default FormDropdown]))
+    ["semantic-ui-react$FormDropdown" :as FormDropdown]))
 
   (def ui-form-dropdown
   "Sugar for <Form.Field control={Dropdown} />.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.card.ui-card-header
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Card/CardHeader" :default CardHeader]))
+    ["semantic-ui-react$CardHeader" :as CardHeader]))
 
   (def ui-card-header
   "A card can contain a header.

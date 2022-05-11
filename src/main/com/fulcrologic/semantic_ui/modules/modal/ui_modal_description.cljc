@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.modal.ui-modal-description
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Modal/ModalDescription" :default ModalDescription]))
+    ["semantic-ui-react$ModalDescription" :as ModalDescription]))
 
   (def ui-modal-description
   "A modal can contain a description with one or more paragraphs.

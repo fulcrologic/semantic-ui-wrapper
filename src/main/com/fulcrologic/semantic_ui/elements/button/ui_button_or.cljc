@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.button.ui-button-or
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Button/ButtonOr" :default ButtonOr]))
+    ["semantic-ui-react$ButtonOr" :as ButtonOr]))
 
   (def ui-button-or
   "Button groups can contain conditionals.

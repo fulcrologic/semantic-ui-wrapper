@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.step.ui-step
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Step/Step" :default Step]))
+    ["semantic-ui-react$Step" :as Step]))
 
   (def ui-step
   "A step shows the completion status of an activity in a series of activities.

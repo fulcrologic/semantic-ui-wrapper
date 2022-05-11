@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.menu.ui-menu
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Menu/Menu" :default Menu]))
+    ["semantic-ui-react$Menu" :as Menu]))
 
   (def ui-menu
   "A menu displays grouped navigation actions.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.sticky.ui-sticky
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Sticky/Sticky" :default Sticky]))
+    ["semantic-ui-react$Sticky" :as Sticky]))
 
   (def ui-sticky
   "Sticky content stays fixed to the browser viewport while another column of content is visible on the page.

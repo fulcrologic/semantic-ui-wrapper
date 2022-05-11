@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.button.ui-button
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Button/Button" :default Button]))
+    ["semantic-ui-react$Button" :as Button]))
 
   (def ui-button
   "A Button indicates a possible user action.
@@ -34,5 +34,6 @@
     - secondary (bool): A button can be formatted to show different levels of emphasis.
     - size (enum): A button can have different sizes. (mini, tiny, small, medium, large, big, huge, massive)
     - tabIndex (number|string): A button can receive focus. ()
-    - toggle (bool): A button can be formatted to toggle on and off."
+    - toggle (bool): A button can be formatted to toggle on and off.
+    - type (enum): The type of the HTML element. (button, submit, reset)"
    #?(:cljs (h/factory-apply Button)))

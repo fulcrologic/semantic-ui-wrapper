@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.menu.ui-menu-item
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Menu/MenuItem" :default MenuItem]))
+    ["semantic-ui-react$MenuItem" :as MenuItem]))
 
   (def ui-menu-item
   "A menu can contain an item.

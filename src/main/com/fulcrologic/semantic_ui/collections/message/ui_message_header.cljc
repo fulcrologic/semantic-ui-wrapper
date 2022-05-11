@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.message.ui-message-header
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Message/MessageHeader" :default MessageHeader]))
+    ["semantic-ui-react$MessageHeader" :as MessageHeader]))
 
   (def ui-message-header
   "A message can contain a header.

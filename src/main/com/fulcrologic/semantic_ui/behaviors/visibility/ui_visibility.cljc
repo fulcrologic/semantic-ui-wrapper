@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.behaviors.visibility.ui-visibility
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/behaviors/Visibility/Visibility" :default Visibility]))
+    ["semantic-ui-react$Visibility" :as Visibility]))
 
   (def ui-visibility
   "Visibility provides a set of callbacks for when a content appears in the viewport.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.comment.ui-comment-actions
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Comment/CommentActions" :default CommentActions]))
+    ["semantic-ui-react$CommentActions" :as CommentActions]))
 
   (def ui-comment-actions
   "A comment can contain an list of actions a user may perform related to this comment.
