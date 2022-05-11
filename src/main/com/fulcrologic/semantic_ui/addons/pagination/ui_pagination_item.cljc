@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.addons.pagination.ui-pagination-item
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/addons/Pagination/PaginationItem" :default PaginationItem]))
+    ["semantic-ui-react$PaginationItem" :as PaginationItem]))
 
   (def ui-pagination-item
   "An item of a pagination.

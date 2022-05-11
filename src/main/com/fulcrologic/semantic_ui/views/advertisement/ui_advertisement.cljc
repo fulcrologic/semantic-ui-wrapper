@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.advertisement.ui-advertisement
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Advertisement/Advertisement" :default Advertisement]))
+    ["semantic-ui-react$Advertisement" :as Advertisement]))
 
   (def ui-advertisement
   "An ad displays third-party promotional content.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.modal.ui-modal-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Modal/ModalContent" :default ModalContent]))
+    ["semantic-ui-react$ModalContent" :as ModalContent]))
 
   (def ui-modal-content
   "A modal can contain content.

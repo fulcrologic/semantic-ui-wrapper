@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.list.ui-list
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/List/List" :default List]))
+    ["semantic-ui-react$List" :as List]))
 
   (def ui-list
   "A list groups related content.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.breadcrumb.ui-breadcrumb-section
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Breadcrumb/BreadcrumbSection" :default BreadcrumbSection]))
+    ["semantic-ui-react$BreadcrumbSection" :as BreadcrumbSection]))
 
   (def ui-breadcrumb-section
   "A section sub-component for Breadcrumb component.

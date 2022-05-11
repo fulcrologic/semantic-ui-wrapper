@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.popup.ui-popup-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Popup/PopupContent" :default PopupContent]))
+    ["semantic-ui-react$PopupContent" :as PopupContent]))
 
   (def ui-popup-content
   "A PopupContent displays the content body of a Popover.

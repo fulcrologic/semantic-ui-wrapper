@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.transition.ui-transition
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Transition/Transition" :default Transition]))
+    ["semantic-ui-react$Transition" :as Transition]))
 
   (def ui-transition
   "A transition is an animation usually used to move content in or out of view.

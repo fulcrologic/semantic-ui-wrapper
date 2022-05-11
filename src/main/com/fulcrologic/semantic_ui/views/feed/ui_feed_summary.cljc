@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.feed.ui-feed-summary
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Feed/FeedSummary" :default FeedSummary]))
+    ["semantic-ui-react$FeedSummary" :as FeedSummary]))
 
   (def ui-feed-summary
   "A feed can contain a summary.

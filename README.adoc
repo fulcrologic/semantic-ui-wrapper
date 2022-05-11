@@ -13,7 +13,7 @@ This library offers improved integration with the semantic-ui-react package with
 factories and doc strings generated directly from the Semantic-UI source. It also includes symbols for 
 all icon names.
 
-NOTE: This library requires that you use Fulcro 3 and is only tested with Shadow CLJS as the compiler.
+NOTE: This library requires that you use Fulcro 3.
 
 image::https://img.shields.io/clojars/v/com.fulcrologic/semantic-ui-wrapper.svg[link="https://clojars.org/com.fulcrologic/semantic-ui-wrapper"]
 

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.image.ui-image
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Image/Image" :default Image]))
+    ["semantic-ui-react$Image" :as Image]))
 
   (def ui-image
   "An image is a graphic representation of something.

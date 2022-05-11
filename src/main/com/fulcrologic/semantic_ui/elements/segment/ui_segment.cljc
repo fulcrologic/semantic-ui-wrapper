@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.segment.ui-segment
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Segment/Segment" :default Segment]))
+    ["semantic-ui-react$Segment" :as Segment]))
 
   (def ui-segment
   "A segment is used to create a grouping of related content.

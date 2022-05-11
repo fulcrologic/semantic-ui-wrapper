@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.grid.ui-grid
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Grid/Grid" :default Grid]))
+    ["semantic-ui-react$Grid" :as Grid]))
 
   (def ui-grid
   "A grid is used to harmonize negative space in a layout.

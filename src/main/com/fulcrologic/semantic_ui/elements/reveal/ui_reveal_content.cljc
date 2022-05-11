@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.reveal.ui-reveal-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Reveal/RevealContent" :default RevealContent]))
+    ["semantic-ui-react$RevealContent" :as RevealContent]))
 
   (def ui-reveal-content
   "A content sub-component for the Reveal.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.placeholder.ui-placeholder-header
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Placeholder/PlaceholderHeader" :default PlaceholderHeader]))
+    ["semantic-ui-react$PlaceholderHeader" :as PlaceholderHeader]))
 
   (def ui-placeholder-header
   "A placeholder can contain a header.

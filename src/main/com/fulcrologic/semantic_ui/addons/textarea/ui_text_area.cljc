@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.addons.textarea.ui-text-area
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/addons/TextArea/TextArea" :default TextArea]))
+    ["semantic-ui-react$TextArea" :as TextArea]))
 
   (def ui-text-area
   "A TextArea can be used to allow for extended user input.

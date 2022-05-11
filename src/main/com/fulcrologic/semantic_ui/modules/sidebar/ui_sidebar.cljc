@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.sidebar.ui-sidebar
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Sidebar/Sidebar" :default Sidebar]))
+    ["semantic-ui-react$Sidebar" :as Sidebar]))
 
   (def ui-sidebar
   "A sidebar hides additional content beside a page.

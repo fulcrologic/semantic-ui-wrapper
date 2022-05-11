@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.feed.ui-feed-event
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Feed/FeedEvent" :default FeedEvent]))
+    ["semantic-ui-react$FeedEvent" :as FeedEvent]))
 
   (def ui-feed-event
   "A feed contains an event.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.table.ui-table
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Table/Table" :default Table]))
+    ["semantic-ui-react$Table" :as Table]))
 
   (def ui-table
   "A table displays a collections of data grouped into rows.
@@ -10,7 +10,7 @@
     - as (elementType): An element type to render as (string or function).
     - attached (bool|enum): Attach table to other content (top, bottom)
     - basic (enum|bool): A table can reduce its complexity to increase readability. (very)
-    - celled (bool): A table may be divided each row into separate cells.
+    - celled (bool): A table may be divided into individual cells.
     - children (node): Primary content.
     - className (string): Additional classes.
     - collapsing (bool): A table can be collapsing, taking up only as much space as its rows.

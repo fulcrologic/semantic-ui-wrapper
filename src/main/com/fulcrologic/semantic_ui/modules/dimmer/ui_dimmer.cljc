@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.dimmer.ui-dimmer
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Dimmer/Dimmer" :default Dimmer]))
+    ["semantic-ui-react$Dimmer" :as Dimmer]))
 
   (def ui-dimmer
   "A dimmer hides distractions to focus attention on particular content.

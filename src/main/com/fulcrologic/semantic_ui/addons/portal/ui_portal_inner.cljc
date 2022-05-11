@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.addons.portal.ui-portal-inner
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/addons/Portal/PortalInner" :default PortalInner]))
+    ["semantic-ui-react$PortalInner" :as PortalInner]))
 
   (def ui-portal-inner
   "An inner component that allows you to render children outside their parent.

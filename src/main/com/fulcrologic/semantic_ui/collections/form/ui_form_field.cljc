@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.form.ui-form-field
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Form/FormField" :default FormField]))
+    ["semantic-ui-react$FormField" :as FormField]))
 
   (def ui-form-field
   "A field is a form element containing a label and an input.

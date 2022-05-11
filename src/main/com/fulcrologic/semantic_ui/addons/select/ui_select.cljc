@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.addons.select.ui-select
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/addons/Select/Select" :default Select]))
+    ["semantic-ui-react$Select" :as Select]))
 
   (def ui-select
   "A Select is sugar for <Dropdown selection />.

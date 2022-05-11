@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.search.ui-search
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Search/Search" :default Search]))
+    ["semantic-ui-react$Search" :as Search]))
 
   (def ui-search
   "A search module allows a user to query for results from a selection of data
@@ -29,6 +29,7 @@
     - onSearchChange (func): Called on search input change.
     - onSelectionChange (func): Called when the active selection index is changed.
     - open (bool): Controls whether or not the results menu is displayed.
+    - placeholder (string): A search can show placeholder text when empty.
     - resultRenderer (func): Renders the SearchResult contents.
     - results (arrayOf|shape): One of: ()
     - selectFirstResult (bool): Whether the search should automatically select the first result after searching.

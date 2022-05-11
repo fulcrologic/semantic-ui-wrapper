@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.step.ui-step-title
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Step/StepTitle" :default StepTitle]))
+    ["semantic-ui-react$StepTitle" :as StepTitle]))
 
   (def ui-step-title
   "A step can contain a title.

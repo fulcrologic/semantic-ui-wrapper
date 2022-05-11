@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-text
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Dropdown/DropdownText" :default DropdownText]))
+    ["semantic-ui-react$DropdownText" :as DropdownText]))
 
   (def ui-dropdown-text
   "A dropdown contains a selected value.

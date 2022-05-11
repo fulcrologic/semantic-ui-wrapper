@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.sidebar.ui-sidebar-pusher
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Sidebar/SidebarPusher" :default SidebarPusher]))
+    ["semantic-ui-react$SidebarPusher" :as SidebarPusher]))
 
   (def ui-sidebar-pusher
   "A pushable sub-component for Sidebar.

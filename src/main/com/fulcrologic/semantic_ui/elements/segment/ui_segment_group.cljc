@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.segment.ui-segment-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Segment/SegmentGroup" :default SegmentGroup]))
+    ["semantic-ui-react$SegmentGroup" :as SegmentGroup]))
 
   (def ui-segment-group
   "A group of segments can be formatted to appear together.

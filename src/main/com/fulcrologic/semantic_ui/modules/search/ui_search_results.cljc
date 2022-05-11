@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.search.ui-search-results
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Search/SearchResults" :default SearchResults]))
+    ["semantic-ui-react$SearchResults" :as SearchResults]))
 
   (def ui-search-results
   "

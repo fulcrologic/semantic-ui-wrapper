@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.accordion.ui-accordion
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/modules/Accordion/Accordion" :default Accordion]))
+    ["semantic-ui-react$Accordion" :as Accordion]))
 
   (def ui-accordion
   "An accordion allows users to toggle the display of sections of content.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.input.ui-input
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Input/Input" :default Input]))
+    ["semantic-ui-react$Input" :as Input]))
 
   (def ui-input
   "An Input is a field used to elicit a response from a user.

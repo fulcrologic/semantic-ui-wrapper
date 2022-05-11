@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.comment.ui-comment-author
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Comment/CommentAuthor" :default CommentAuthor]))
+    ["semantic-ui-react$CommentAuthor" :as CommentAuthor]))
 
   (def ui-comment-author
   "A comment can contain an author.

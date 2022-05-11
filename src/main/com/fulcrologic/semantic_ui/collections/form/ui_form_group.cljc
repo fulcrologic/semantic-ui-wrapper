@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.form.ui-form-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Form/FormGroup" :default FormGroup]))
+    ["semantic-ui-react$FormGroup" :as FormGroup]))
 
   (def ui-form-group
   "A set of fields can appear grouped together.

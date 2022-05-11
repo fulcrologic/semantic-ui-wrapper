@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.flag.ui-flag
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Flag/Flag" :default Flag]))
+    ["semantic-ui-react$Flag" :as Flag]))
 
   (def ui-flag
   "A flag is is used to represent a political state.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.header.ui-header-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Header/HeaderContent" :default HeaderContent]))
+    ["semantic-ui-react$HeaderContent" :as HeaderContent]))
 
   (def ui-header-content
   "Header content wraps the main content when there is an adjacent Icon or Image.

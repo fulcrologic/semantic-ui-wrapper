@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.header.ui-header-subheader
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Header/HeaderSubheader" :default HeaderSubheader]))
+    ["semantic-ui-react$HeaderSubheader" :as HeaderSubheader]))
 
   (def ui-header-subheader
   "Headers may contain subheaders.

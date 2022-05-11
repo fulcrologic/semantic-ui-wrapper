@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.feed.ui-feed-date
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Feed/FeedDate" :default FeedDate]))
+    ["semantic-ui-react$FeedDate" :as FeedDate]))
 
   (def ui-feed-date
   "An event or an event summary can contain a date.

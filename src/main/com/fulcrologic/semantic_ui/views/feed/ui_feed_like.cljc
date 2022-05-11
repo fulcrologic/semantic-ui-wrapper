@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.feed.ui-feed-like
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Feed/FeedLike" :default FeedLike]))
+    ["semantic-ui-react$FeedLike" :as FeedLike]))
 
   (def ui-feed-like
   "A feed can contain a like element.

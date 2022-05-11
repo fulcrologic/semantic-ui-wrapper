@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.comment.ui-comment-action
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Comment/CommentAction" :default CommentAction]))
+    ["semantic-ui-react$CommentAction" :as CommentAction]))
 
   (def ui-comment-action
   "A comment can contain an action.

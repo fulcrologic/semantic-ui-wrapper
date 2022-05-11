@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.grid.ui-grid-row
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/collections/Grid/GridRow" :default GridRow]))
+    ["semantic-ui-react$GridRow" :as GridRow]))
 
   (def ui-grid-row
   "A row sub-component for Grid.

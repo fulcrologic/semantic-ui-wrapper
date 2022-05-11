@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.list.ui-list-item
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/List/ListItem" :default ListItem]))
+    ["semantic-ui-react$ListItem" :as ListItem]))
 
   (def ui-list-item
   "A list item can contain a set of items.

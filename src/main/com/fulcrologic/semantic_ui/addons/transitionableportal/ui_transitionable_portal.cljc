@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.addons.transitionableportal.ui-transitionable-portal
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/addons/TransitionablePortal/TransitionablePortal" :default TransitionablePortal]))
+    ["semantic-ui-react$TransitionablePortal" :as TransitionablePortal]))
 
   (def ui-transitionable-portal
   "A sugar for `Portal` and `Transition`.

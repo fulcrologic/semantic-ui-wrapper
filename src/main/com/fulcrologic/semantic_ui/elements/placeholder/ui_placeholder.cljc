@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.placeholder.ui-placeholder
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/elements/Placeholder/Placeholder" :default Placeholder]))
+    ["semantic-ui-react$Placeholder" :as Placeholder]))
 
   (def ui-placeholder
   "A placeholder is used to reserve space for content that soon will appear in a layout.

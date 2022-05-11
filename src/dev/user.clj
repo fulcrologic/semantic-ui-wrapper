@@ -60,11 +60,16 @@
        "\n  "
        " #?(:cljs (h/" (factory-helper class) " " class-ref ")))\n"))))
 
-(defn factory-ns-shadow [ns class factory-name include-file docstring filename]
+; shadow-cljs v2.18.0 fails to build with this form of require:
+;; [semantic-ui-react$Confirm :as Confirm]
+;; "Multiple files failed to compile.  aborted par-compile"
+;; It passes with:
+;; ["semantic-ui-react$Confirm" :as Confirm]
+(defn factory-ns-cljs [ns class factory-name docstring]
   (str "(ns " ns "\n"
     "  (:require\n"
     "    [com.fulcrologic.semantic-ui.factory-helpers :as h]\n"
-    "    [\"" include-file "\" :default " class "]))\n\n"
+    "    [\"semantic-ui-react$" class "\" :as " class "]))\n\n"
     "  " (factory-helper-function class factory-name docstring)))
 
 (defn gen-factory-map [out-path]
@@ -114,11 +119,10 @@
                   (map #(read-info component-dir %))
                   (map (gen-factory-map "src/main/com/fulcrologic/semantic_ui/"))
                   (sort-by :factory-name))]
-    ;(make-parents "semantic-ui-wrappers/src/main/com/fulcrologic/semantic_ui/factories.cljc")
     (spit (as-file "src/main/com/fulcrologic/semantic_ui/factories.cljc") (gen-cljs-factories modules))
-    (doseq [{:keys [filename ns class factory-name include-file filename docstring props] :as m} modules]
+    (doseq [{:keys [ns class factory-name filename docstring props]} modules]
       (make-parents filename)
-      (spit (as-file filename) (factory-ns-shadow ns class factory-name include-file docstring filename))
+      (spit (as-file filename) (factory-ns-cljs ns class factory-name docstring))
       (if (= class "Icon")
         (spit (as-file "src/main/com/fulcrologic/semantic_ui/icons.cljc") (icons-ns (->> props (filter #(= (:name %) "name")) first :value)))))))
 
@@ -132,5 +136,7 @@
   ;; then using the path to the docs/src/componentInfo folder, start a repl and run 
   ;; 
   (gen-factories "/Users/tonykay/oss/Semantic-UI-React/docs/src/componentInfo")
-  )
+
+  (gen-factories "/Users/danie/matter/source/Semantic-UI-React/docs/src/componentInfo"))
+
 

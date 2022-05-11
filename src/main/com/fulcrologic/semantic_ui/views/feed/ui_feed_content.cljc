@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.feed.ui-feed-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react/dist/commonjs/views/Feed/FeedContent" :default FeedContent]))
+    ["semantic-ui-react$FeedContent" :as FeedContent]))
 
   (def ui-feed-content
   "
