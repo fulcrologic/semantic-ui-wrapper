@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.label.ui-label-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$LabelGroup" :as LabelGroup]))
+    #?(:cljs ["semantic-ui-react$LabelGroup" :as LabelGroup])))
 
   (def ui-label-group
   "A label can be grouped.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.message.ui-message-list
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$MessageList" :as MessageList]))
+    #?(:cljs ["semantic-ui-react$MessageList" :as MessageList])))
 
   (def ui-message-list
   "A message can contain a list of items.

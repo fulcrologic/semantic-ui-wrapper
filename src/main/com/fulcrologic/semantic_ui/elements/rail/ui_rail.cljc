@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.rail.ui-rail
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Rail" :as Rail]))
+    #?(:cljs ["semantic-ui-react$Rail" :as Rail])))
 
   (def ui-rail
   "A rail is used to show accompanying content outside the boundaries of the main view of a site.

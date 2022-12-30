@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.embed.ui-embed
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Embed" :as Embed]))
+    #?(:cljs ["semantic-ui-react$Embed" :as Embed])))
 
   (def ui-embed
   "An embed displays content from other websites like YouTube videos or Google Maps.

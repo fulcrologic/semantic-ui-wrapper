@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.dimmer.ui-dimmer-dimmable
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$DimmerDimmable" :as DimmerDimmable]))
+    #?(:cljs ["semantic-ui-react$DimmerDimmable" :as DimmerDimmable])))
 
   (def ui-dimmer-dimmable
   "A dimmable sub-component for Dimmer.

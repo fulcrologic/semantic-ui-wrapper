@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.step.ui-step-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$StepGroup" :as StepGroup]))
+    #?(:cljs ["semantic-ui-react$StepGroup" :as StepGroup])))
 
   (def ui-step-group
   "A set of steps.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.accordion.ui-accordion-title
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$AccordionTitle" :as AccordionTitle]))
+    #?(:cljs ["semantic-ui-react$AccordionTitle" :as AccordionTitle])))
 
   (def ui-accordion-title
   "A title sub-component for Accordion component.

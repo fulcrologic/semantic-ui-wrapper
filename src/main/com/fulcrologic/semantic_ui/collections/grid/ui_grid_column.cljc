@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.grid.ui-grid-column
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$GridColumn" :as GridColumn]))
+    #?(:cljs ["semantic-ui-react$GridColumn" :as GridColumn])))
 
   (def ui-grid-column
   "A column sub-component for Grid.

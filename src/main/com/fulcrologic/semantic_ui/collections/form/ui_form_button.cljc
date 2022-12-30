@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.form.ui-form-button
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$FormButton" :as FormButton]))
+    #?(:cljs ["semantic-ui-react$FormButton" :as FormButton])))
 
   (def ui-form-button
   "Sugar for <Form.Field control={Button} />.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.message.ui-message-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$MessageContent" :as MessageContent]))
+    #?(:cljs ["semantic-ui-react$MessageContent" :as MessageContent])))
 
   (def ui-message-content
   "A message can contain a content.

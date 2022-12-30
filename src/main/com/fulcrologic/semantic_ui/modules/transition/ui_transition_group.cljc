@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.transition.ui-transition-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$TransitionGroup" :as TransitionGroup]))
+    #?(:cljs ["semantic-ui-react$TransitionGroup" :as TransitionGroup])))
 
   (def ui-transition-group
   "A Transition.Group animates children as they mount and unmount.

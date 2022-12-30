@@ -16,7 +16,7 @@
   "devDependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "semantic-ui-react": "^2.0.1",
+    "semantic-ui-react": "^2.1.4",
     "shadow-cljs": "^2.11.8"
   },
   "dependencies": {

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.feed.ui-feed-user
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$FeedUser" :as FeedUser]))
+    #?(:cljs ["semantic-ui-react$FeedUser" :as FeedUser])))
 
   (def ui-feed-user
   "A feed can contain a user element.

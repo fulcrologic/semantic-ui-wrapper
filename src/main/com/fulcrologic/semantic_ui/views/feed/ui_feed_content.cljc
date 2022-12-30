@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.feed.ui-feed-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$FeedContent" :as FeedContent]))
+    #?(:cljs ["semantic-ui-react$FeedContent" :as FeedContent])))
 
   (def ui-feed-content
   "

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.comment.ui-comment-metadata
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$CommentMetadata" :as CommentMetadata]))
+    #?(:cljs ["semantic-ui-react$CommentMetadata" :as CommentMetadata])))
 
   (def ui-comment-metadata
   "A comment can contain metadata about the comment, an arbitrary amount of metadata may be defined.

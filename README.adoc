@@ -10,7 +10,7 @@ WARNING: BREAK VERSIONING. This project is just wrappers for a js library which 
 they do things like remove and rename code artifacts over time in a way that may break your program.
 
 This library offers improved integration with the semantic-ui-react package with predefined
-factories and doc strings generated directly from the Semantic-UI source. It also includes symbols for 
+factories and doc strings generated directly from the Semantic-UI source. It also includes symbols for
 all icon names.
 
 NOTE: This library requires that you use Fulcro 3.
@@ -20,7 +20,7 @@ image::https://img.shields.io/clojars/v/com.fulcrologic/semantic-ui-wrapper.svg[
 == Versions/Compatibility
 
 * 1.0.x - Known compatible with Semantic UI React v0.88.2
-* 2.0.1+ - Newer versions match the version of https://react.semantic-ui.com[Semantic UI React] that was
+* 2.0.1+ - Newer versions _match_ the version of https://react.semantic-ui.com[Semantic UI React] that was
 used to generate the wrappers. *That* project follows BREAK versioning, and this library is just simple
 wrappers. Expect upgrades to possibly break your code.
 
@@ -149,7 +149,7 @@ idea to do that before trying to help.
 
 == Regenerating Factories
 
-The factories files are generated from a checkout of the (https://github.com/Semantic-Org/Semantic-UI)[Semantic-UI] 
+The factories files are generated from a checkout of the (https://github.com/Semantic-Org/Semantic-UI)[Semantic-UI]
 source (to automatically get the docstrings). The `user` namespace can be run in a normal Clojure REPL, and
 contains the function to generate the files.
 
@@ -165,14 +165,14 @@ In the cloned repository, run:
 [source]
 -----
 yarn install
-yarn build:docs 
+yarn build:docs
 -----
 
 Then using the path to the generated docs/src/componentInfo folder, start a repl and run
 
 [source]
 -----
-(gen-factories "path/to/generated/componentInfo") 
+(gen-factories "path/to/generated/componentInfo")
 -----
 
 == LICENSE

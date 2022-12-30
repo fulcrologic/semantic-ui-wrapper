@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-header
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$DropdownHeader" :as DropdownHeader]))
+    #?(:cljs ["semantic-ui-react$DropdownHeader" :as DropdownHeader])))
 
   (def ui-dropdown-header
   "A dropdown menu can contain a header.

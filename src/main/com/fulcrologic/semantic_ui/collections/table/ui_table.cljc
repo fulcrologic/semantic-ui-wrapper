@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.table.ui-table
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Table" :as Table]))
+    #?(:cljs ["semantic-ui-react$Table" :as Table])))
 
   (def ui-table
   "A table displays a collections of data grouped into rows.

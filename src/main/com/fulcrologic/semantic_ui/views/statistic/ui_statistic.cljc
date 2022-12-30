@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.statistic.ui-statistic
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Statistic" :as Statistic]))
+    #?(:cljs ["semantic-ui-react$Statistic" :as Statistic])))
 
   (def ui-statistic
   "A statistic emphasizes the current value of an attribute.

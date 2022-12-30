@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.item.ui-item-description
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$ItemDescription" :as ItemDescription]))
+    #?(:cljs ["semantic-ui-react$ItemDescription" :as ItemDescription])))
 
   (def ui-item-description
   "An item can contain a description with a single or multiple paragraphs.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.comment.ui-comment-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$CommentGroup" :as CommentGroup]))
+    #?(:cljs ["semantic-ui-react$CommentGroup" :as CommentGroup])))
 
   (def ui-comment-group
   "Comments can be grouped.

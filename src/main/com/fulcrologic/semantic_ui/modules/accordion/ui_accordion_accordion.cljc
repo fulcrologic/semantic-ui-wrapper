@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.accordion.ui-accordion-accordion
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$AccordionAccordion" :as AccordionAccordion]))
+    #?(:cljs ["semantic-ui-react$AccordionAccordion" :as AccordionAccordion])))
 
   (def ui-accordion-accordion
   "An Accordion can contain sub-accordions.

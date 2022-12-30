@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.modal.ui-modal-dimmer
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$ModalDimmer" :as ModalDimmer]))
+    #?(:cljs ["semantic-ui-react$ModalDimmer" :as ModalDimmer])))
 
   (def ui-modal-dimmer
   "A modal has a dimmer.

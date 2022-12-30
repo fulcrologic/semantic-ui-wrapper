@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.placeholder.ui-placeholder-image
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$PlaceholderImage" :as PlaceholderImage]))
+    #?(:cljs ["semantic-ui-react$PlaceholderImage" :as PlaceholderImage])))
 
   (def ui-placeholder-image
   "A placeholder can contain an image.

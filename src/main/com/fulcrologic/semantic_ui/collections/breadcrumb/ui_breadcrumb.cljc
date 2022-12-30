@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.breadcrumb.ui-breadcrumb
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Breadcrumb" :as Breadcrumb]))
+    #?(:cljs ["semantic-ui-react$Breadcrumb" :as Breadcrumb])))
 
   (def ui-breadcrumb
   "A breadcrumb is used to show hierarchy between content.

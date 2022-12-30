@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.message.ui-message
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Message" :as Message]))
+    #?(:cljs ["semantic-ui-react$Message" :as Message])))
 
   (def ui-message
   "A message displays information that explains nearby content.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.dimmer.ui-dimmer-inner
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$DimmerInner" :as DimmerInner]))
+    #?(:cljs ["semantic-ui-react$DimmerInner" :as DimmerInner])))
 
   (def ui-dimmer-inner
   "An inner element for a Dimmer.

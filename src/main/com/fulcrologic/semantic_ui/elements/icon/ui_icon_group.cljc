@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.icon.ui-icon-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$IconGroup" :as IconGroup]))
+    #?(:cljs ["semantic-ui-react$IconGroup" :as IconGroup])))
 
   (def ui-icon-group
   "Several icons can be used together as a group.

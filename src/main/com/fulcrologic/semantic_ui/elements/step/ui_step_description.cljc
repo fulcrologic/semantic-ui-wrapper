@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.step.ui-step-description
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$StepDescription" :as StepDescription]))
+    #?(:cljs ["semantic-ui-react$StepDescription" :as StepDescription])))
 
   (def ui-step-description
   "

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.divider.ui-divider
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Divider" :as Divider]))
+    #?(:cljs ["semantic-ui-react$Divider" :as Divider])))
 
   (def ui-divider
   "A divider visually segments content into groups.

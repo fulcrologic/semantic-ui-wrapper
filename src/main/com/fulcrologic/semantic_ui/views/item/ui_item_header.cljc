@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.item.ui-item-header
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$ItemHeader" :as ItemHeader]))
+    #?(:cljs ["semantic-ui-react$ItemHeader" :as ItemHeader])))
 
   (def ui-item-header
   "An item can contain a header.

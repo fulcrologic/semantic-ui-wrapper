@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.modal.ui-modal-header
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$ModalHeader" :as ModalHeader]))
+    #?(:cljs ["semantic-ui-react$ModalHeader" :as ModalHeader])))
 
   (def ui-modal-header
   "A modal can have a header.

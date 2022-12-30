@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.search.ui-search
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Search" :as Search]))
+    #?(:cljs ["semantic-ui-react$Search" :as Search])))
 
   (def ui-search
   "A search module allows a user to query for results from a selection of data

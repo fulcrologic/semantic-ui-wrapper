@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.rating.ui-rating-icon
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$RatingIcon" :as RatingIcon]))
+    #?(:cljs ["semantic-ui-react$RatingIcon" :as RatingIcon])))
 
   (def ui-rating-icon
   "An internal icon sub-component for Rating component

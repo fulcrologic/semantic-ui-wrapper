@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.addons.radio.ui-radio
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Radio" :as Radio]))
+    #?(:cljs ["semantic-ui-react$Radio" :as Radio])))
 
   (def ui-radio
   "A Radio is sugar for <Checkbox radio />.

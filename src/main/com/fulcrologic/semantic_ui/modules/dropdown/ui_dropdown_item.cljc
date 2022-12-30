@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-item
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$DropdownItem" :as DropdownItem]))
+    #?(:cljs ["semantic-ui-react$DropdownItem" :as DropdownItem])))
 
   (def ui-dropdown-item
   "An item sub-component for Dropdown component.

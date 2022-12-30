@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.list.ui-list-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$ListContent" :as ListContent]))
+    #?(:cljs ["semantic-ui-react$ListContent" :as ListContent])))
 
   (def ui-list-content
   "A list item can contain a content.

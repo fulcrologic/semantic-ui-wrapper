@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.tab.ui-tab-pane
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$TabPane" :as TabPane]))
+    #?(:cljs ["semantic-ui-react$TabPane" :as TabPane])))
 
   (def ui-tab-pane
   "A tab pane holds the content of a tab.

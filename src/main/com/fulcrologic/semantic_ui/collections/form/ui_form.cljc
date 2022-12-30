@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.form.ui-form
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Form" :as Form]))
+    #?(:cljs ["semantic-ui-react$Form" :as Form])))
 
   (def ui-form
   "A Form displays a set of related user input fields in a structured way.

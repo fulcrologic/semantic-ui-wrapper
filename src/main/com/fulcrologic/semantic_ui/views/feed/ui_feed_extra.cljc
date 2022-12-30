@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.feed.ui-feed-extra
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$FeedExtra" :as FeedExtra]))
+    #?(:cljs ["semantic-ui-react$FeedExtra" :as FeedExtra])))
 
   (def ui-feed-extra
   "A feed can contain an extra content.

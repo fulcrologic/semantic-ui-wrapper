@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.menu.ui-menu-menu
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$MenuMenu" :as MenuMenu]))
+    #?(:cljs ["semantic-ui-react$MenuMenu" :as MenuMenu])))
 
   (def ui-menu-menu
   "A menu can contain a sub menu.

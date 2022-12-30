@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.button.ui-button
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Button" :as Button]))
+    #?(:cljs ["semantic-ui-react$Button" :as Button])))
 
   (def ui-button
   "A Button indicates a possible user action.

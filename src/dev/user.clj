@@ -69,7 +69,7 @@
   (str "(ns " ns "\n"
     "  (:require\n"
     "    [com.fulcrologic.semantic-ui.factory-helpers :as h]\n"
-    "    [\"semantic-ui-react$" class "\" :as " class "]))\n\n"
+    "    #?(:cljs [\"semantic-ui-react$" class "\" :as " class "])))\n\n"
     "  " (factory-helper-function class factory-name docstring)))
 
 (defn gen-factory-map [out-path]
@@ -132,9 +132,9 @@
   ;; git clone https://github.com/Semantic-Org/Semantic-UI-React
   ;; in the cloned repo:
   ;; yarn install
-  ;; yarn build:docs 
-  ;; then using the path to the docs/src/componentInfo folder, start a repl and run 
-  ;; 
+  ;; yarn build:docs
+  ;; then using the path to the docs/src/componentInfo folder, start a repl and run
+  ;;
   (gen-factories "/Users/tonykay/oss/Semantic-UI-React/docs/src/componentInfo")
 
   (gen-factories "/Users/danie/matter/source/Semantic-UI-React/docs/src/componentInfo"))

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.accordion.ui-accordion-panel
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$AccordionPanel" :as AccordionPanel]))
+    #?(:cljs ["semantic-ui-react$AccordionPanel" :as AccordionPanel])))
 
   (def ui-accordion-panel
   "A panel sub-component for Accordion component.

@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.image.ui-image-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$ImageGroup" :as ImageGroup]))
+    #?(:cljs ["semantic-ui-react$ImageGroup" :as ImageGroup])))
 
   (def ui-image-group
   "A group of images.

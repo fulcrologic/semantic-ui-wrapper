@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.search.ui-search-category-layout
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$SearchCategoryLayout" :as SearchCategoryLayout]))
+    #?(:cljs ["semantic-ui-react$SearchCategoryLayout" :as SearchCategoryLayout])))
 
   (def ui-search-category-layout
   "

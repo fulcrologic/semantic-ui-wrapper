@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.addons.pagination.ui-pagination
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Pagination" :as Pagination]))
+    #?(:cljs ["semantic-ui-react$Pagination" :as Pagination])))
 
   (def ui-pagination
   "A component to render a pagination.

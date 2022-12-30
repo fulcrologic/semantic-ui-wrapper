@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.modules.modal.ui-modal
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Modal" :as Modal]))
+    #?(:cljs ["semantic-ui-react$Modal" :as Modal])))
 
   (def ui-modal
   "A modal displays content that temporarily blocks interactions with the main view of a site.

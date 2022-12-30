@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.card.ui-card-group
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$CardGroup" :as CardGroup]))
+    #?(:cljs ["semantic-ui-react$CardGroup" :as CardGroup])))
 
   (def ui-card-group
   "A group of cards.

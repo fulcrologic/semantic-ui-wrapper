@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.placeholder.ui-placeholder-paragraph
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$PlaceholderParagraph" :as PlaceholderParagraph]))
+    #?(:cljs ["semantic-ui-react$PlaceholderParagraph" :as PlaceholderParagraph])))
 
   (def ui-placeholder-paragraph
   "A placeholder can contain a paragraph.

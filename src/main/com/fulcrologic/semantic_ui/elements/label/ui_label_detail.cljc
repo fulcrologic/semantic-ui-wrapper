@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.elements.label.ui-label-detail
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$LabelDetail" :as LabelDetail]))
+    #?(:cljs ["semantic-ui-react$LabelDetail" :as LabelDetail])))
 
   (def ui-label-detail
   "

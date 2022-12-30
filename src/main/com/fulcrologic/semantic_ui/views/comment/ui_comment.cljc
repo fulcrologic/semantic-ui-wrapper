@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.comment.ui-comment
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$Comment" :as Comment]))
+    #?(:cljs ["semantic-ui-react$Comment" :as Comment])))
 
   (def ui-comment
   "A comment displays user feedback to site content.

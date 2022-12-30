@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.card.ui-card-content
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$CardContent" :as CardContent]))
+    #?(:cljs ["semantic-ui-react$CardContent" :as CardContent])))
 
   (def ui-card-content
   "A card can contain blocks of content or extra content meant to be formatted separately from the main content.

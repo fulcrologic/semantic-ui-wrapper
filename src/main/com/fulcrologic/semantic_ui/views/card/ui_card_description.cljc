@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.views.card.ui-card-description
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$CardDescription" :as CardDescription]))
+    #?(:cljs ["semantic-ui-react$CardDescription" :as CardDescription])))
 
   (def ui-card-description
   "A card can contain a description with one or more paragraphs.

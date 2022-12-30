@@ -1,7 +1,7 @@
 (ns com.fulcrologic.semantic-ui.collections.form.ui-form-checkbox
   (:require
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
-    ["semantic-ui-react$FormCheckbox" :as FormCheckbox]))
+    #?(:cljs ["semantic-ui-react$FormCheckbox" :as FormCheckbox])))
 
   (def ui-form-checkbox
   "Sugar for <Form.Field control={Checkbox} />.
