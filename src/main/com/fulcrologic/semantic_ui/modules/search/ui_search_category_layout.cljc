@@ -3,10 +3,11 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$SearchCategoryLayout" :as SearchCategoryLayout])))
 
-  (def ui-search-category-layout
+(def ui-search-category-layout
   "
 
   Props:
     - categoryContent (element): The rendered category content
     - resultsContent (element): The rendered results content"
-   #?(:cljs (h/factory-apply SearchCategoryLayout)))
+  #?(:clj  (h/make-stub-factory "SearchCategoryLayout")
+     :cljs (h/factory-apply SearchCategoryLayout)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ItemExtra" :as ItemExtra])))
 
-  (def ui-item-extra
+(def ui-item-extra
   "An item can contain extra content meant to be formatted separately from the main content.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply ItemExtra)))
+  #?(:clj  (h/make-stub-factory "ItemExtra")
+     :cljs (h/factory-apply ItemExtra)))

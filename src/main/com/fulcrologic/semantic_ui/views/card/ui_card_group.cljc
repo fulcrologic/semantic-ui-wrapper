@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$CardGroup" :as CardGroup])))
 
-  (def ui-card-group
+(def ui-card-group
   "A group of cards.
 
   Props:
@@ -17,4 +17,5 @@
     - itemsPerRow (enum): A group of cards can set how many cards should exist in a row. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)
     - stackable (bool): A group of cards can automatically stack rows to a single columns on mobile devices.
     - textAlign (enum): A card group can adjust its text alignment. (left, center, right)"
-   #?(:cljs (h/factory-apply CardGroup)))
+  #?(:clj  (h/make-stub-factory "CardGroup")
+     :cljs (h/factory-apply CardGroup)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$LabelGroup" :as LabelGroup])))
 
-  (def ui-label-group
+(def ui-label-group
   "A label can be grouped.
 
   Props:
@@ -15,4 +15,5 @@
     - content (custom): Shorthand for primary content.
     - size (enum): Label group can share sizes together. (mini, tiny, small, medium, large, big, huge, massive)
     - tag (bool): Label group can share tag formatting."
-   #?(:cljs (h/factory-apply LabelGroup)))
+  #?(:clj  (h/make-stub-factory "LabelGroup")
+     :cljs (h/factory-apply LabelGroup)))

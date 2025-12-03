@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$CommentText" :as CommentText])))
 
-  (def ui-comment-text
+(def ui-comment-text
   "A comment can contain text.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply CommentText)))
+  #?(:clj  (h/make-stub-factory "CommentText")
+     :cljs (h/factory-apply CommentText)))

@@ -3,10 +3,11 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$FormCheckbox" :as FormCheckbox])))
 
-  (def ui-form-checkbox
+(def ui-form-checkbox
   "Sugar for <Form.Field control={Checkbox} />.
 
   Props:
     - as (elementType): An element type to render as (string or function).
     - control (custom): A FormField control prop."
-   #?(:cljs (h/factory-apply FormCheckbox)))
+  #?(:clj  (h/make-form-stub-factory "FormCheckbox" :checkbox)
+     :cljs (h/factory-apply FormCheckbox)))

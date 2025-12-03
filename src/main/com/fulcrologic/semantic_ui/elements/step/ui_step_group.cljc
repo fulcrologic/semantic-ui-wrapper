@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$StepGroup" :as StepGroup])))
 
-  (def ui-step-group
+(def ui-step-group
   "A set of steps.
 
   Props:
@@ -20,4 +20,5 @@
     - unstackable (bool): A step can prevent itself from stacking on mobile.
     - vertical (bool): A step can be displayed stacked vertically.
     - widths (enum): Steps can be divided evenly inside their parent. (..._.keys(numberMap), ..._.keys(numberMap).map(Number), ..._.values(numberMap))"
-   #?(:cljs (h/factory-apply StepGroup)))
+  #?(:clj  (h/make-stub-factory "StepGroup")
+     :cljs (h/factory-apply StepGroup)))

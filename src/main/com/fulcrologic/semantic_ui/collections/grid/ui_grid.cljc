@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Grid" :as Grid])))
 
-  (def ui-grid
+(def ui-grid
   "A grid is used to harmonize negative space in a layout.
 
   Props:
@@ -24,4 +24,5 @@
     - stretched (bool): A grid can stretch its contents to take up the entire grid height.
     - textAlign (enum): A grid can specify its text alignment. (left, center, right, justified)
     - verticalAlign (enum): A grid can specify its vertical alignment to have all its columns vertically centered. (bottom, middle, top)"
-   #?(:cljs (h/factory-apply Grid)))
+  #?(:clj  (h/make-stub-factory "Grid")
+     :cljs (h/factory-apply Grid)))

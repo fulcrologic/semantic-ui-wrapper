@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Label" :as Label])))
 
-  (def ui-label
+(def ui-label
   "A label displays content classification.
 
   Props:
@@ -31,4 +31,5 @@
     - ribbon (bool|enum): A label can appear as a ribbon attaching itself to an element. (right)
     - size (enum): A label can have different sizes. (mini, tiny, small, medium, large, big, huge, massive)
     - tag (bool): A label can appear as a tag."
-   #?(:cljs (h/factory-apply Label)))
+  #?(:clj  (h/make-stub-factory "Label")
+     :cljs (h/factory-apply Label)))

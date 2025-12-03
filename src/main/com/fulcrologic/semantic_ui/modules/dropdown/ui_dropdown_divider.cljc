@@ -3,10 +3,11 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$DropdownDivider" :as DropdownDivider])))
 
-  (def ui-dropdown-divider
+(def ui-dropdown-divider
   "A dropdown menu can contain dividers to separate related content.
 
   Props:
     - as (elementType): An element type to render as (string or function).
     - className (string): Additional classes."
-   #?(:cljs (h/factory-apply DropdownDivider)))
+  #?(:clj  (h/make-stub-factory "DropdownDivider")
+     :cljs (h/factory-apply DropdownDivider)))

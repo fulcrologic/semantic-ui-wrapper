@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$TransitionablePortal" :as TransitionablePortal])))
 
-  (def ui-transitionable-portal
+(def ui-transitionable-portal
   "A sugar for `Portal` and `Transition`.
 
   Props:
@@ -14,4 +14,5 @@
     - onStart (func): Callback on animation start.
     - open (bool): Controls whether or not the portal is displayed.
     - transition (object): Transition props."
-   #?(:cljs (h/factory-apply TransitionablePortal)))
+  #?(:clj  (h/make-modal-stub-factory "TransitionablePortal")
+     :cljs (h/factory-apply TransitionablePortal)))

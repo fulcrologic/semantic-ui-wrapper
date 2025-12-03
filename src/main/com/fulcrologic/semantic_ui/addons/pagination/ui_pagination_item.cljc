@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$PaginationItem" :as PaginationItem])))
 
-  (def ui-pagination-item
+(def ui-pagination-item
   "An item of a pagination.
 
   Props:
@@ -12,4 +12,5 @@
     - onClick (func): Called on click.
     - onKeyDown (func): Called on key down.
     - type (enum): A pagination should have a type. (ellipsisItem, firstItem, prevItem, pageItem, nextItem, lastItem)"
-   #?(:cljs (h/factory-apply PaginationItem)))
+  #?(:clj  (h/make-stub-factory "PaginationItem")
+     :cljs (h/factory-apply PaginationItem)))

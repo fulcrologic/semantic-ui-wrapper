@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$StatisticValue" :as StatisticValue])))
 
-  (def ui-statistic-value
+(def ui-statistic-value
   "A statistic can contain a numeric, icon, image, or text value.
 
   Props:
@@ -12,4 +12,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - text (bool): Format the value with smaller font size to fit nicely beside number values."
-   #?(:cljs (h/factory-apply StatisticValue)))
+  #?(:clj  (h/make-stub-factory "StatisticValue")
+     :cljs (h/factory-apply StatisticValue)))

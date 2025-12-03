@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$List" :as List])))
 
-  (def ui-list
+(def ui-list
   "A list groups related content.
 
   Props:
@@ -26,4 +26,5 @@
     - selection (bool): A selection list formats list items as possible choices.
     - size (enum): A list can vary in size. (mini, tiny, small, medium, large, big, huge, massive)
     - verticalAlign (enum): An element inside a list can be vertically aligned. (bottom, middle, top)"
-   #?(:cljs (h/factory-apply List)))
+  #?(:clj  (h/make-stub-factory "List")
+     :cljs (h/factory-apply List)))

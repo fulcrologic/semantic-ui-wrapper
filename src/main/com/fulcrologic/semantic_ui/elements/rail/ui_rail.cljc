@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Rail" :as Rail])))
 
-  (def ui-rail
+(def ui-rail
   "A rail is used to show accompanying content outside the boundaries of the main view of a site.
 
   Props:
@@ -17,4 +17,5 @@
     - internal (bool): A rail can attach itself to the inside of a container.
     - position (enum): A rail can be presented on the left or right side of a container. (left, right)
     - size (enum): A rail can have different sizes. (mini, tiny, small, large, big, huge, massive)"
-   #?(:cljs (h/factory-apply Rail)))
+  #?(:clj  (h/make-stub-factory "Rail")
+     :cljs (h/factory-apply Rail)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$TableCell" :as TableCell])))
 
-  (def ui-table-cell
+(def ui-table-cell
   "A table row can have cells.
 
   Props:
@@ -24,4 +24,5 @@
     - verticalAlign (enum): A table cell can adjust its text alignment. (bottom, middle, top)
     - warning (bool): A cell may warn a user.
     - width (enum): A table can specify the width of individual columns independently. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
-   #?(:cljs (h/factory-apply TableCell)))
+  #?(:clj  (h/make-stub-factory "TableCell")
+     :cljs (h/factory-apply TableCell)))

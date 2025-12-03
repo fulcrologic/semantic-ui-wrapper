@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Message" :as Message])))
 
-  (def ui-message
+(def ui-message
   "A message displays information that explains nearby content.
 
   Props:
@@ -28,4 +28,5 @@
     - success (bool): A message may be formatted to display a positive message.  Same as `positive`.
     - visible (bool): A message can be set to visible to force itself to be shown.
     - warning (bool): A message may be formatted to display warning messages."
-   #?(:cljs (h/factory-apply Message)))
+  #?(:clj  (h/make-stub-factory "Message")
+     :cljs (h/factory-apply Message)))

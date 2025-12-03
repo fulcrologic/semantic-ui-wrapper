@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ItemDescription" :as ItemDescription])))
 
-  (def ui-item-description
+(def ui-item-description
   "An item can contain a description with a single or multiple paragraphs.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply ItemDescription)))
+  #?(:clj  (h/make-stub-factory "ItemDescription")
+     :cljs (h/factory-apply ItemDescription)))

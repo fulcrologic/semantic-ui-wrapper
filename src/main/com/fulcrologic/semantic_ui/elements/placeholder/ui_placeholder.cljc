@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Placeholder" :as Placeholder])))
 
-  (def ui-placeholder
+(def ui-placeholder
   "A placeholder is used to reserve space for content that soon will appear in a layout.
 
   Props:
@@ -13,4 +13,5 @@
     - content (custom): Shorthand for primary content.
     - fluid (bool): A fluid placeholder takes up the width of its container.
     - inverted (bool): A placeholder can have their colors inverted."
-   #?(:cljs (h/factory-apply Placeholder)))
+  #?(:clj  (h/make-stub-factory "Placeholder")
+     :cljs (h/factory-apply Placeholder)))

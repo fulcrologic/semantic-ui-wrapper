@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ImageGroup" :as ImageGroup])))
 
-  (def ui-image-group
+(def ui-image-group
   "A group of images.
 
   Props:
@@ -12,4 +12,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - size (enum): A group of images can be formatted to have the same size. (mini, tiny, small, medium, large, big, huge, massive)"
-   #?(:cljs (h/factory-apply ImageGroup)))
+  #?(:clj  (h/make-stub-factory "ImageGroup")
+     :cljs (h/factory-apply ImageGroup)))

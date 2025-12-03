@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ItemMeta" :as ItemMeta])))
 
-  (def ui-item-meta
+(def ui-item-meta
   "An item can contain content metadata.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply ItemMeta)))
+  #?(:clj  (h/make-stub-factory "ItemMeta")
+     :cljs (h/factory-apply ItemMeta)))

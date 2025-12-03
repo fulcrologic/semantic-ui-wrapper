@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$TextArea" :as TextArea])))
 
-  (def ui-text-area
+(def ui-text-area
   "A TextArea can be used to allow for extended user input.
 
   Props:
@@ -12,4 +12,5 @@
     - onInput (func): Called on input.
     - rows (number|string): Indicates row count for a TextArea. ()
     - value (number|string): The value of the textarea. ()"
-   #?(:cljs (h/wrapped-factory-apply TextArea)))
+  #?(:clj  (h/make-form-stub-factory "TextArea" :textarea)
+     :cljs (h/wrapped-factory-apply TextArea)))

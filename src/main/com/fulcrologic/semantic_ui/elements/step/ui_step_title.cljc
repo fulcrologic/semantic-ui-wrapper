@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$StepTitle" :as StepTitle])))
 
-  (def ui-step-title
+(def ui-step-title
   "A step can contain a title.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply StepTitle)))
+  #?(:clj  (h/make-stub-factory "StepTitle")
+     :cljs (h/factory-apply StepTitle)))

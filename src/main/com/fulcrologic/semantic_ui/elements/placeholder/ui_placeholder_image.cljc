@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$PlaceholderImage" :as PlaceholderImage])))
 
-  (def ui-placeholder-image
+(def ui-placeholder-image
   "A placeholder can contain an image.
 
   Props:
@@ -11,4 +11,5 @@
     - className (string): Additional classes.
     - rectangular (bool): An image can modify size correctly with responsive styles. ()
     - square (bool): An image can modify size correctly with responsive styles. ()"
-   #?(:cljs (h/factory-apply PlaceholderImage)))
+  #?(:clj  (h/make-stub-factory "PlaceholderImage")
+     :cljs (h/factory-apply PlaceholderImage)))

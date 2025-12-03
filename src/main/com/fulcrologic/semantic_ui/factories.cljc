@@ -1,9 +1,9 @@
 (ns com.fulcrologic.semantic-ui.factories
-   (:require
-     #?(:cljs [semantic-ui-react :as suir])
-     [com.fulcrologic.semantic-ui.factory-helpers :as h]))
+  (:require
+    #?(:cljs [semantic-ui-react :as suir])
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]))
 
- (def ui-accordion
+(def ui-accordion
   "An accordion allows users to toggle the display of sections of content.
 
   Props:
@@ -11,7 +11,7 @@
     - fluid (bool): Format to take up the width of its container.
     - inverted (bool): Format for dark backgrounds.
     - styled (bool): Adds some basic styling to accordion panels."
-   #?(:cljs (h/factory-apply suir/Accordion)))
+  #?(:cljs (h/factory-apply suir/Accordion)))
 
 (def ui-accordion-accordion
   "An Accordion can contain sub-accordions.
@@ -25,7 +25,7 @@
     - exclusive (bool): Only allow one panel open at a time.
     - onTitleClick (func): Called when a panel title is clicked. ()
     - panels (arrayOf): Shorthand array of props for Accordion. ()"
-   #?(:cljs (h/factory-apply suir/AccordionAccordion)))
+  #?(:cljs (h/factory-apply suir/AccordionAccordion)))
 
 (def ui-accordion-content
   "A content sub-component for Accordion component.
@@ -36,7 +36,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/AccordionContent)))
+  #?(:cljs (h/factory-apply suir/AccordionContent)))
 
 (def ui-accordion-panel
   "A panel sub-component for Accordion component.
@@ -47,7 +47,7 @@
     - index (number|string): A panel index. ()
     - onTitleClick (func): Called when a panel title is clicked.
     - title (custom): A shorthand for Accordion.Title."
-   #?(:cljs (h/factory-apply suir/AccordionPanel)))
+  #?(:cljs (h/factory-apply suir/AccordionPanel)))
 
 (def ui-accordion-title
   "A title sub-component for Accordion component.
@@ -61,7 +61,7 @@
     - icon (custom): Shorthand for Icon.
     - index (string|number): AccordionTitle index inside Accordion. ()
     - onClick (func): Called on click."
-   #?(:cljs (h/factory-apply suir/AccordionTitle)))
+  #?(:cljs (h/factory-apply suir/AccordionTitle)))
 
 (def ui-advertisement
   "An ad displays third-party promotional content.
@@ -74,7 +74,7 @@
     - content (custom): Shorthand for primary content.
     - test (bool|number|string): Text to be displayed on the advertisement. ()
     - unit (enum): Varies the size of the advertisement. (medium rectangle, large rectangle, vertical rectangle, small rectangle, mobile banner, banner, vertical banner, top banner, half banner, button, square button, small button, skyscraper, wide skyscraper, leaderboard, large leaderboard, mobile leaderboard, billboard, panorama, netboard, half page, square, small square)"
-   #?(:cljs (h/factory-apply suir/Advertisement)))
+  #?(:cljs (h/factory-apply suir/Advertisement)))
 
 (def ui-breadcrumb
   "A breadcrumb is used to show hierarchy between content.
@@ -87,7 +87,7 @@
     - icon (custom): For use with the sections prop. Render as an `Icon` component with `divider` class instead of a `div` in ()
     - sections (custom): Shorthand array of props for Breadcrumb.Section.
     - size (enum): Size of Breadcrumb. (mini, tiny, small, large, big, huge, massive)"
-   #?(:cljs (h/factory-apply suir/Breadcrumb)))
+  #?(:cljs (h/factory-apply suir/Breadcrumb)))
 
 (def ui-breadcrumb-divider
   "A divider sub-component for Breadcrumb component.
@@ -98,7 +98,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - icon (custom): Render as an `Icon` component with `divider` class instead of a `div`."
-   #?(:cljs (h/factory-apply suir/BreadcrumbDivider)))
+  #?(:cljs (h/factory-apply suir/BreadcrumbDivider)))
 
 (def ui-breadcrumb-section
   "A section sub-component for Breadcrumb component.
@@ -112,7 +112,7 @@
     - href (string): Render as an `a` tag instead of a `div` and adds the href attribute. ()
     - link (bool): Render as an `a` tag instead of a `div`. ()
     - onClick (func): Called on click. When passed, the component will render as an `a`"
-   #?(:cljs (h/factory-apply suir/BreadcrumbSection)))
+  #?(:cljs (h/factory-apply suir/BreadcrumbSection)))
 
 (def ui-button
   "A Button indicates a possible user action.
@@ -147,7 +147,7 @@
     - tabIndex (number|string): A button can receive focus. ()
     - toggle (bool): A button can be formatted to toggle on and off.
     - type (enum): The type of the HTML element. (button, submit, reset)"
-   #?(:cljs (h/factory-apply suir/Button)))
+  #?(:cljs (h/factory-apply suir/Button)))
 
 (def ui-button-content
   "Used in some Button types, such as `animated`.
@@ -159,7 +159,7 @@
     - content (custom): Shorthand for primary content.
     - hidden (bool): Initially hidden, visible on hover.
     - visible (bool): Initially visible, hidden on hover."
-   #?(:cljs (h/factory-apply suir/ButtonContent)))
+  #?(:cljs (h/factory-apply suir/ButtonContent)))
 
 (def ui-button-group
   "Buttons can be grouped.
@@ -187,7 +187,7 @@
     - toggle (bool): Groups can be formatted to toggle on and off.
     - vertical (bool): Groups can be formatted to appear vertically.
     - widths (enum): Groups can have their widths divided evenly. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
-   #?(:cljs (h/factory-apply suir/ButtonGroup)))
+  #?(:cljs (h/factory-apply suir/ButtonGroup)))
 
 (def ui-button-or
   "Button groups can contain conditionals.
@@ -196,7 +196,7 @@
     - as (elementType): An element type to render as (string or function).
     - className (string): Additional classes.
     - text (number|string): Or buttons can have their text localized, or adjusted by using the text prop. ()"
-   #?(:cljs (h/factory-apply suir/ButtonOr)))
+  #?(:cljs (h/factory-apply suir/ButtonOr)))
 
 (def ui-card
   "A card displays site content in a manner similar to a playing card.
@@ -218,7 +218,7 @@
     - meta (custom): Shorthand for CardMeta.
     - onClick (func): Called on click. When passed, the component renders as an `a`
     - raised (bool): A Card can be formatted to raise above the page."
-   #?(:cljs (h/factory-apply suir/Card)))
+  #?(:cljs (h/factory-apply suir/Card)))
 
 (def ui-card-content
   "A card can contain blocks of content or extra content meant to be formatted separately from the main content.
@@ -233,7 +233,7 @@
     - header (custom): Shorthand for CardHeader.
     - meta (custom): Shorthand for CardMeta.
     - textAlign (enum): A card content can adjust its text alignment. (left, center, right)"
-   #?(:cljs (h/factory-apply suir/CardContent)))
+  #?(:cljs (h/factory-apply suir/CardContent)))
 
 (def ui-card-description
   "A card can contain a description with one or more paragraphs.
@@ -244,7 +244,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - textAlign (enum): A card content can adjust its text alignment. (left, center, right)"
-   #?(:cljs (h/factory-apply suir/CardDescription)))
+  #?(:cljs (h/factory-apply suir/CardDescription)))
 
 (def ui-card-group
   "A group of cards.
@@ -260,7 +260,7 @@
     - itemsPerRow (enum): A group of cards can set how many cards should exist in a row. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)
     - stackable (bool): A group of cards can automatically stack rows to a single columns on mobile devices.
     - textAlign (enum): A card group can adjust its text alignment. (left, center, right)"
-   #?(:cljs (h/factory-apply suir/CardGroup)))
+  #?(:cljs (h/factory-apply suir/CardGroup)))
 
 (def ui-card-header
   "A card can contain a header.
@@ -271,7 +271,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - textAlign (enum): A card header can adjust its text alignment. (left, center, right)"
-   #?(:cljs (h/factory-apply suir/CardHeader)))
+  #?(:cljs (h/factory-apply suir/CardHeader)))
 
 (def ui-card-meta
   "A card can contain content metadata.
@@ -282,7 +282,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - textAlign (enum): A card meta can adjust its text alignment. (left, center, right)"
-   #?(:cljs (h/factory-apply suir/CardMeta)))
+  #?(:cljs (h/factory-apply suir/CardMeta)))
 
 (def ui-checkbox
   "A checkbox allows a user to select a value from a small set of options, often binary.
@@ -310,7 +310,7 @@
     - toggle (bool): Format to show an on or off choice. ()
     - type (enum): HTML input type, either checkbox or radio. (checkbox, radio)
     - value (string|number): The HTML input value. ()"
-   #?(:cljs (h/wrapped-factory-apply suir/Checkbox)))
+  #?(:cljs (h/wrapped-factory-apply suir/Checkbox)))
 
 (def ui-comment
   "A comment displays user feedback to site content.
@@ -321,7 +321,7 @@
     - className (string): Additional classes.
     - collapsed (bool): Comment can be collapsed, or hidden from view.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/Comment)))
+  #?(:cljs (h/factory-apply suir/Comment)))
 
 (def ui-comment-action
   "A comment can contain an action.
@@ -332,7 +332,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/CommentAction)))
+  #?(:cljs (h/factory-apply suir/CommentAction)))
 
 (def ui-comment-actions
   "A comment can contain an list of actions a user may perform related to this comment.
@@ -342,7 +342,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/CommentActions)))
+  #?(:cljs (h/factory-apply suir/CommentActions)))
 
 (def ui-comment-author
   "A comment can contain an author.
@@ -352,7 +352,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/CommentAuthor)))
+  #?(:cljs (h/factory-apply suir/CommentAuthor)))
 
 (def ui-comment-avatar
   "A comment can contain an image or avatar.
@@ -361,7 +361,7 @@
     - as (elementType): An element type to render as (string or function).
     - className (string): Additional classes.
     - src (string): Specifies the URL of the image."
-   #?(:cljs (h/factory-apply suir/CommentAvatar)))
+  #?(:cljs (h/factory-apply suir/CommentAvatar)))
 
 (def ui-comment-content
   "A comment can contain content.
@@ -371,7 +371,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/CommentContent)))
+  #?(:cljs (h/factory-apply suir/CommentContent)))
 
 (def ui-comment-group
   "Comments can be grouped.
@@ -385,7 +385,7 @@
     - minimal (bool): Comments can hide extra information unless a user shows intent to interact with a comment.
     - size (enum): Comments can have different sizes. (mini, tiny, small, large, big, huge, massive)
     - threaded (bool): A comment list can be threaded to showing the relationship between conversations."
-   #?(:cljs (h/factory-apply suir/CommentGroup)))
+  #?(:cljs (h/factory-apply suir/CommentGroup)))
 
 (def ui-comment-metadata
   "A comment can contain metadata about the comment, an arbitrary amount of metadata may be defined.
@@ -395,7 +395,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/CommentMetadata)))
+  #?(:cljs (h/factory-apply suir/CommentMetadata)))
 
 (def ui-comment-text
   "A comment can contain text.
@@ -405,7 +405,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/CommentText)))
+  #?(:cljs (h/factory-apply suir/CommentText)))
 
 (def ui-confirm
   "A Confirm modal gives the user a choice to confirm or cancel an action.
@@ -419,7 +419,7 @@
     - onConfirm (func): Called when the OK button is clicked.
     - open (bool): Whether or not the modal is visible.
     - size (enum): A Confirm can vary in size (mini, tiny, small, large, fullscreen)"
-   #?(:cljs (h/factory-apply suir/Confirm)))
+  #?(:cljs (h/factory-apply suir/Confirm)))
 
 (def ui-container
   "A container limits content to a maximum width.
@@ -432,7 +432,7 @@
     - fluid (bool): Container has no maximum width.
     - text (bool): Reduce maximum width to more naturally accommodate text.
     - textAlign (enum): Align container text. (left, center, right, justified)"
-   #?(:cljs (h/factory-apply suir/Container)))
+  #?(:cljs (h/factory-apply suir/Container)))
 
 (def ui-dimmer
   "A dimmer hides distractions to focus attention on particular content.
@@ -440,7 +440,7 @@
   Props:
     - active (bool): An active dimmer will dim its parent container.
     - page (bool): A dimmer can be formatted to be fixed to the page."
-   #?(:cljs (h/factory-apply suir/Dimmer)))
+  #?(:cljs (h/factory-apply suir/Dimmer)))
 
 (def ui-dimmer-dimmable
   "A dimmable sub-component for Dimmer.
@@ -452,7 +452,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - dimmed (bool): Controls whether or not the dim is displayed."
-   #?(:cljs (h/factory-apply suir/DimmerDimmable)))
+  #?(:cljs (h/factory-apply suir/DimmerDimmable)))
 
 (def ui-dimmer-inner
   "An inner element for a Dimmer.
@@ -470,7 +470,7 @@
     - page (bool): A dimmer can be formatted to be fixed to the page.
     - simple (bool): A dimmer can be controlled with simple prop.
     - verticalAlign (enum): A dimmer can have its content top or bottom aligned. (bottom, top)"
-   #?(:cljs (h/factory-apply suir/DimmerInner)))
+  #?(:cljs (h/factory-apply suir/DimmerInner)))
 
 (def ui-divider
   "A divider visually segments content into groups.
@@ -487,7 +487,7 @@
     - inverted (bool): Divider can have its colours inverted.
     - section (bool): Divider can provide greater margins to divide sections of content.
     - vertical (bool): Divider can segment content vertically."
-   #?(:cljs (h/factory-apply suir/Divider)))
+  #?(:cljs (h/factory-apply suir/Divider)))
 
 (def ui-dropdown
   "A dropdown allows a user to select a value from a series of options.
@@ -558,7 +558,7 @@
     - upward (bool): Controls whether the dropdown will open upward.
     - value (bool|string|number|arrayOf): Current value or value array if multiple. Creates a controlled component. ()
     - wrapSelection (bool): A dropdown will go to the last element when ArrowUp is pressed on the first,"
-   #?(:cljs (h/factory-apply suir/Dropdown)))
+  #?(:cljs (h/factory-apply suir/Dropdown)))
 
 (def ui-dropdown-divider
   "A dropdown menu can contain dividers to separate related content.
@@ -566,7 +566,7 @@
   Props:
     - as (elementType): An element type to render as (string or function).
     - className (string): Additional classes."
-   #?(:cljs (h/factory-apply suir/DropdownDivider)))
+  #?(:cljs (h/factory-apply suir/DropdownDivider)))
 
 (def ui-dropdown-header
   "A dropdown menu can contain a header.
@@ -577,7 +577,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - icon (custom): Shorthand for Icon."
-   #?(:cljs (h/factory-apply suir/DropdownHeader)))
+  #?(:cljs (h/factory-apply suir/DropdownHeader)))
 
 (def ui-dropdown-item
   "An item sub-component for Dropdown component.
@@ -598,7 +598,7 @@
     - selected (bool): The item currently selected by keyboard shortcut.
     - text (custom): Display text.
     - value (bool|number|string): Stored value. ()"
-   #?(:cljs (h/factory-apply suir/DropdownItem)))
+  #?(:cljs (h/factory-apply suir/DropdownItem)))
 
 (def ui-dropdown-menu
   "A dropdown menu can contain a menu.
@@ -611,7 +611,7 @@
     - direction (enum): A dropdown menu can open to the left or to the right. (left, right)
     - open (bool): Whether or not the dropdown menu is displayed.
     - scrolling (bool): A dropdown menu can scroll."
-   #?(:cljs (h/factory-apply suir/DropdownMenu)))
+  #?(:cljs (h/factory-apply suir/DropdownMenu)))
 
 (def ui-dropdown-search-input
   "A search item sub-component for Dropdown component.
@@ -623,7 +623,7 @@
     - tabIndex (number|string): An input can receive focus. ()
     - type (string): The HTML input type.
     - value (number|string): Stored value. ()"
-   #?(:cljs (h/wrapped-factory-apply suir/DropdownSearchInput)))
+  #?(:cljs (h/wrapped-factory-apply suir/DropdownSearchInput)))
 
 (def ui-dropdown-text
   "A dropdown contains a selected value.
@@ -633,7 +633,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/DropdownText)))
+  #?(:cljs (h/factory-apply suir/DropdownText)))
 
 (def ui-embed
   "An embed displays content from other websites like YouTube videos or Google Maps.
@@ -657,7 +657,7 @@
     - placeholder (string): A placeholder image for embed.
     - source (enum): Specifies a source to use. (youtube, vimeo)
     - url (string): Specifies a url to use for embed. ()"
-   #?(:cljs (h/factory-apply suir/Embed)))
+  #?(:cljs (h/factory-apply suir/Embed)))
 
 (def ui-feed
   "A feed presents user activity chronologically.
@@ -668,7 +668,7 @@
     - className (string): Additional classes.
     - events (custom): Shorthand array of props for FeedEvent.
     - size (enum): A feed can have different sizes. (small, large)"
-   #?(:cljs (h/factory-apply suir/Feed)))
+  #?(:cljs (h/factory-apply suir/Feed)))
 
 (def ui-feed-content
   "
@@ -683,7 +683,7 @@
     - extraText (custom): Shorthand for FeedExtra with text.
     - meta (custom): Shorthand for FeedMeta.
     - summary (custom): Shorthand for FeedSummary."
-   #?(:cljs (h/factory-apply suir/FeedContent)))
+  #?(:cljs (h/factory-apply suir/FeedContent)))
 
 (def ui-feed-date
   "An event or an event summary can contain a date.
@@ -693,7 +693,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/FeedDate)))
+  #?(:cljs (h/factory-apply suir/FeedDate)))
 
 (def ui-feed-event
   "A feed contains an event.
@@ -710,7 +710,7 @@
     - image (custom): An event can contain image label.
     - meta (custom): Shorthand for FeedMeta.
     - summary (custom): Shorthand for FeedSummary."
-   #?(:cljs (h/factory-apply suir/FeedEvent)))
+  #?(:cljs (h/factory-apply suir/FeedEvent)))
 
 (def ui-feed-extra
   "A feed can contain an extra content.
@@ -722,7 +722,7 @@
     - content (custom): Shorthand for primary content.
     - images (union): An event can contain additional information like a set of images. ()
     - text (bool): An event can contain additional text information."
-   #?(:cljs (h/factory-apply suir/FeedExtra)))
+  #?(:cljs (h/factory-apply suir/FeedExtra)))
 
 (def ui-feed-label
   "An event can contain an image or icon label.
@@ -734,7 +734,7 @@
     - content (custom): Shorthand for primary content.
     - icon (custom): An event can contain icon label.
     - image (custom): An event can contain image label."
-   #?(:cljs (h/factory-apply suir/FeedLabel)))
+  #?(:cljs (h/factory-apply suir/FeedLabel)))
 
 (def ui-feed-like
   "A feed can contain a like element.
@@ -745,7 +745,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - icon (custom): Shorthand for icon. Mutually exclusive with children."
-   #?(:cljs (h/factory-apply suir/FeedLike)))
+  #?(:cljs (h/factory-apply suir/FeedLike)))
 
 (def ui-feed-meta
   "A feed can contain a meta.
@@ -756,7 +756,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - like (custom): Shorthand for FeedLike."
-   #?(:cljs (h/factory-apply suir/FeedMeta)))
+  #?(:cljs (h/factory-apply suir/FeedMeta)))
 
 (def ui-feed-summary
   "A feed can contain a summary.
@@ -768,7 +768,7 @@
     - content (custom): Shorthand for primary content.
     - date (custom): Shorthand for FeedDate.
     - user (custom): Shorthand for FeedUser."
-   #?(:cljs (h/factory-apply suir/FeedSummary)))
+  #?(:cljs (h/factory-apply suir/FeedSummary)))
 
 (def ui-feed-user
   "A feed can contain a user element.
@@ -778,7 +778,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/FeedUser)))
+  #?(:cljs (h/factory-apply suir/FeedUser)))
 
 (def ui-flag
   "A flag is is used to represent a political state.
@@ -787,7 +787,7 @@
     - as (elementType): An element type to render as (string or function).
     - className (string): Additional classes.
     - name (enum): Flag name, can use the two digit country code, the full name, or a common alias. (ad, andorra, ae, united arab emirates, uae, af, afghanistan, ag, antigua, ai, anguilla, al, albania, am, armenia, an, netherlands antilles, ao, angola, ar, argentina, as, american samoa, at, austria, au, australia, aw, aruba, ax, aland islands, az, azerbaijan, ba, bosnia, bb, barbados, bd, bangladesh, be, belgium, bf, burkina faso, bg, bulgaria, bh, bahrain, bi, burundi, bj, benin, bm, bermuda, bn, brunei, bo, bolivia, br, brazil, bs, bahamas, bt, bhutan, bv, bouvet island, bw, botswana, by, belarus, bz, belize, ca, canada, cc, cocos islands, cd, congo, cf, central african republic, cg, congo brazzaville, ch, switzerland, ci, cote divoire, ck, cook islands, cl, chile, cm, cameroon, cn, china, co, colombia, cr, costa rica, cs, cu, cuba ...)"
-   #?(:cljs (h/factory-apply suir/Flag)))
+  #?(:cljs (h/factory-apply suir/Flag)))
 
 (def ui-form
   "A Form displays a set of related user input fields in a structured way.
@@ -807,7 +807,7 @@
     - unstackable (bool): A form can prevent itself from stacking on mobile.
     - warning (bool): Automatically show any warning Message children.
     - widths (enum): Forms can automatically divide fields to be equal width. (equal)"
-   #?(:cljs (h/factory-apply suir/Form)))
+  #?(:cljs (h/factory-apply suir/Form)))
 
 (def ui-form-button
   "Sugar for <Form.Field control={Button} />.
@@ -815,7 +815,7 @@
   Props:
     - as (elementType): An element type to render as (string or function).
     - control (custom): A FormField control prop."
-   #?(:cljs (h/factory-apply suir/FormButton)))
+  #?(:cljs (h/factory-apply suir/FormButton)))
 
 (def ui-form-checkbox
   "Sugar for <Form.Field control={Checkbox} />.
@@ -823,7 +823,7 @@
   Props:
     - as (elementType): An element type to render as (string or function).
     - control (custom): A FormField control prop."
-   #?(:cljs (h/factory-apply suir/FormCheckbox)))
+  #?(:cljs (h/factory-apply suir/FormCheckbox)))
 
 (def ui-form-dropdown
   "Sugar for <Form.Field control={Dropdown} />.
@@ -831,7 +831,7 @@
   Props:
     - as (elementType): An element type to render as (string or function).
     - control (custom): A FormField control prop."
-   #?(:cljs (h/factory-apply suir/FormDropdown)))
+  #?(:cljs (h/factory-apply suir/FormDropdown)))
 
 (def ui-form-field
   "A field is a form element containing a label and an input.
@@ -850,7 +850,7 @@
     - required (bool): A field can show that input is mandatory.
     - type (): Passed to the control component (i.e. <input type='password' />) ()
     - width (enum): A field can specify its width in grid columns (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
-   #?(:cljs (h/factory-apply suir/FormField)))
+  #?(:cljs (h/factory-apply suir/FormField)))
 
 (def ui-form-group
   "A set of fields can appear grouped together.
@@ -863,7 +863,7 @@
     - inline (bool): Multiple fields may be inline in a row. ()
     - unstackable (bool): A form group can prevent itself from stacking on mobile.
     - widths (enum): Fields Groups can specify their width in grid columns or automatically divide fields to be equal width. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, equal)"
-   #?(:cljs (h/factory-apply suir/FormGroup)))
+  #?(:cljs (h/factory-apply suir/FormGroup)))
 
 (def ui-form-input
   "Sugar for <Form.Field control={Input} />.
@@ -871,7 +871,7 @@
   Props:
     - as (elementType): An element type to render as (string or function).
     - control (custom): A FormField control prop."
-   #?(:cljs (h/wrapped-factory-apply suir/FormInput)))
+  #?(:cljs (h/wrapped-factory-apply suir/FormInput)))
 
 (def ui-form-radio
   "Sugar for <Form.Field control={Radio} />.
@@ -879,7 +879,7 @@
   Props:
     - as (elementType): An element type to render as (string or function).
     - control (custom): A FormField control prop."
-   #?(:cljs (h/factory-apply suir/FormRadio)))
+  #?(:cljs (h/factory-apply suir/FormRadio)))
 
 (def ui-form-select
   "Sugar for <Form.Field control={Select} />.
@@ -888,7 +888,7 @@
     - as (elementType): An element type to render as (string or function).
     - control (custom): A FormField control prop.
     - options (arrayOf): Array of Dropdown.Item props e.g. `{ text: '', value: '' }` ([:name \"shape\"], [:value \"Dropdown.Item.propTypes\"], [:computed true])"
-   #?(:cljs (h/factory-apply suir/FormSelect)))
+  #?(:cljs (h/factory-apply suir/FormSelect)))
 
 (def ui-form-text-area
   "Sugar for <Form.Field control={TextArea} />.
@@ -896,7 +896,7 @@
   Props:
     - as (elementType): An element type to render as (string or function).
     - control (custom): A FormField control prop."
-   #?(:cljs (h/factory-apply suir/FormTextArea)))
+  #?(:cljs (h/factory-apply suir/FormTextArea)))
 
 (def ui-grid
   "A grid is used to harmonize negative space in a layout.
@@ -919,7 +919,7 @@
     - stretched (bool): A grid can stretch its contents to take up the entire grid height.
     - textAlign (enum): A grid can specify its text alignment. (left, center, right, justified)
     - verticalAlign (enum): A grid can specify its vertical alignment to have all its columns vertically centered. (bottom, middle, top)"
-   #?(:cljs (h/factory-apply suir/Grid)))
+  #?(:cljs (h/factory-apply suir/Grid)))
 
 (def ui-grid-column
   "A column sub-component for Grid.
@@ -940,7 +940,7 @@
     - verticalAlign (enum): A column can specify its vertical alignment to have all its columns vertically centered. (bottom, middle, top)
     - widescreen (enum): A column can specify a width for a wide screen device. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)
     - width (enum): Represents width of column. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
-   #?(:cljs (h/factory-apply suir/GridColumn)))
+  #?(:cljs (h/factory-apply suir/GridColumn)))
 
 (def ui-grid-row
   "A row sub-component for Grid.
@@ -958,7 +958,7 @@
     - stretched (bool): A row can stretch its contents to take up the entire column height.
     - textAlign (enum): A row can specify its text alignment. (left, center, right, justified)
     - verticalAlign (enum): A row can specify its vertical alignment to have all its columns vertically centered. (bottom, middle, top)"
-   #?(:cljs (h/factory-apply suir/GridRow)))
+  #?(:cljs (h/factory-apply suir/GridRow)))
 
 (def ui-header
   "A header provides a short summary of content
@@ -981,7 +981,7 @@
     - sub (bool): Headers may be formatted to label smaller or de-emphasized content.
     - subheader (custom): Shorthand for Header.Subheader.
     - textAlign (enum): Align header content. (left, center, right, justified)"
-   #?(:cljs (h/factory-apply suir/Header)))
+  #?(:cljs (h/factory-apply suir/Header)))
 
 (def ui-header-content
   "Header content wraps the main content when there is an adjacent Icon or Image.
@@ -991,7 +991,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/HeaderContent)))
+  #?(:cljs (h/factory-apply suir/HeaderContent)))
 
 (def ui-header-subheader
   "Headers may contain subheaders.
@@ -1001,7 +1001,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/HeaderSubheader)))
+  #?(:cljs (h/factory-apply suir/HeaderSubheader)))
 
 (def ui-icon
   "An icon is a glyph used to represent something else.
@@ -1024,7 +1024,7 @@
     - name (enum): Name of the icon. (american sign language interpreting, assistive listening systems, audio description, blind, braille, closed captioning, closed captioning outline, deaf, low vision, phone volume, question circle, question circle outline, sign language, tty, universal access, wheelchair, angle double down, angle double left, angle double right, angle double up, angle down, angle left, angle right, angle up, arrow alternate circle down, arrow alternate circle down outline, arrow alternate circle left, arrow alternate circle left outline, arrow alternate circle right, arrow alternate circle right outline, arrow alternate circle up, arrow alternate circle up outline, arrow circle down, arrow circle left, arrow circle right, arrow circle up, arrow down, arrow left, arrow right, arrow up, arrows alternate, arrows alternate horizontal, arrows alternate vertical, caret down, caret left, caret right, caret square down, caret square down outline, caret square left, caret square left outline, caret square right, caret square right outline, caret square up, caret square up outline, caret up, cart arrow down, chart line, chevron circle down, chevron circle left, chevron circle right, chevron circle up, chevron down, chevron left, chevron right, chevron up, cloud download, cloud upload, download, exchange, expand arrows alternate, external alternate, external square alternate, hand point down, hand point down outline, hand point left, hand point left outline, hand point right, hand point right outline, hand point up, hand point up outline, hand pointer, hand pointer outline, history, level down alternate, level up alternate, location arrow, long arrow alternate down, long arrow alternate left, long arrow alternate right, long arrow alternate up, mouse pointer, play, random, recycle, redo, redo alternate, reply, reply all, retweet, share ...)
     - rotated (enum): Icon can rotated. (clockwise, counterclockwise)
     - size (enum): Size of the icon. (mini, tiny, small, large, big, huge, massive)"
-   #?(:cljs (h/factory-apply suir/Icon)))
+  #?(:cljs (h/factory-apply suir/Icon)))
 
 (def ui-icon-group
   "Several icons can be used together as a group.
@@ -1035,7 +1035,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - size (enum): Size of the icon group. (mini, tiny, small, large, big, huge, massive)"
-   #?(:cljs (h/factory-apply suir/IconGroup)))
+  #?(:cljs (h/factory-apply suir/IconGroup)))
 
 (def ui-image
   "An image is a graphic representation of something.
@@ -1063,7 +1063,7 @@
     - ui (bool): Whether or not to add the ui className.
     - verticalAlign (enum): An image can specify its vertical alignment. (bottom, middle, top)
     - wrapped (bool): An image can render wrapped in a `div.ui.image` as alternative HTML markup."
-   #?(:cljs (h/factory-apply suir/Image)))
+  #?(:cljs (h/factory-apply suir/Image)))
 
 (def ui-image-group
   "A group of images.
@@ -1074,7 +1074,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - size (enum): A group of images can be formatted to have the same size. (mini, tiny, small, medium, large, big, huge, massive)"
-   #?(:cljs (h/factory-apply suir/ImageGroup)))
+  #?(:cljs (h/factory-apply suir/ImageGroup)))
 
 (def ui-input
   "An Input is a field used to elicit a response from a user.
@@ -1101,7 +1101,7 @@
     - tabIndex (number|string): An Input can receive focus. ()
     - transparent (bool): Transparent Input has no background.
     - type (string): The HTML input type."
-   #?(:cljs (h/wrapped-factory-apply suir/Input)))
+  #?(:cljs (h/wrapped-factory-apply suir/Input)))
 
 (def ui-item
   "An item view presents large collections of site content for display.
@@ -1116,7 +1116,7 @@
     - header (custom): Shorthand for ItemHeader component.
     - image (custom): Shorthand for ItemImage component.
     - meta (custom): Shorthand for ItemMeta component."
-   #?(:cljs (h/factory-apply suir/Item)))
+  #?(:cljs (h/factory-apply suir/Item)))
 
 (def ui-item-content
   "An item can contain content.
@@ -1131,7 +1131,7 @@
     - header (custom): Shorthand for ItemHeader component.
     - meta (custom): Shorthand for ItemMeta component.
     - verticalAlign (enum): Content can specify its vertical alignment. (bottom, middle, top)"
-   #?(:cljs (h/factory-apply suir/ItemContent)))
+  #?(:cljs (h/factory-apply suir/ItemContent)))
 
 (def ui-item-description
   "An item can contain a description with a single or multiple paragraphs.
@@ -1141,7 +1141,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/ItemDescription)))
+  #?(:cljs (h/factory-apply suir/ItemDescription)))
 
 (def ui-item-extra
   "An item can contain extra content meant to be formatted separately from the main content.
@@ -1151,7 +1151,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/ItemExtra)))
+  #?(:cljs (h/factory-apply suir/ItemExtra)))
 
 (def ui-item-group
   "A group of items.
@@ -1166,7 +1166,7 @@
     - link (bool): An item can be formatted so that the entire contents link to another page.
     - relaxed (bool|enum): A group of items can relax its padding to provide more negative space. (very)
     - unstackable (bool): Prevent items from stacking on mobile."
-   #?(:cljs (h/factory-apply suir/ItemGroup)))
+  #?(:cljs (h/factory-apply suir/ItemGroup)))
 
 (def ui-item-header
   "An item can contain a header.
@@ -1176,14 +1176,14 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/ItemHeader)))
+  #?(:cljs (h/factory-apply suir/ItemHeader)))
 
 (def ui-item-image
   "An item can contain an image.
 
   Props:
     - size (custom): An image may appear at different sizes."
-   #?(:cljs (h/factory-apply suir/ItemImage)))
+  #?(:cljs (h/factory-apply suir/ItemImage)))
 
 (def ui-item-meta
   "An item can contain content metadata.
@@ -1193,7 +1193,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/ItemMeta)))
+  #?(:cljs (h/factory-apply suir/ItemMeta)))
 
 (def ui-label
   "A label displays content classification.
@@ -1223,7 +1223,7 @@
     - ribbon (bool|enum): A label can appear as a ribbon attaching itself to an element. (right)
     - size (enum): A label can have different sizes. (mini, tiny, small, medium, large, big, huge, massive)
     - tag (bool): A label can appear as a tag."
-   #?(:cljs (h/factory-apply suir/Label)))
+  #?(:cljs (h/factory-apply suir/Label)))
 
 (def ui-label-detail
   "
@@ -1233,7 +1233,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/LabelDetail)))
+  #?(:cljs (h/factory-apply suir/LabelDetail)))
 
 (def ui-label-group
   "A label can be grouped.
@@ -1247,7 +1247,7 @@
     - content (custom): Shorthand for primary content.
     - size (enum): Label group can share sizes together. (mini, tiny, small, medium, large, big, huge, massive)
     - tag (bool): Label group can share tag formatting."
-   #?(:cljs (h/factory-apply suir/LabelGroup)))
+  #?(:cljs (h/factory-apply suir/LabelGroup)))
 
 (def ui-list
   "A list groups related content.
@@ -1272,7 +1272,7 @@
     - selection (bool): A selection list formats list items as possible choices.
     - size (enum): A list can vary in size. (mini, tiny, small, medium, large, big, huge, massive)
     - verticalAlign (enum): An element inside a list can be vertically aligned. (bottom, middle, top)"
-   #?(:cljs (h/factory-apply suir/List)))
+  #?(:cljs (h/factory-apply suir/List)))
 
 (def ui-list-content
   "A list item can contain a content.
@@ -1286,7 +1286,7 @@
     - floated (enum): An list content can be floated left or right. (left, right)
     - header (custom): Shorthand for ListHeader.
     - verticalAlign (enum): An element inside a list can be vertically aligned. (bottom, middle, top)"
-   #?(:cljs (h/factory-apply suir/ListContent)))
+  #?(:cljs (h/factory-apply suir/ListContent)))
 
 (def ui-list-description
   "A list item can contain a description.
@@ -1296,7 +1296,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/ListDescription)))
+  #?(:cljs (h/factory-apply suir/ListDescription)))
 
 (def ui-list-header
   "A list item can contain a header.
@@ -1306,7 +1306,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/ListHeader)))
+  #?(:cljs (h/factory-apply suir/ListHeader)))
 
 (def ui-list-icon
   "A list item can contain an icon.
@@ -1314,7 +1314,7 @@
   Props:
     - className (string): Additional classes.
     - verticalAlign (enum): An element inside a list can be vertically aligned. (bottom, middle, top)"
-   #?(:cljs (h/factory-apply suir/ListIcon)))
+  #?(:cljs (h/factory-apply suir/ListIcon)))
 
 (def ui-list-item
   "A list item can contain a set of items.
@@ -1332,7 +1332,7 @@
     - image (custom): Shorthand for Image. ()
     - onClick (func): A ListItem can be clicked
     - value (string): A value for an ordered list."
-   #?(:cljs (h/factory-apply suir/ListItem)))
+  #?(:cljs (h/factory-apply suir/ListItem)))
 
 (def ui-list-list
   "A list can contain a sub list.
@@ -1342,7 +1342,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/ListList)))
+  #?(:cljs (h/factory-apply suir/ListList)))
 
 (def ui-loader
   "A loader alerts a user to wait for an activity to complete.
@@ -1358,7 +1358,7 @@
     - inline (bool|enum): Loaders can appear inline with content. (centered)
     - inverted (bool): Loaders can have their colors inverted.
     - size (enum): Loaders can have different sizes. (mini, tiny, small, medium, large, big, huge, massive)"
-   #?(:cljs (h/factory-apply suir/Loader)))
+  #?(:cljs (h/factory-apply suir/Loader)))
 
 (def ui-menu
   "A menu displays grouped navigation actions.
@@ -1389,7 +1389,7 @@
     - text (bool): A menu can be formatted for text content.
     - vertical (bool): A vertical menu displays elements vertically.
     - widths (enum): A menu can have its items divided evenly. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
-   #?(:cljs (h/factory-apply suir/Menu)))
+  #?(:cljs (h/factory-apply suir/Menu)))
 
 (def ui-menu-header
   "A menu item may include a header or may itself be a header.
@@ -1399,7 +1399,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/MenuHeader)))
+  #?(:cljs (h/factory-apply suir/MenuHeader)))
 
 (def ui-menu-item
   "A menu can contain an item.
@@ -1420,7 +1420,7 @@
     - name (string): Internal name of the MenuItem.
     - onClick (func): Called on click. When passed, the component will render as an `a`
     - position (enum): A menu item can take left or right position. (left, right)"
-   #?(:cljs (h/factory-apply suir/MenuItem)))
+  #?(:cljs (h/factory-apply suir/MenuItem)))
 
 (def ui-menu-menu
   "A menu can contain a sub menu.
@@ -1431,7 +1431,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - position (enum): A sub menu can take left or right position. (left, right)"
-   #?(:cljs (h/factory-apply suir/MenuMenu)))
+  #?(:cljs (h/factory-apply suir/MenuMenu)))
 
 (def ui-message
   "A message displays information that explains nearby content.
@@ -1458,7 +1458,7 @@
     - success (bool): A message may be formatted to display a positive message.  Same as `positive`.
     - visible (bool): A message can be set to visible to force itself to be shown.
     - warning (bool): A message may be formatted to display warning messages."
-   #?(:cljs (h/factory-apply suir/Message)))
+  #?(:cljs (h/factory-apply suir/Message)))
 
 (def ui-message-content
   "A message can contain a content.
@@ -1468,7 +1468,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/MessageContent)))
+  #?(:cljs (h/factory-apply suir/MessageContent)))
 
 (def ui-message-header
   "A message can contain a header.
@@ -1478,7 +1478,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/MessageHeader)))
+  #?(:cljs (h/factory-apply suir/MessageHeader)))
 
 (def ui-message-item
   "A message list can contain an item.
@@ -1488,7 +1488,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/MessageItem)))
+  #?(:cljs (h/factory-apply suir/MessageItem)))
 
 (def ui-message-list
   "A message can contain a list of items.
@@ -1498,7 +1498,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - items (custom): Shorthand Message.Items."
-   #?(:cljs (h/factory-apply suir/MessageList)))
+  #?(:cljs (h/factory-apply suir/MessageList)))
 
 (def ui-modal
   "A modal displays content that temporarily blocks interactions with the main view of a site.
@@ -1528,7 +1528,7 @@
     - size (enum): A modal can vary in size (mini, tiny, small, large, fullscreen)
     - style (object): Custom styles.
     - trigger (node): Element to be rendered in-place where the modal is defined."
-   #?(:cljs (h/factory-apply suir/Modal)))
+  #?(:cljs (h/factory-apply suir/Modal)))
 
 (def ui-modal-actions
   "A modal can contain a row of actions.
@@ -1540,7 +1540,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - onActionClick (func): Action onClick handler when using shorthand `actions`. ()"
-   #?(:cljs (h/factory-apply suir/ModalActions)))
+  #?(:cljs (h/factory-apply suir/ModalActions)))
 
 (def ui-modal-content
   "A modal can contain content.
@@ -1552,7 +1552,7 @@
     - content (custom): Shorthand for primary content.
     - image (bool): A modal can contain image content.
     - scrolling (bool): A modal can use the entire size of the screen."
-   #?(:cljs (h/factory-apply suir/ModalContent)))
+  #?(:cljs (h/factory-apply suir/ModalContent)))
 
 (def ui-modal-description
   "A modal can contain a description with one or more paragraphs.
@@ -1562,7 +1562,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/ModalDescription)))
+  #?(:cljs (h/factory-apply suir/ModalDescription)))
 
 (def ui-modal-dimmer
   "A modal has a dimmer.
@@ -1577,7 +1577,7 @@
     - inverted (bool): A dimmer can be inverted.
     - mountNode (any): The node where the modal should mount. Defaults to document.body.
     - scrolling (bool): A dimmer can make body scrollable."
-   #?(:cljs (h/factory-apply suir/ModalDimmer)))
+  #?(:cljs (h/factory-apply suir/ModalDimmer)))
 
 (def ui-modal-header
   "A modal can have a header.
@@ -1587,7 +1587,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/ModalHeader)))
+  #?(:cljs (h/factory-apply suir/ModalHeader)))
 
 (def ui-pagination
   "A component to render a pagination.
@@ -1607,7 +1607,7 @@
     - prevItem (custom): A shorthand for PaginationItem.
     - siblingRange (number|string): Number of always visible pages before and after the current one. ()
     - totalPages (number|string): Total number of pages. ()"
-   #?(:cljs (h/factory-apply suir/Pagination)))
+  #?(:cljs (h/factory-apply suir/Pagination)))
 
 (def ui-pagination-item
   "An item of a pagination.
@@ -1618,7 +1618,7 @@
     - onClick (func): Called on click.
     - onKeyDown (func): Called on key down.
     - type (enum): A pagination should have a type. (ellipsisItem, firstItem, prevItem, pageItem, nextItem, lastItem)"
-   #?(:cljs (h/factory-apply suir/PaginationItem)))
+  #?(:cljs (h/factory-apply suir/PaginationItem)))
 
 (def ui-placeholder
   "A placeholder is used to reserve space for content that soon will appear in a layout.
@@ -1630,7 +1630,7 @@
     - content (custom): Shorthand for primary content.
     - fluid (bool): A fluid placeholder takes up the width of its container.
     - inverted (bool): A placeholder can have their colors inverted."
-   #?(:cljs (h/factory-apply suir/Placeholder)))
+  #?(:cljs (h/factory-apply suir/Placeholder)))
 
 (def ui-placeholder-header
   "A placeholder can contain a header.
@@ -1641,7 +1641,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - image (bool): A placeholder can contain an image."
-   #?(:cljs (h/factory-apply suir/PlaceholderHeader)))
+  #?(:cljs (h/factory-apply suir/PlaceholderHeader)))
 
 (def ui-placeholder-image
   "A placeholder can contain an image.
@@ -1651,7 +1651,7 @@
     - className (string): Additional classes.
     - rectangular (bool): An image can modify size correctly with responsive styles. ()
     - square (bool): An image can modify size correctly with responsive styles. ()"
-   #?(:cljs (h/factory-apply suir/PlaceholderImage)))
+  #?(:cljs (h/factory-apply suir/PlaceholderImage)))
 
 (def ui-placeholder-line
   "A placeholder can contain have lines of text.
@@ -1660,7 +1660,7 @@
     - as (elementType): An element type to render as (string or function).
     - className (string): Additional classes.
     - length (enum): A line can specify how long its contents should appear. (full, very long, long, medium, short, very short)"
-   #?(:cljs (h/factory-apply suir/PlaceholderLine)))
+  #?(:cljs (h/factory-apply suir/PlaceholderLine)))
 
 (def ui-placeholder-paragraph
   "A placeholder can contain a paragraph.
@@ -1670,7 +1670,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/PlaceholderParagraph)))
+  #?(:cljs (h/factory-apply suir/PlaceholderParagraph)))
 
 (def ui-popup
   "A Popup displays additional information on top of a page.
@@ -1705,7 +1705,7 @@
     - style (object): Custom Popup style.
     - trigger (node): Element to be rendered in-place where the popup is defined.
     - wide (bool|enum): Popup width. (very)"
-   #?(:cljs (h/factory-apply suir/Popup)))
+  #?(:cljs (h/factory-apply suir/Popup)))
 
 (def ui-popup-content
   "A PopupContent displays the content body of a Popover.
@@ -1715,7 +1715,7 @@
     - children (node): The content of the Popup
     - className (string): Classes to add to the Popup content className.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/PopupContent)))
+  #?(:cljs (h/factory-apply suir/PopupContent)))
 
 (def ui-popup-header
   "A PopupHeader displays a header in a Popover.
@@ -1725,7 +1725,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/PopupHeader)))
+  #?(:cljs (h/factory-apply suir/PopupHeader)))
 
 (def ui-portal
   "A component that allows you to render children outside their parent.
@@ -1753,7 +1753,7 @@
     - openOnTriggerMouseEnter (bool): Controls whether or not the portal should open when mousing over the trigger.
     - trigger (node): Element to be rendered in-place where the portal is defined.
     - triggerRef (custom): Called with a ref to the trigger node."
-   #?(:cljs (h/factory-apply suir/Portal)))
+  #?(:cljs (h/factory-apply suir/Portal)))
 
 (def ui-portal-inner
   "An inner component that allows you to render children outside their parent.
@@ -1764,7 +1764,7 @@
     - mountNode (any): The node where the portal should mount.
     - onMount (func): Called when the portal is mounted on the DOM
     - onUnmount (func): Called when the portal is unmounted from the DOM"
-   #?(:cljs (h/factory-apply suir/PortalInner)))
+  #?(:cljs (h/factory-apply suir/PortalInner)))
 
 (def ui-progress
   "A progress bar shows the progression of a task.
@@ -1791,7 +1791,7 @@
     - total (union): For use with value. Together, these will calculate the percent. Mutually excludes percent. ()
     - value (union): For use with total. Together, these will calculate the percent. Mutually excludes percent. ()
     - warning (bool): A progress bar can show a warning state."
-   #?(:cljs (h/factory-apply suir/Progress)))
+  #?(:cljs (h/factory-apply suir/Progress)))
 
 (def ui-radio
   "A Radio is sugar for <Checkbox radio />.
@@ -1801,7 +1801,7 @@
     - slider (custom): Format to emphasize the current selection state.
     - toggle (custom): Format to show an on or off choice.
     - type (custom): HTML input type, either checkbox or radio."
-   #?(:cljs (h/factory-apply suir/Radio)))
+  #?(:cljs (h/factory-apply suir/Radio)))
 
 (def ui-rail
   "A rail is used to show accompanying content outside the boundaries of the main view of a site.
@@ -1817,7 +1817,7 @@
     - internal (bool): A rail can attach itself to the inside of a container.
     - position (enum): A rail can be presented on the left or right side of a container. (left, right)
     - size (enum): A rail can have different sizes. (mini, tiny, small, large, big, huge, massive)"
-   #?(:cljs (h/factory-apply suir/Rail)))
+  #?(:cljs (h/factory-apply suir/Rail)))
 
 (def ui-rating
   "A rating indicates user interest in content.
@@ -1833,7 +1833,7 @@
     - onRate (func): Called after user selects a new rating.
     - rating (number|string): The current number of active icons. ()
     - size (enum): A progress bar can vary in size. (mini, tiny, small, large, huge, massive)"
-   #?(:cljs (h/factory-apply suir/Rating)))
+  #?(:cljs (h/factory-apply suir/Rating)))
 
 (def ui-rating-icon
   "An internal icon sub-component for Rating component
@@ -1847,7 +1847,7 @@
     - onKeyUp (func): Called on keyup.
     - onMouseEnter (func): Called on mouseenter.
     - selected (bool): Indicates selection of an icon."
-   #?(:cljs (h/factory-apply suir/RatingIcon)))
+  #?(:cljs (h/factory-apply suir/RatingIcon)))
 
 (def ui-reveal
   "A reveal displays additional content in place of previous content when activated.
@@ -1861,7 +1861,7 @@
     - content (custom): Shorthand for primary content.
     - disabled (bool): A disabled reveal will not animate when hovered.
     - instant (bool): An element can show its content without delay."
-   #?(:cljs (h/factory-apply suir/Reveal)))
+  #?(:cljs (h/factory-apply suir/Reveal)))
 
 (def ui-reveal-content
   "A content sub-component for the Reveal.
@@ -1873,7 +1873,7 @@
     - content (custom): Shorthand for primary content.
     - hidden (bool): A reveal may contain content that is visible before interaction.
     - visible (bool): A reveal may contain content that is hidden before user interaction."
-   #?(:cljs (h/factory-apply suir/RevealContent)))
+  #?(:cljs (h/factory-apply suir/RevealContent)))
 
 (def ui-search
   "A search module allows a user to query for results from a selection of data
@@ -1908,7 +1908,7 @@
     - showNoResults (bool): Whether a \"no results\" message should be shown if no results are found.
     - size (enum): A search can have different sizes. (mini, tiny, small, large, big, huge, massive)
     - value (string): Current value of the search input. Creates a controlled component."
-   #?(:cljs (h/wrapped-factory-apply suir/Search)))
+  #?(:cljs (h/wrapped-factory-apply suir/Search)))
 
 (def ui-search-category
   "
@@ -1923,7 +1923,7 @@
     - name (string): Display name.
     - renderer (func): Renders the category contents.
     - results (array): Array of Search.Result props."
-   #?(:cljs (h/factory-apply suir/SearchCategory)))
+  #?(:cljs (h/factory-apply suir/SearchCategory)))
 
 (def ui-search-category-layout
   "
@@ -1931,7 +1931,7 @@
   Props:
     - categoryContent (element): The rendered category content
     - resultsContent (element): The rendered results content"
-   #?(:cljs (h/factory-apply suir/SearchCategoryLayout)))
+  #?(:cljs (h/factory-apply suir/SearchCategoryLayout)))
 
 (def ui-search-result
   "
@@ -1948,7 +1948,7 @@
     - price (string): Customized text for price.
     - renderer (func): Renders the result contents.
     - title (string): Display title."
-   #?(:cljs (h/factory-apply suir/SearchResult)))
+  #?(:cljs (h/factory-apply suir/SearchResult)))
 
 (def ui-search-results
   "
@@ -1958,7 +1958,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/SearchResults)))
+  #?(:cljs (h/factory-apply suir/SearchResults)))
 
 (def ui-segment
   "A segment is used to create a grouping of related content.
@@ -1988,7 +1988,7 @@
     - tertiary (bool): A segment can be formatted to appear even less noticeable.
     - textAlign (enum): Formats content to be aligned as part of a vertical group. (left, center, right)
     - vertical (bool): Formats content to be aligned vertically."
-   #?(:cljs (h/factory-apply suir/Segment)))
+  #?(:cljs (h/factory-apply suir/Segment)))
 
 (def ui-segment-group
   "A group of segments can be formatted to appear together.
@@ -2004,7 +2004,7 @@
     - raised (bool): A segment group may be formatted to raise above the page.
     - size (enum): A segment group can have different sizes. (mini, tiny, small, large, big, huge, massive)
     - stacked (bool): Formatted to show it contains multiple pages."
-   #?(:cljs (h/factory-apply suir/SegmentGroup)))
+  #?(:cljs (h/factory-apply suir/SegmentGroup)))
 
 (def ui-segment-inline
   "A placeholder segment can be inline.
@@ -2014,14 +2014,14 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/SegmentInline)))
+  #?(:cljs (h/factory-apply suir/SegmentInline)))
 
 (def ui-select
   "A Select is sugar for <Dropdown selection />.
 
   Props:
     - options (arrayOf): Array of Dropdown.Item props e.g. `{ text: '', value: '' }` ([:name \"shape\"], [:value \"Dropdown.Item.propTypes\"], [:computed true])"
-   #?(:cljs (h/factory-apply suir/Select)))
+  #?(:cljs (h/factory-apply suir/Select)))
 
 (def ui-sidebar
   "A sidebar hides additional content beside a page.
@@ -2040,7 +2040,7 @@
     - target (custom|custom): A sidebar can handle clicks on the passed element. ()
     - visible (bool): Controls whether or not the sidebar is visible on the page.
     - width (enum): Sidebar width. (very thin, thin, wide, very wide)"
-   #?(:cljs (h/factory-apply suir/Sidebar)))
+  #?(:cljs (h/factory-apply suir/Sidebar)))
 
 (def ui-sidebar-pushable
   "A pushable sub-component for Sidebar.
@@ -2050,7 +2050,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/SidebarPushable)))
+  #?(:cljs (h/factory-apply suir/SidebarPushable)))
 
 (def ui-sidebar-pusher
   "A pushable sub-component for Sidebar.
@@ -2061,7 +2061,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - dimmed (bool): Controls whether or not the dim is displayed."
-   #?(:cljs (h/factory-apply suir/SidebarPusher)))
+  #?(:cljs (h/factory-apply suir/SidebarPusher)))
 
 (def ui-statistic
   "A statistic emphasizes the current value of an attribute.
@@ -2079,7 +2079,7 @@
     - size (enum): A statistic can vary in size. (mini, tiny, small, large, huge)
     - text (bool): Format the StatisticValue with smaller font size to fit nicely beside number values.
     - value (custom): Value content of the Statistic."
-   #?(:cljs (h/factory-apply suir/Statistic)))
+  #?(:cljs (h/factory-apply suir/Statistic)))
 
 (def ui-statistic-group
   "A group of statistics.
@@ -2095,7 +2095,7 @@
     - items (custom): Array of props for Statistic.
     - size (enum): A statistic group can vary in size. (mini, tiny, small, large, huge)
     - widths (enum): A statistic group can have its items divided evenly. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
-   #?(:cljs (h/factory-apply suir/StatisticGroup)))
+  #?(:cljs (h/factory-apply suir/StatisticGroup)))
 
 (def ui-statistic-label
   "A statistic can contain a label to help provide context for the presented value.
@@ -2105,7 +2105,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/StatisticLabel)))
+  #?(:cljs (h/factory-apply suir/StatisticLabel)))
 
 (def ui-statistic-value
   "A statistic can contain a numeric, icon, image, or text value.
@@ -2116,7 +2116,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - text (bool): Format the value with smaller font size to fit nicely beside number values."
-   #?(:cljs (h/factory-apply suir/StatisticValue)))
+  #?(:cljs (h/factory-apply suir/StatisticValue)))
 
 (def ui-step
   "A step shows the completion status of an activity in a series of activities.
@@ -2136,7 +2136,7 @@
     - onClick (func): Called on click. When passed, the component will render as an `a`
     - ordered (bool): A step can show a ordered sequence of steps. Passed from StepGroup.
     - title (custom): Shorthand for StepTitle."
-   #?(:cljs (h/factory-apply suir/Step)))
+  #?(:cljs (h/factory-apply suir/Step)))
 
 (def ui-step-content
   "A step can contain a content.
@@ -2148,7 +2148,7 @@
     - content (custom): Shorthand for primary content.
     - description (custom): Shorthand for StepDescription.
     - title (custom): Shorthand for StepTitle."
-   #?(:cljs (h/factory-apply suir/StepContent)))
+  #?(:cljs (h/factory-apply suir/StepContent)))
 
 (def ui-step-description
   "
@@ -2158,7 +2158,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/StepDescription)))
+  #?(:cljs (h/factory-apply suir/StepDescription)))
 
 (def ui-step-group
   "A set of steps.
@@ -2177,7 +2177,7 @@
     - unstackable (bool): A step can prevent itself from stacking on mobile.
     - vertical (bool): A step can be displayed stacked vertically.
     - widths (enum): Steps can be divided evenly inside their parent. (..._.keys(numberMap), ..._.keys(numberMap).map(Number), ..._.values(numberMap))"
-   #?(:cljs (h/factory-apply suir/StepGroup)))
+  #?(:cljs (h/factory-apply suir/StepGroup)))
 
 (def ui-step-title
   "A step can contain a title.
@@ -2187,7 +2187,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply suir/StepTitle)))
+  #?(:cljs (h/factory-apply suir/StepTitle)))
 
 (def ui-sticky
   "Sticky content stays fixed to the browser viewport while another column of content is visible on the page.
@@ -2207,7 +2207,7 @@
     - pushing (bool): Whether element should be \"pushed\" by the viewport, attaching to the bottom of the screen when scrolling up.
     - scrollContext (custom|custom): Context which sticky should attach onscroll events. ()
     - styleElement (object): Custom style for sticky element."
-   #?(:cljs (h/factory-apply suir/Sticky)))
+  #?(:cljs (h/factory-apply suir/Sticky)))
 
 (def ui-tab
   "A Tab is a hidden section of content activated by a Menu.
@@ -2222,7 +2222,7 @@
     - onTabChange (func): Called on tab change.
     - panes (arrayOf): Array of objects describing each Menu.Item and Tab.Pane: ([:name \"shape\"], [:value {:menuItem {:name \"custom\", :raw \"customPropTypes.itemShorthand\", :required false}, :pane {:name \"custom\", :raw \"customPropTypes.itemShorthand\", :required false}, :render {:name \"func\", :required false}}])
     - renderActiveOnly (bool): A Tab can render only active pane."
-   #?(:cljs (h/factory-apply suir/Tab)))
+  #?(:cljs (h/factory-apply suir/Tab)))
 
 (def ui-tab-pane
   "A tab pane holds the content of a tab.
@@ -2234,7 +2234,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - loading (bool): A Tab.Pane can display a loading indicator."
-   #?(:cljs (h/factory-apply suir/TabPane)))
+  #?(:cljs (h/factory-apply suir/TabPane)))
 
 (def ui-table
   "A table displays a collections of data grouped into rows.
@@ -2269,7 +2269,7 @@
     - textAlign (enum): A table can adjust its text alignment. (left, center, right)
     - unstackable (bool): A table can specify how it stacks table content responsively.
     - verticalAlign (enum): A table can adjust its text alignment. (bottom, middle, top)"
-   #?(:cljs (h/factory-apply suir/Table)))
+  #?(:cljs (h/factory-apply suir/Table)))
 
 (def ui-table-body
   "
@@ -2278,7 +2278,7 @@
     - as (elementType): An element type to render as (string or function).
     - children (node): Primary content.
     - className (string): Additional classes."
-   #?(:cljs (h/factory-apply suir/TableBody)))
+  #?(:cljs (h/factory-apply suir/TableBody)))
 
 (def ui-table-cell
   "A table row can have cells.
@@ -2301,14 +2301,14 @@
     - verticalAlign (enum): A table cell can adjust its text alignment. (bottom, middle, top)
     - warning (bool): A cell may warn a user.
     - width (enum): A table can specify the width of individual columns independently. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
-   #?(:cljs (h/factory-apply suir/TableCell)))
+  #?(:cljs (h/factory-apply suir/TableCell)))
 
 (def ui-table-footer
   "A table can have a footer.
 
   Props:
     - as (elementType): An element type to render as (string or function)."
-   #?(:cljs (h/factory-apply suir/TableFooter)))
+  #?(:cljs (h/factory-apply suir/TableFooter)))
 
 (def ui-table-header
   "A table can have a header.
@@ -2319,7 +2319,7 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - fullWidth (bool): A definition table can have a full width header or footer, filling in the gap left by the first column."
-   #?(:cljs (h/factory-apply suir/TableHeader)))
+  #?(:cljs (h/factory-apply suir/TableHeader)))
 
 (def ui-table-header-cell
   "A table can have a header cell.
@@ -2328,7 +2328,7 @@
     - as (elementType): An element type to render as (string or function).
     - className (string): Additional classes.
     - sorted (enum): A header cell can be sorted in ascending or descending order. (ascending, descending)"
-   #?(:cljs (h/factory-apply suir/TableHeaderCell)))
+  #?(:cljs (h/factory-apply suir/TableHeaderCell)))
 
 (def ui-table-row
   "A table can have rows.
@@ -2347,7 +2347,7 @@
     - textAlign (enum): A table row can adjust its text alignment. (left, center, right)
     - verticalAlign (enum): A table row can adjust its vertical alignment. (bottom, middle, top)
     - warning (bool): A row may warn a user."
-   #?(:cljs (h/factory-apply suir/TableRow)))
+  #?(:cljs (h/factory-apply suir/TableRow)))
 
 (def ui-text-area
   "A TextArea can be used to allow for extended user input.
@@ -2358,7 +2358,7 @@
     - onInput (func): Called on input.
     - rows (number|string): Indicates row count for a TextArea. ()
     - value (number|string): The value of the textarea. ()"
-   #?(:cljs (h/wrapped-factory-apply suir/TextArea)))
+  #?(:cljs (h/wrapped-factory-apply suir/TextArea)))
 
 (def ui-transition
   "A transition is an animation usually used to move content in or out of view.
@@ -2377,7 +2377,7 @@
     - transitionOnMount (bool): Run the enter animation when the component mounts, if it is initially shown.
     - unmountOnHide (bool): Unmount the component (remove it from the DOM) when it is not shown.
     - visible (bool): Show the component; triggers the enter or exit animation."
-   #?(:cljs (h/factory-apply suir/Transition)))
+  #?(:cljs (h/factory-apply suir/Transition)))
 
 (def ui-transition-group
   "A Transition.Group animates children as they mount and unmount.
@@ -2388,7 +2388,7 @@
     - children (node): Primary content.
     - directional (bool): Whether it is directional animation event or not. Use it only for custom transitions.
     - duration (number|shape|string): Duration of the CSS transition animation in milliseconds. ()"
-   #?(:cljs (h/factory-apply suir/TransitionGroup)))
+  #?(:cljs (h/factory-apply suir/TransitionGroup)))
 
 (def ui-transitionable-portal
   "A sugar for `Portal` and `Transition`.
@@ -2401,7 +2401,7 @@
     - onStart (func): Callback on animation start.
     - open (bool): Controls whether or not the portal is displayed.
     - transition (object): Transition props."
-   #?(:cljs (h/factory-apply suir/TransitionablePortal)))
+  #?(:cljs (h/factory-apply suir/TransitionablePortal)))
 
 (def ui-visibility
   "Visibility provides a set of callbacks for when a content appears in the viewport.
@@ -2429,4 +2429,4 @@
     - onUpdate (func): Element's top edge has passed bottom of screen.
     - once (bool): When set to false a callback will occur each time an element passes the threshold for a condition.
     - updateOn (enum): Allows to choose the mode of the position calculations: (events, repaint)"
-   #?(:cljs (h/factory-apply suir/Visibility)))
+  #?(:cljs (h/factory-apply suir/Visibility)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Popup" :as Popup])))
 
-  (def ui-popup
+(def ui-popup
   "A Popup displays additional information on top of a page.
 
   Props:
@@ -36,4 +36,5 @@
     - style (object): Custom Popup style.
     - trigger (node): Element to be rendered in-place where the popup is defined.
     - wide (bool|enum): Popup width. (very)"
-   #?(:cljs (h/factory-apply Popup)))
+  #?(:clj  (h/make-modal-stub-factory "Popup")
+     :cljs (h/factory-apply Popup)))

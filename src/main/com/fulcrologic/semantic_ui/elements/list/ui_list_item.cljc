@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ListItem" :as ListItem])))
 
-  (def ui-list-item
+(def ui-list-item
   "A list item can contain a set of items.
 
   Props:
@@ -19,4 +19,5 @@
     - image (custom): Shorthand for Image. ()
     - onClick (func): A ListItem can be clicked
     - value (string): A value for an ordered list."
-   #?(:cljs (h/factory-apply ListItem)))
+  #?(:clj  (h/make-stub-factory "ListItem")
+     :cljs (h/factory-apply ListItem)))

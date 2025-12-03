@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$FeedSummary" :as FeedSummary])))
 
-  (def ui-feed-summary
+(def ui-feed-summary
   "A feed can contain a summary.
 
   Props:
@@ -13,4 +13,5 @@
     - content (custom): Shorthand for primary content.
     - date (custom): Shorthand for FeedDate.
     - user (custom): Shorthand for FeedUser."
-   #?(:cljs (h/factory-apply FeedSummary)))
+  #?(:clj  (h/make-stub-factory "FeedSummary")
+     :cljs (h/factory-apply FeedSummary)))

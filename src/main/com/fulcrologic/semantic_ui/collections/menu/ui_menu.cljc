@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Menu" :as Menu])))
 
-  (def ui-menu
+(def ui-menu
   "A menu displays grouped navigation actions.
 
   Props:
@@ -32,4 +32,5 @@
     - text (bool): A menu can be formatted for text content.
     - vertical (bool): A vertical menu displays elements vertically.
     - widths (enum): A menu can have its items divided evenly. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
-   #?(:cljs (h/factory-apply Menu)))
+  #?(:clj  (h/make-stub-factory "Menu")
+     :cljs (h/factory-apply Menu)))

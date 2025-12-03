@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Sticky" :as Sticky])))
 
-  (def ui-sticky
+(def ui-sticky
   "Sticky content stays fixed to the browser viewport while another column of content is visible on the page.
 
   Props:
@@ -21,4 +21,5 @@
     - pushing (bool): Whether element should be \"pushed\" by the viewport, attaching to the bottom of the screen when scrolling up.
     - scrollContext (custom|custom): Context which sticky should attach onscroll events. ()
     - styleElement (object): Custom style for sticky element."
-   #?(:cljs (h/factory-apply Sticky)))
+  #?(:clj  (h/make-stub-factory "Sticky")
+     :cljs (h/factory-apply Sticky)))

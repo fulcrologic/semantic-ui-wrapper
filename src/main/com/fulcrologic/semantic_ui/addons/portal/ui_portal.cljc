@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Portal" :as Portal])))
 
-  (def ui-portal
+(def ui-portal
   "A component that allows you to render children outside their parent.
 
   Props:
@@ -29,4 +29,5 @@
     - openOnTriggerMouseEnter (bool): Controls whether or not the portal should open when mousing over the trigger.
     - trigger (node): Element to be rendered in-place where the portal is defined.
     - triggerRef (custom): Called with a ref to the trigger node."
-   #?(:cljs (h/factory-apply Portal)))
+  #?(:clj  (h/make-modal-stub-factory "Portal")
+     :cljs (h/factory-apply Portal)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$FeedEvent" :as FeedEvent])))
 
-  (def ui-feed-event
+(def ui-feed-event
   "A feed contains an event.
 
   Props:
@@ -18,4 +18,5 @@
     - image (custom): An event can contain image label.
     - meta (custom): Shorthand for FeedMeta.
     - summary (custom): Shorthand for FeedSummary."
-   #?(:cljs (h/factory-apply FeedEvent)))
+  #?(:clj  (h/make-stub-factory "FeedEvent")
+     :cljs (h/factory-apply FeedEvent)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Feed" :as Feed])))
 
-  (def ui-feed
+(def ui-feed
   "A feed presents user activity chronologically.
 
   Props:
@@ -12,4 +12,5 @@
     - className (string): Additional classes.
     - events (custom): Shorthand array of props for FeedEvent.
     - size (enum): A feed can have different sizes. (small, large)"
-   #?(:cljs (h/factory-apply Feed)))
+  #?(:clj  (h/make-stub-factory "Feed")
+     :cljs (h/factory-apply Feed)))

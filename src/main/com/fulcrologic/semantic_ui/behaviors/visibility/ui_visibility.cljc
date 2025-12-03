@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Visibility" :as Visibility])))
 
-  (def ui-visibility
+(def ui-visibility
   "Visibility provides a set of callbacks for when a content appears in the viewport.
 
   Props:
@@ -29,4 +29,5 @@
     - onUpdate (func): Element's top edge has passed bottom of screen.
     - once (bool): When set to false a callback will occur each time an element passes the threshold for a condition.
     - updateOn (enum): Allows to choose the mode of the position calculations: (events, repaint)"
-   #?(:cljs (h/factory-apply Visibility)))
+  #?(:clj  (h/make-stub-factory "Visibility")
+     :cljs (h/factory-apply Visibility)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Header" :as Header])))
 
-  (def ui-header
+(def ui-header
   "A header provides a short summary of content
 
   Props:
@@ -24,4 +24,5 @@
     - sub (bool): Headers may be formatted to label smaller or de-emphasized content.
     - subheader (custom): Shorthand for Header.Subheader.
     - textAlign (enum): Align header content. (left, center, right, justified)"
-   #?(:cljs (h/factory-apply Header)))
+  #?(:clj  (h/make-stub-factory "Header")
+     :cljs (h/factory-apply Header)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ListHeader" :as ListHeader])))
 
-  (def ui-list-header
+(def ui-list-header
   "A list item can contain a header.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply ListHeader)))
+  #?(:clj  (h/make-stub-factory "ListHeader")
+     :cljs (h/factory-apply ListHeader)))

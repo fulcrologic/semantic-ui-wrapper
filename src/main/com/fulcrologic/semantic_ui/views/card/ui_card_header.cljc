@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$CardHeader" :as CardHeader])))
 
-  (def ui-card-header
+(def ui-card-header
   "A card can contain a header.
 
   Props:
@@ -12,4 +12,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - textAlign (enum): A card header can adjust its text alignment. (left, center, right)"
-   #?(:cljs (h/factory-apply CardHeader)))
+  #?(:clj  (h/make-stub-factory "CardHeader")
+     :cljs (h/factory-apply CardHeader)))

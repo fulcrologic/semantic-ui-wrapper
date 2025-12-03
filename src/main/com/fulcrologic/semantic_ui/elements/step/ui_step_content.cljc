@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$StepContent" :as StepContent])))
 
-  (def ui-step-content
+(def ui-step-content
   "A step can contain a content.
 
   Props:
@@ -13,4 +13,5 @@
     - content (custom): Shorthand for primary content.
     - description (custom): Shorthand for StepDescription.
     - title (custom): Shorthand for StepTitle."
-   #?(:cljs (h/factory-apply StepContent)))
+  #?(:clj  (h/make-stub-factory "StepContent")
+     :cljs (h/factory-apply StepContent)))

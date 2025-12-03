@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$TransitionGroup" :as TransitionGroup])))
 
-  (def ui-transition-group
+(def ui-transition-group
   "A Transition.Group animates children as they mount and unmount.
 
   Props:
@@ -12,4 +12,5 @@
     - children (node): Primary content.
     - directional (bool): Whether it is directional animation event or not. Use it only for custom transitions.
     - duration (number|shape|string): Duration of the CSS transition animation in milliseconds. ()"
-   #?(:cljs (h/factory-apply TransitionGroup)))
+  #?(:clj  (h/make-stub-factory "TransitionGroup")
+     :cljs (h/factory-apply TransitionGroup)))

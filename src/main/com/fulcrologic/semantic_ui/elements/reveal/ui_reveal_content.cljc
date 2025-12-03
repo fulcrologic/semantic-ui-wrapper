@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$RevealContent" :as RevealContent])))
 
-  (def ui-reveal-content
+(def ui-reveal-content
   "A content sub-component for the Reveal.
 
   Props:
@@ -13,4 +13,5 @@
     - content (custom): Shorthand for primary content.
     - hidden (bool): A reveal may contain content that is visible before interaction.
     - visible (bool): A reveal may contain content that is hidden before user interaction."
-   #?(:cljs (h/factory-apply RevealContent)))
+  #?(:clj  (h/make-stub-factory "RevealContent")
+     :cljs (h/factory-apply RevealContent)))

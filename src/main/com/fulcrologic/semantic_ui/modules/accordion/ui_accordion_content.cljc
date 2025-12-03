@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$AccordionContent" :as AccordionContent])))
 
-  (def ui-accordion-content
+(def ui-accordion-content
   "A content sub-component for Accordion component.
 
   Props:
@@ -12,4 +12,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply AccordionContent)))
+  #?(:clj  (h/make-stub-factory "AccordionContent")
+     :cljs (h/factory-apply AccordionContent)))

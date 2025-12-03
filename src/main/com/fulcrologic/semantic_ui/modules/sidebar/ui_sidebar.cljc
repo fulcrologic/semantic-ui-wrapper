@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Sidebar" :as Sidebar])))
 
-  (def ui-sidebar
+(def ui-sidebar
   "A sidebar hides additional content beside a page.
 
   Props:
@@ -20,4 +20,5 @@
     - target (custom|custom): A sidebar can handle clicks on the passed element. ()
     - visible (bool): Controls whether or not the sidebar is visible on the page.
     - width (enum): Sidebar width. (very thin, thin, wide, very wide)"
-   #?(:cljs (h/factory-apply Sidebar)))
+  #?(:clj  (h/make-stub-factory "Sidebar")
+     :cljs (h/factory-apply Sidebar)))

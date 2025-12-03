@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$SegmentGroup" :as SegmentGroup])))
 
-  (def ui-segment-group
+(def ui-segment-group
   "A group of segments can be formatted to appear together.
 
   Props:
@@ -17,4 +17,5 @@
     - raised (bool): A segment group may be formatted to raise above the page.
     - size (enum): A segment group can have different sizes. (mini, tiny, small, large, big, huge, massive)
     - stacked (bool): Formatted to show it contains multiple pages."
-   #?(:cljs (h/factory-apply SegmentGroup)))
+  #?(:clj  (h/make-stub-factory "SegmentGroup")
+     :cljs (h/factory-apply SegmentGroup)))

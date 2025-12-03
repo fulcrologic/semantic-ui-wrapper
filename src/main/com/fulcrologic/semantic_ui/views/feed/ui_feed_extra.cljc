@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$FeedExtra" :as FeedExtra])))
 
-  (def ui-feed-extra
+(def ui-feed-extra
   "A feed can contain an extra content.
 
   Props:
@@ -13,4 +13,5 @@
     - content (custom): Shorthand for primary content.
     - images (union): An event can contain additional information like a set of images. ()
     - text (bool): An event can contain additional text information."
-   #?(:cljs (h/factory-apply FeedExtra)))
+  #?(:clj  (h/make-stub-factory "FeedExtra")
+     :cljs (h/factory-apply FeedExtra)))

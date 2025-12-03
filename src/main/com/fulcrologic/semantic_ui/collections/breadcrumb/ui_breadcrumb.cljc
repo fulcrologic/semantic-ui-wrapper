@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Breadcrumb" :as Breadcrumb])))
 
-  (def ui-breadcrumb
+(def ui-breadcrumb
   "A breadcrumb is used to show hierarchy between content.
 
   Props:
@@ -14,4 +14,5 @@
     - icon (custom): For use with the sections prop. Render as an `Icon` component with `divider` class instead of a `div` in ()
     - sections (custom): Shorthand array of props for Breadcrumb.Section.
     - size (enum): Size of Breadcrumb. (mini, tiny, small, large, big, huge, massive)"
-   #?(:cljs (h/factory-apply Breadcrumb)))
+  #?(:clj  (h/make-stub-factory "Breadcrumb")
+     :cljs (h/factory-apply Breadcrumb)))

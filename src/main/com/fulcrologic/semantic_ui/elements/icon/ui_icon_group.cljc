@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$IconGroup" :as IconGroup])))
 
-  (def ui-icon-group
+(def ui-icon-group
   "Several icons can be used together as a group.
 
   Props:
@@ -12,4 +12,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - size (enum): Size of the icon group. (mini, tiny, small, large, big, huge, massive)"
-   #?(:cljs (h/factory-apply IconGroup)))
+  #?(:clj  (h/make-stub-factory "IconGroup")
+     :cljs (h/factory-apply IconGroup)))

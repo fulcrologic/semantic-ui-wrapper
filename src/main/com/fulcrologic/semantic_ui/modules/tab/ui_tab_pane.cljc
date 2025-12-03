@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$TabPane" :as TabPane])))
 
-  (def ui-tab-pane
+(def ui-tab-pane
   "A tab pane holds the content of a tab.
 
   Props:
@@ -13,4 +13,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - loading (bool): A Tab.Pane can display a loading indicator."
-   #?(:cljs (h/factory-apply TabPane)))
+  #?(:clj  (h/make-stub-factory "TabPane")
+     :cljs (h/factory-apply TabPane)))

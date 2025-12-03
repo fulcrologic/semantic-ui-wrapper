@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Form" :as Form])))
 
-  (def ui-form
+(def ui-form
   "A Form displays a set of related user input fields in a structured way.
 
   Props:
@@ -21,4 +21,5 @@
     - unstackable (bool): A form can prevent itself from stacking on mobile.
     - warning (bool): Automatically show any warning Message children.
     - widths (enum): Forms can automatically divide fields to be equal width. (equal)"
-   #?(:cljs (h/factory-apply Form)))
+  #?(:clj  (h/make-stub-factory "Form")
+     :cljs (h/factory-apply Form)))

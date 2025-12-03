@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Search" :as Search])))
 
-  (def ui-search
+(def ui-search
   "A search module allows a user to query for results from a selection of data
 
   Props:
@@ -36,4 +36,5 @@
     - showNoResults (bool): Whether a \"no results\" message should be shown if no results are found.
     - size (enum): A search can have different sizes. (mini, tiny, small, large, big, huge, massive)
     - value (string): Current value of the search input. Creates a controlled component."
-   #?(:cljs (h/wrapped-factory-apply Search)))
+  #?(:clj  (h/make-form-stub-factory "Search" :input)
+     :cljs (h/wrapped-factory-apply Search)))

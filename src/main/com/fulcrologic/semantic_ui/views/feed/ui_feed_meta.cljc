@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$FeedMeta" :as FeedMeta])))
 
-  (def ui-feed-meta
+(def ui-feed-meta
   "A feed can contain a meta.
 
   Props:
@@ -12,4 +12,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - like (custom): Shorthand for FeedLike."
-   #?(:cljs (h/factory-apply FeedMeta)))
+  #?(:clj  (h/make-stub-factory "FeedMeta")
+     :cljs (h/factory-apply FeedMeta)))

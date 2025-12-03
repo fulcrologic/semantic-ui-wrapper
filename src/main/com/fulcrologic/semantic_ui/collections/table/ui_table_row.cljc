@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$TableRow" :as TableRow])))
 
-  (def ui-table-row
+(def ui-table-row
   "A table can have rows.
 
   Props:
@@ -20,4 +20,5 @@
     - textAlign (enum): A table row can adjust its text alignment. (left, center, right)
     - verticalAlign (enum): A table row can adjust its vertical alignment. (bottom, middle, top)
     - warning (bool): A row may warn a user."
-   #?(:cljs (h/factory-apply TableRow)))
+  #?(:clj  (h/make-stub-factory "TableRow")
+     :cljs (h/factory-apply TableRow)))

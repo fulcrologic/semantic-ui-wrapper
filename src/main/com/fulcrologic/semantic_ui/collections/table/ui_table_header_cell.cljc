@@ -3,11 +3,12 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$TableHeaderCell" :as TableHeaderCell])))
 
-  (def ui-table-header-cell
+(def ui-table-header-cell
   "A table can have a header cell.
 
   Props:
     - as (elementType): An element type to render as (string or function).
     - className (string): Additional classes.
     - sorted (enum): A header cell can be sorted in ascending or descending order. (ascending, descending)"
-   #?(:cljs (h/factory-apply TableHeaderCell)))
+  #?(:clj  (h/make-stub-factory "TableHeaderCell")
+     :cljs (h/factory-apply TableHeaderCell)))

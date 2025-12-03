@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Statistic" :as Statistic])))
 
-  (def ui-statistic
+(def ui-statistic
   "A statistic emphasizes the current value of an attribute.
 
   Props:
@@ -19,4 +19,5 @@
     - size (enum): A statistic can vary in size. (mini, tiny, small, large, huge)
     - text (bool): Format the StatisticValue with smaller font size to fit nicely beside number values.
     - value (custom): Value content of the Statistic."
-   #?(:cljs (h/factory-apply Statistic)))
+  #?(:clj  (h/make-stub-factory "Statistic")
+     :cljs (h/factory-apply Statistic)))

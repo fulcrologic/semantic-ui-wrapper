@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Container" :as Container])))
 
-  (def ui-container
+(def ui-container
   "A container limits content to a maximum width.
 
   Props:
@@ -14,4 +14,5 @@
     - fluid (bool): Container has no maximum width.
     - text (bool): Reduce maximum width to more naturally accommodate text.
     - textAlign (enum): Align container text. (left, center, right, justified)"
-   #?(:cljs (h/factory-apply Container)))
+  #?(:clj  (h/make-stub-factory "Container")
+     :cljs (h/factory-apply Container)))

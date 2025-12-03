@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Rating" :as Rating])))
 
-  (def ui-rating
+(def ui-rating
   "A rating indicates user interest in content.
 
   Props:
@@ -17,4 +17,5 @@
     - onRate (func): Called after user selects a new rating.
     - rating (number|string): The current number of active icons. ()
     - size (enum): A progress bar can vary in size. (mini, tiny, small, large, huge, massive)"
-   #?(:cljs (h/factory-apply Rating)))
+  #?(:clj  (h/make-stub-factory "Rating")
+     :cljs (h/factory-apply Rating)))

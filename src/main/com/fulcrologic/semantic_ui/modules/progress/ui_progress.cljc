@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Progress" :as Progress])))
 
-  (def ui-progress
+(def ui-progress
   "A progress bar shows the progression of a task.
 
   Props:
@@ -28,4 +28,5 @@
     - total (union): For use with value. Together, these will calculate the percent. Mutually excludes percent. ()
     - value (union): For use with total. Together, these will calculate the percent. Mutually excludes percent. ()
     - warning (bool): A progress bar can show a warning state."
-   #?(:cljs (h/factory-apply Progress)))
+  #?(:clj  (h/make-stub-factory "Progress")
+     :cljs (h/factory-apply Progress)))

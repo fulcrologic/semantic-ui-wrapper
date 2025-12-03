@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$DropdownSearchInput" :as DropdownSearchInput])))
 
-  (def ui-dropdown-search-input
+(def ui-dropdown-search-input
   "A search item sub-component for Dropdown component.
 
   Props:
@@ -13,4 +13,5 @@
     - tabIndex (number|string): An input can receive focus. ()
     - type (string): The HTML input type.
     - value (number|string): Stored value. ()"
-   #?(:cljs (h/wrapped-factory-apply DropdownSearchInput)))
+  #?(:clj  (h/make-form-stub-factory "DropdownSearchInput" :input)
+     :cljs (h/wrapped-factory-apply DropdownSearchInput)))

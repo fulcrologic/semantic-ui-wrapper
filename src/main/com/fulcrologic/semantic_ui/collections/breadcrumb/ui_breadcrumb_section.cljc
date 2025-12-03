@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$BreadcrumbSection" :as BreadcrumbSection])))
 
-  (def ui-breadcrumb-section
+(def ui-breadcrumb-section
   "A section sub-component for Breadcrumb component.
 
   Props:
@@ -15,4 +15,5 @@
     - href (string): Render as an `a` tag instead of a `div` and adds the href attribute. ()
     - link (bool): Render as an `a` tag instead of a `div`. ()
     - onClick (func): Called on click. When passed, the component will render as an `a`"
-   #?(:cljs (h/factory-apply BreadcrumbSection)))
+  #?(:clj  (h/make-stub-factory "BreadcrumbSection")
+     :cljs (h/factory-apply BreadcrumbSection)))

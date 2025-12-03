@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$MenuItem" :as MenuItem])))
 
-  (def ui-menu-item
+(def ui-menu-item
   "A menu can contain an item.
 
   Props:
@@ -22,4 +22,5 @@
     - name (string): Internal name of the MenuItem.
     - onClick (func): Called on click. When passed, the component will render as an `a`
     - position (enum): A menu item can take left or right position. (left, right)"
-   #?(:cljs (h/factory-apply MenuItem)))
+  #?(:clj  (h/make-stub-factory "MenuItem")
+     :cljs (h/factory-apply MenuItem)))

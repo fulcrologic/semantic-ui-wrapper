@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$MessageContent" :as MessageContent])))
 
-  (def ui-message-content
+(def ui-message-content
   "A message can contain a content.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply MessageContent)))
+  #?(:clj  (h/make-stub-factory "MessageContent")
+     :cljs (h/factory-apply MessageContent)))

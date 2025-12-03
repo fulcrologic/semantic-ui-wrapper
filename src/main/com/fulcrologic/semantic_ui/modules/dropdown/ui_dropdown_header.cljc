@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$DropdownHeader" :as DropdownHeader])))
 
-  (def ui-dropdown-header
+(def ui-dropdown-header
   "A dropdown menu can contain a header.
 
   Props:
@@ -12,4 +12,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - icon (custom): Shorthand for Icon."
-   #?(:cljs (h/factory-apply DropdownHeader)))
+  #?(:clj  (h/make-stub-factory "DropdownHeader")
+     :cljs (h/factory-apply DropdownHeader)))

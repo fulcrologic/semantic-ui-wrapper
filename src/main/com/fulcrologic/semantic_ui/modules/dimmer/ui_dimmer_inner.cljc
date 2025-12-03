@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$DimmerInner" :as DimmerInner])))
 
-  (def ui-dimmer-inner
+(def ui-dimmer-inner
   "An inner element for a Dimmer.
 
   Props:
@@ -19,4 +19,5 @@
     - page (bool): A dimmer can be formatted to be fixed to the page.
     - simple (bool): A dimmer can be controlled with simple prop.
     - verticalAlign (enum): A dimmer can have its content top or bottom aligned. (bottom, top)"
-   #?(:cljs (h/factory-apply DimmerInner)))
+  #?(:clj  (h/make-stub-factory "DimmerInner")
+     :cljs (h/factory-apply DimmerInner)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$DimmerDimmable" :as DimmerDimmable])))
 
-  (def ui-dimmer-dimmable
+(def ui-dimmer-dimmable
   "A dimmable sub-component for Dimmer.
 
   Props:
@@ -13,4 +13,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - dimmed (bool): Controls whether or not the dim is displayed."
-   #?(:cljs (h/factory-apply DimmerDimmable)))
+  #?(:clj  (h/make-stub-factory "DimmerDimmable")
+     :cljs (h/factory-apply DimmerDimmable)))

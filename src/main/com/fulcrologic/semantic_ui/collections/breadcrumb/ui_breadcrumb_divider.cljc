@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$BreadcrumbDivider" :as BreadcrumbDivider])))
 
-  (def ui-breadcrumb-divider
+(def ui-breadcrumb-divider
   "A divider sub-component for Breadcrumb component.
 
   Props:
@@ -12,4 +12,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - icon (custom): Render as an `Icon` component with `divider` class instead of a `div`."
-   #?(:cljs (h/factory-apply BreadcrumbDivider)))
+  #?(:clj  (h/make-stub-factory "BreadcrumbDivider")
+     :cljs (h/factory-apply BreadcrumbDivider)))

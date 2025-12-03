@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$CardContent" :as CardContent])))
 
-  (def ui-card-content
+(def ui-card-content
   "A card can contain blocks of content or extra content meant to be formatted separately from the main content.
 
   Props:
@@ -16,4 +16,5 @@
     - header (custom): Shorthand for CardHeader.
     - meta (custom): Shorthand for CardMeta.
     - textAlign (enum): A card content can adjust its text alignment. (left, center, right)"
-   #?(:cljs (h/factory-apply CardContent)))
+  #?(:clj  (h/make-stub-factory "CardContent")
+     :cljs (h/factory-apply CardContent)))

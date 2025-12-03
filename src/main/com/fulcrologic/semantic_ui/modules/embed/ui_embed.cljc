@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Embed" :as Embed])))
 
-  (def ui-embed
+(def ui-embed
   "An embed displays content from other websites like YouTube videos or Google Maps.
 
   Props:
@@ -25,4 +25,5 @@
     - placeholder (string): A placeholder image for embed.
     - source (enum): Specifies a source to use. (youtube, vimeo)
     - url (string): Specifies a url to use for embed. ()"
-   #?(:cljs (h/factory-apply Embed)))
+  #?(:clj  (h/make-stub-factory "Embed")
+     :cljs (h/factory-apply Embed)))

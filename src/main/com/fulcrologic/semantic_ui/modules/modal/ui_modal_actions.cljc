@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ModalActions" :as ModalActions])))
 
-  (def ui-modal-actions
+(def ui-modal-actions
   "A modal can contain a row of actions.
 
   Props:
@@ -13,4 +13,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - onActionClick (func): Action onClick handler when using shorthand `actions`. ()"
-   #?(:cljs (h/factory-apply ModalActions)))
+  #?(:clj  (h/make-stub-factory "ModalActions")
+     :cljs (h/factory-apply ModalActions)))

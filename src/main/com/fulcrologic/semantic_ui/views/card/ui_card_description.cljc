@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$CardDescription" :as CardDescription])))
 
-  (def ui-card-description
+(def ui-card-description
   "A card can contain a description with one or more paragraphs.
 
   Props:
@@ -12,4 +12,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - textAlign (enum): A card content can adjust its text alignment. (left, center, right)"
-   #?(:cljs (h/factory-apply CardDescription)))
+  #?(:clj  (h/make-stub-factory "CardDescription")
+     :cljs (h/factory-apply CardDescription)))

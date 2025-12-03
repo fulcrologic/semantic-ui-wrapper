@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Input" :as Input])))
 
-  (def ui-input
+(def ui-input
   "An Input is a field used to elicit a response from a user.
 
   Props:
@@ -28,4 +28,5 @@
     - tabIndex (number|string): An Input can receive focus. ()
     - transparent (bool): Transparent Input has no background.
     - type (string): The HTML input type."
-   #?(:cljs (h/wrapped-factory-apply Input)))
+  #?(:clj  (h/make-form-stub-factory "Input" :input)
+     :cljs (h/wrapped-factory-apply Input)))

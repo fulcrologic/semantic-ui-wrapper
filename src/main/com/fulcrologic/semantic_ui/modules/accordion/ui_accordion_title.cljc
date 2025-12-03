@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$AccordionTitle" :as AccordionTitle])))
 
-  (def ui-accordion-title
+(def ui-accordion-title
   "A title sub-component for Accordion component.
 
   Props:
@@ -15,4 +15,5 @@
     - icon (custom): Shorthand for Icon.
     - index (string|number): AccordionTitle index inside Accordion. ()
     - onClick (func): Called on click."
-   #?(:cljs (h/factory-apply AccordionTitle)))
+  #?(:clj  (h/make-stub-factory "AccordionTitle")
+     :cljs (h/factory-apply AccordionTitle)))

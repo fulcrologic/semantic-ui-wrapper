@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Reveal" :as Reveal])))
 
-  (def ui-reveal
+(def ui-reveal
   "A reveal displays additional content in place of previous content when activated.
 
   Props:
@@ -15,4 +15,5 @@
     - content (custom): Shorthand for primary content.
     - disabled (bool): A disabled reveal will not animate when hovered.
     - instant (bool): An element can show its content without delay."
-   #?(:cljs (h/factory-apply Reveal)))
+  #?(:clj  (h/make-stub-factory "Reveal")
+     :cljs (h/factory-apply Reveal)))

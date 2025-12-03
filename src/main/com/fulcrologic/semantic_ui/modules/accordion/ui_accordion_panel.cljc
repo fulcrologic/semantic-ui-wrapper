@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$AccordionPanel" :as AccordionPanel])))
 
-  (def ui-accordion-panel
+(def ui-accordion-panel
   "A panel sub-component for Accordion component.
 
   Props:
@@ -12,4 +12,5 @@
     - index (number|string): A panel index. ()
     - onTitleClick (func): Called when a panel title is clicked.
     - title (custom): A shorthand for Accordion.Title."
-   #?(:cljs (h/factory-apply AccordionPanel)))
+  #?(:clj  (h/make-stub-factory "AccordionPanel")
+     :cljs (h/factory-apply AccordionPanel)))

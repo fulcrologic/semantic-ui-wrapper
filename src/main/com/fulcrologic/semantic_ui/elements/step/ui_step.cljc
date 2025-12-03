@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Step" :as Step])))
 
-  (def ui-step
+(def ui-step
   "A step shows the completion status of an activity in a series of activities.
 
   Props:
@@ -21,4 +21,5 @@
     - onClick (func): Called on click. When passed, the component will render as an `a`
     - ordered (bool): A step can show a ordered sequence of steps. Passed from StepGroup.
     - title (custom): Shorthand for StepTitle."
-   #?(:cljs (h/factory-apply Step)))
+  #?(:clj  (h/make-stub-factory "Step")
+     :cljs (h/factory-apply Step)))

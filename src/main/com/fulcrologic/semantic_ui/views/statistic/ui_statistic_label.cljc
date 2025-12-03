@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$StatisticLabel" :as StatisticLabel])))
 
-  (def ui-statistic-label
+(def ui-statistic-label
   "A statistic can contain a label to help provide context for the presented value.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply StatisticLabel)))
+  #?(:clj  (h/make-stub-factory "StatisticLabel")
+     :cljs (h/factory-apply StatisticLabel)))

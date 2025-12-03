@@ -2,9 +2,9 @@
   (:require [com.fulcrologic.fulcro.components :as fp]
             [com.fulcrologic.fulcro.dom :as dom]
             [com.fulcrologic.fulcro.mutations :as fm]
-            [nubank.workspaces.core :as ws]
+            [com.fulcrologic.semantic-ui.elements.input.ui-input :refer [ui-input]]
             [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
-            [com.fulcrologic.semantic-ui.elements.input.ui-input :refer [ui-input]]))
+            [nubank.workspaces.core :as ws]))
 
 (fp/defsc Input
   [this {:keys [my-val]}]

@@ -6,12 +6,12 @@
 
 Fulcro 3 convenience wrappers for using https://react.semantic-ui.com[Semantic UI React] components.
 
-WARNING: BREAK VERSIONING. This project is just wrappers for a js library which follows break versioning. This means
-they do things like remove and rename code artifacts over time in a way that may break your program.
+WARNING: BREAK VERSIONING.
+This project is just wrappers for a js library which follows break versioning.
+This means they do things like remove and rename code artifacts over time in a way that may break your program.
 
-This library offers improved integration with the semantic-ui-react package with predefined
-factories and doc strings generated directly from the Semantic-UI source. It also includes symbols for
-all icon names.
+This library offers improved integration with the semantic-ui-react package with predefined factories and doc strings generated directly from the Semantic-UI source.
+It also includes symbols for all icon names.
 
 NOTE: This library requires that you use Fulcro 3.
 
@@ -20,9 +20,8 @@ image::https://img.shields.io/clojars/v/com.fulcrologic/semantic-ui-wrapper.svg[
 == Versions/Compatibility
 
 * 1.0.x - Known compatible with Semantic UI React v0.88.2
-* 2.0.1+ - Newer versions _match_ the version of https://react.semantic-ui.com[Semantic UI React] that was
-used to generate the wrappers. *That* project follows BREAK versioning, and this library is just simple
-wrappers. Expect upgrades to possibly break your code.
+* 2.0.1+ - Newer versions _match_ the version of https://react.semantic-ui.com[Semantic UI React] that was used to generate the wrappers. *That* project follows BREAK versioning, and this library is just simple wrappers.
+Expect upgrades to possibly break your code.
 
 == Usage
 
@@ -33,8 +32,8 @@ Add this library to your Fulcro project, and add `semantic-ui-react` to your `pa
 $ npm install --save-dev semantic-ui-react
 -----
 
-NOTE: Semantic UI CSS supplies the layout of everything. Simpler components like buttons can be created with simple
-factories like `(dom/button :.ui.button ...)`, so using the react wrappers for those bloats your code for no good reason.
+NOTE: Semantic UI CSS supplies the layout of everything.
+Simpler components like buttons can be created with simple factories like `(dom/button :.ui.button ...)`, so using the react wrappers for those bloats your code for no good reason.
 
 === Using Components
 
@@ -45,8 +44,7 @@ If you just want everything (which will bloat your advanced compile build), then
 (:require [com.fulcrologic.semantic-ui.factories :refer [ui-button]]
 -----
 
-But if you'd like to include just what you use in your build then
-individual factories can be found in namespaces that mirror the semantic-ui-react module structure:
+But if you'd like to include just what you use in your build then individual factories can be found in namespaces that mirror the semantic-ui-react module structure:
 
 e.g. `Collections > Form > FormInput` is available as
 
@@ -62,15 +60,13 @@ and `Elements > Button > Button` is available as
 (:require [com.fulcrologic.semantic-ui.button.ui-button :refer [ui-button]])
 -----
 
-While this is a bit tedious in the requires, it ensures that you don't get components in your
-build that you don't use.
+While this is a bit tedious in the requires, it ensures that you don't get components in your build that you don't use.
 
 == Porting from Semantic UI React Documentation Examples
 
-Props are required. The factories will convert them to js for you, but if you want every ounce of
-possible speed you can pre-tag your props with `#js`. Note that the "nested" elements with dot
-notation become just hyphenated names (e.g. `Button.Group` -> `ui-button-group`,
-and `List.List` -> `ui-list-list`):
+Props are required.
+The factories will convert them to js for you, but if you want every ounce of possible speed you can pre-tag your props with `#js`.
+Note that the "nested" elements with dot notation become just hyphenated names (e.g. `Button.Group` -> `ui-button-group`, and `List.List` -> `ui-list-list`):
 
 React Version:
 
@@ -120,16 +116,14 @@ This library:
 
 == Icons
 
-The `icons` namespace simply has symbol definitions for each legal string icon name. This
-allows you to use your IDE's code completion to find icon names as long as
-you can remember something about that name. You may, of course, simply use a known icon
-name as a string instead.
-
+The `icons` namespace simply has symbol definitions for each legal string icon name.
+This allows you to use your IDE's code completion to find icon names as long as you can remember something about that name.
+You may, of course, simply use a known icon name as a string instead.
 
 == Examples
 
-You can see some example usage in the workspaces of this repository. To play with them live
-clone this repo, and start the compiler:
+You can see some example usage in the workspaces of this repository.
+To play with them live clone this repo, and start the compiler:
 
 [source]
 -----
@@ -144,14 +138,14 @@ Then navigate to http://localhost:8023
 
 == Contributing
 
-Ping the Fulcro slack channel with your idea, or create a github issue. It is a good
-idea to do that before trying to help.
+Ping the Fulcro slack channel with your idea, or create a github issue.
+It is a good idea to do that before trying to help.
 
 == Regenerating Factories
 
 The factories files are generated from a checkout of the (https://github.com/Semantic-Org/Semantic-UI)[Semantic-UI]
-source (to automatically get the docstrings). The `user` namespace can be run in a normal Clojure REPL, and
-contains the function to generate the files.
+source (to automatically get the docstrings).
+The `user` namespace can be run in a normal Clojure REPL, and contains the function to generate the files.
 
 First clone the semantic-ui-react repo:
 

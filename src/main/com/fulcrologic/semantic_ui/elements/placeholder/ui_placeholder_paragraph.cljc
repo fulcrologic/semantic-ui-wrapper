@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$PlaceholderParagraph" :as PlaceholderParagraph])))
 
-  (def ui-placeholder-paragraph
+(def ui-placeholder-paragraph
   "A placeholder can contain a paragraph.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply PlaceholderParagraph)))
+  #?(:clj  (h/make-stub-factory "PlaceholderParagraph")
+     :cljs (h/factory-apply PlaceholderParagraph)))

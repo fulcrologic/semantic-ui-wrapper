@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$GridColumn" :as GridColumn])))
 
-  (def ui-grid-column
+(def ui-grid-column
   "A column sub-component for Grid.
 
   Props:
@@ -22,4 +22,5 @@
     - verticalAlign (enum): A column can specify its vertical alignment to have all its columns vertically centered. (bottom, middle, top)
     - widescreen (enum): A column can specify a width for a wide screen device. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)
     - width (enum): Represents width of column. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
-   #?(:cljs (h/factory-apply GridColumn)))
+  #?(:clj  (h/make-stub-factory "GridColumn")
+     :cljs (h/factory-apply GridColumn)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$AccordionAccordion" :as AccordionAccordion])))
 
-  (def ui-accordion-accordion
+(def ui-accordion-accordion
   "An Accordion can contain sub-accordions.
 
   Props:
@@ -15,4 +15,5 @@
     - exclusive (bool): Only allow one panel open at a time.
     - onTitleClick (func): Called when a panel title is clicked. ()
     - panels (arrayOf): Shorthand array of props for Accordion. ()"
-   #?(:cljs (h/factory-apply AccordionAccordion)))
+  #?(:clj  (h/make-stub-factory "AccordionAccordion")
+     :cljs (h/factory-apply AccordionAccordion)))

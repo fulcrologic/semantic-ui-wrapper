@@ -1,13 +1,11 @@
 (ns fulcrologic.semantic-ui.workspaces.form
   (:require [com.fulcrologic.fulcro.components :as fp]
             [com.fulcrologic.fulcro.dom :as dom]
-            [nubank.workspaces.core :as ws]
-            [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
             [com.fulcrologic.fulcro.mutations :as fm]
-            [com.fulcrologic.semantic-ui.factory-helpers :as h]
-            [com.fulcrologic.semantic-ui.elements.input.ui-input :refer [ui-input]]
             [com.fulcrologic.semantic-ui.collections.form.ui-form :refer [ui-form]]
-            [com.fulcrologic.semantic-ui.collections.form.ui-form-input :refer [ui-form-input]]))
+            [com.fulcrologic.semantic-ui.collections.form.ui-form-input :refer [ui-form-input]]
+            [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
+            [nubank.workspaces.core :as ws]))
 
 (fp/defsc FormInput
   [this {:keys [my-x-val my-y-val]}]

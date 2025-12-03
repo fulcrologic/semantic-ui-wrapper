@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$MessageHeader" :as MessageHeader])))
 
-  (def ui-message-header
+(def ui-message-header
   "A message can contain a header.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply MessageHeader)))
+  #?(:clj  (h/make-stub-factory "MessageHeader")
+     :cljs (h/factory-apply MessageHeader)))

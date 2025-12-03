@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$MessageList" :as MessageList])))
 
-  (def ui-message-list
+(def ui-message-list
   "A message can contain a list of items.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - items (custom): Shorthand Message.Items."
-   #?(:cljs (h/factory-apply MessageList)))
+  #?(:clj  (h/make-stub-factory "MessageList")
+     :cljs (h/factory-apply MessageList)))

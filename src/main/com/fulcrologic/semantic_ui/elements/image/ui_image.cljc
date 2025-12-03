@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Image" :as Image])))
 
-  (def ui-image
+(def ui-image
   "An image is a graphic representation of something.
 
   Props:
@@ -29,4 +29,5 @@
     - ui (bool): Whether or not to add the ui className.
     - verticalAlign (enum): An image can specify its vertical alignment. (bottom, middle, top)
     - wrapped (bool): An image can render wrapped in a `div.ui.image` as alternative HTML markup."
-   #?(:cljs (h/factory-apply Image)))
+  #?(:clj  (h/make-stub-factory "Image")
+     :cljs (h/factory-apply Image)))

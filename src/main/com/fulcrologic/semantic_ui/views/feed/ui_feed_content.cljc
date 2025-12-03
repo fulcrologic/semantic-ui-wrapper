@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$FeedContent" :as FeedContent])))
 
-  (def ui-feed-content
+(def ui-feed-content
   "
 
   Props:
@@ -16,4 +16,5 @@
     - extraText (custom): Shorthand for FeedExtra with text.
     - meta (custom): Shorthand for FeedMeta.
     - summary (custom): Shorthand for FeedSummary."
-   #?(:cljs (h/factory-apply FeedContent)))
+  #?(:clj  (h/make-stub-factory "FeedContent")
+     :cljs (h/factory-apply FeedContent)))

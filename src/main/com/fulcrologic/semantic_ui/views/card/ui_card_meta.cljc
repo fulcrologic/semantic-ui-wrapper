@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$CardMeta" :as CardMeta])))
 
-  (def ui-card-meta
+(def ui-card-meta
   "A card can contain content metadata.
 
   Props:
@@ -12,4 +12,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - textAlign (enum): A card meta can adjust its text alignment. (left, center, right)"
-   #?(:cljs (h/factory-apply CardMeta)))
+  #?(:clj  (h/make-stub-factory "CardMeta")
+     :cljs (h/factory-apply CardMeta)))

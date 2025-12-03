@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ItemContent" :as ItemContent])))
 
-  (def ui-item-content
+(def ui-item-content
   "An item can contain content.
 
   Props:
@@ -16,4 +16,5 @@
     - header (custom): Shorthand for ItemHeader component.
     - meta (custom): Shorthand for ItemMeta component.
     - verticalAlign (enum): Content can specify its vertical alignment. (bottom, middle, top)"
-   #?(:cljs (h/factory-apply ItemContent)))
+  #?(:clj  (h/make-stub-factory "ItemContent")
+     :cljs (h/factory-apply ItemContent)))

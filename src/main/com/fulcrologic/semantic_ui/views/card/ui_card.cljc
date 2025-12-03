@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Card" :as Card])))
 
-  (def ui-card
+(def ui-card
   "A card displays site content in a manner similar to a playing card.
 
   Props:
@@ -23,4 +23,5 @@
     - meta (custom): Shorthand for CardMeta.
     - onClick (func): Called on click. When passed, the component renders as an `a`
     - raised (bool): A Card can be formatted to raise above the page."
-   #?(:cljs (h/factory-apply Card)))
+  #?(:clj  (h/make-stub-factory "Card")
+     :cljs (h/factory-apply Card)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ButtonGroup" :as ButtonGroup])))
 
-  (def ui-button-group
+(def ui-button-group
   "Buttons can be grouped.
 
   Props:
@@ -29,4 +29,5 @@
     - toggle (bool): Groups can be formatted to toggle on and off.
     - vertical (bool): Groups can be formatted to appear vertically.
     - widths (enum): Groups can have their widths divided evenly. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
-   #?(:cljs (h/factory-apply ButtonGroup)))
+  #?(:clj  (h/make-stub-factory "ButtonGroup")
+     :cljs (h/factory-apply ButtonGroup)))

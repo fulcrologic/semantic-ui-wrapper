@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$SearchResult" :as SearchResult])))
 
-  (def ui-search-result
+(def ui-search-result
   "
 
   Props:
@@ -18,4 +18,5 @@
     - price (string): Customized text for price.
     - renderer (func): Renders the result contents.
     - title (string): Display title."
-   #?(:cljs (h/factory-apply SearchResult)))
+  #?(:clj  (h/make-stub-factory "SearchResult")
+     :cljs (h/factory-apply SearchResult)))

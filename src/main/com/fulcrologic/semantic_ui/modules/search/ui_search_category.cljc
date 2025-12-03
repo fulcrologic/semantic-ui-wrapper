@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$SearchCategory" :as SearchCategory])))
 
-  (def ui-search-category
+(def ui-search-category
   "
 
   Props:
@@ -16,4 +16,5 @@
     - name (string): Display name.
     - renderer (func): Renders the category contents.
     - results (array): Array of Search.Result props."
-   #?(:cljs (h/factory-apply SearchCategory)))
+  #?(:clj  (h/make-stub-factory "SearchCategory")
+     :cljs (h/factory-apply SearchCategory)))

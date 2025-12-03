@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$StatisticGroup" :as StatisticGroup])))
 
-  (def ui-statistic-group
+(def ui-statistic-group
   "A group of statistics.
 
   Props:
@@ -17,4 +17,5 @@
     - items (custom): Array of props for Statistic.
     - size (enum): A statistic group can vary in size. (mini, tiny, small, large, huge)
     - widths (enum): A statistic group can have its items divided evenly. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
-   #?(:cljs (h/factory-apply StatisticGroup)))
+  #?(:clj  (h/make-stub-factory "StatisticGroup")
+     :cljs (h/factory-apply StatisticGroup)))

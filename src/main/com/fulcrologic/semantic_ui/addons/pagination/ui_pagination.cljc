@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Pagination" :as Pagination])))
 
-  (def ui-pagination
+(def ui-pagination
   "A component to render a pagination.
 
   Props:
@@ -21,4 +21,5 @@
     - prevItem (custom): A shorthand for PaginationItem.
     - siblingRange (number|string): Number of always visible pages before and after the current one. ()
     - totalPages (number|string): Total number of pages. ()"
-   #?(:cljs (h/factory-apply Pagination)))
+  #?(:clj  (h/make-stub-factory "Pagination")
+     :cljs (h/factory-apply Pagination)))

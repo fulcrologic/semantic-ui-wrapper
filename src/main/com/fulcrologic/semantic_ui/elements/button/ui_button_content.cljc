@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ButtonContent" :as ButtonContent])))
 
-  (def ui-button-content
+(def ui-button-content
   "Used in some Button types, such as `animated`.
 
   Props:
@@ -13,4 +13,5 @@
     - content (custom): Shorthand for primary content.
     - hidden (bool): Initially hidden, visible on hover.
     - visible (bool): Initially visible, hidden on hover."
-   #?(:cljs (h/factory-apply ButtonContent)))
+  #?(:clj  (h/make-stub-factory "ButtonContent")
+     :cljs (h/factory-apply ButtonContent)))

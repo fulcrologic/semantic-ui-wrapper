@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Checkbox" :as Checkbox])))
 
-  (def ui-checkbox
+(def ui-checkbox
   "A checkbox allows a user to select a value from a small set of options, often binary.
 
   Props:
@@ -29,4 +29,5 @@
     - toggle (bool): Format to show an on or off choice. ()
     - type (enum): HTML input type, either checkbox or radio. (checkbox, radio)
     - value (string|number): The HTML input value. ()"
-   #?(:cljs (h/wrapped-factory-apply Checkbox)))
+  #?(:clj  (h/make-form-stub-factory "Checkbox" :checkbox)
+     :cljs (h/wrapped-factory-apply Checkbox)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ListDescription" :as ListDescription])))
 
-  (def ui-list-description
+(def ui-list-description
   "A list item can contain a description.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply ListDescription)))
+  #?(:clj  (h/make-stub-factory "ListDescription")
+     :cljs (h/factory-apply ListDescription)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$PortalInner" :as PortalInner])))
 
-  (def ui-portal-inner
+(def ui-portal-inner
   "An inner component that allows you to render children outside their parent.
 
   Props:
@@ -12,4 +12,5 @@
     - mountNode (any): The node where the portal should mount.
     - onMount (func): Called when the portal is mounted on the DOM
     - onUnmount (func): Called when the portal is unmounted from the DOM"
-   #?(:cljs (h/factory-apply PortalInner)))
+  #?(:clj  (h/make-stub-factory "PortalInner")
+     :cljs (h/factory-apply PortalInner)))

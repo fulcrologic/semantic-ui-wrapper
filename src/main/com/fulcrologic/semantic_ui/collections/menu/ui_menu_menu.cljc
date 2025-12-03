@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$MenuMenu" :as MenuMenu])))
 
-  (def ui-menu-menu
+(def ui-menu-menu
   "A menu can contain a sub menu.
 
   Props:
@@ -12,4 +12,5 @@
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
     - position (enum): A sub menu can take left or right position. (left, right)"
-   #?(:cljs (h/factory-apply MenuMenu)))
+  #?(:clj  (h/make-stub-factory "MenuMenu")
+     :cljs (h/factory-apply MenuMenu)))

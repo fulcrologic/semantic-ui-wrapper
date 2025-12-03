@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$CommentGroup" :as CommentGroup])))
 
-  (def ui-comment-group
+(def ui-comment-group
   "Comments can be grouped.
 
   Props:
@@ -15,4 +15,5 @@
     - minimal (bool): Comments can hide extra information unless a user shows intent to interact with a comment.
     - size (enum): Comments can have different sizes. (mini, tiny, small, large, big, huge, massive)
     - threaded (bool): A comment list can be threaded to showing the relationship between conversations."
-   #?(:cljs (h/factory-apply CommentGroup)))
+  #?(:clj  (h/make-stub-factory "CommentGroup")
+     :cljs (h/factory-apply CommentGroup)))

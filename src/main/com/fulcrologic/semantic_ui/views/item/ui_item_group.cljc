@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ItemGroup" :as ItemGroup])))
 
-  (def ui-item-group
+(def ui-item-group
   "A group of items.
 
   Props:
@@ -16,4 +16,5 @@
     - link (bool): An item can be formatted so that the entire contents link to another page.
     - relaxed (bool|enum): A group of items can relax its padding to provide more negative space. (very)
     - unstackable (bool): Prevent items from stacking on mobile."
-   #?(:cljs (h/factory-apply ItemGroup)))
+  #?(:clj  (h/make-stub-factory "ItemGroup")
+     :cljs (h/factory-apply ItemGroup)))

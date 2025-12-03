@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Button" :as Button])))
 
-  (def ui-button
+(def ui-button
   "A Button indicates a possible user action.
 
   Props:
@@ -36,4 +36,5 @@
     - tabIndex (number|string): A button can receive focus. ()
     - toggle (bool): A button can be formatted to toggle on and off.
     - type (enum): The type of the HTML element. (button, submit, reset)"
-   #?(:cljs (h/factory-apply Button)))
+  #?(:clj  (h/make-stub-factory "Button")
+     :cljs (h/factory-apply Button)))

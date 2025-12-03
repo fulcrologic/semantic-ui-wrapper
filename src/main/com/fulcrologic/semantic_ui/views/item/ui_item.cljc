@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Item" :as Item])))
 
-  (def ui-item
+(def ui-item
   "An item view presents large collections of site content for display.
 
   Props:
@@ -16,4 +16,5 @@
     - header (custom): Shorthand for ItemHeader component.
     - image (custom): Shorthand for ItemImage component.
     - meta (custom): Shorthand for ItemMeta component."
-   #?(:cljs (h/factory-apply Item)))
+  #?(:clj  (h/make-stub-factory "Item")
+     :cljs (h/factory-apply Item)))

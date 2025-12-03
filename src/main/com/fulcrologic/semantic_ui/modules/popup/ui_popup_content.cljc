@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$PopupContent" :as PopupContent])))
 
-  (def ui-popup-content
+(def ui-popup-content
   "A PopupContent displays the content body of a Popover.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): The content of the Popup
     - className (string): Classes to add to the Popup content className.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply PopupContent)))
+  #?(:clj  (h/make-stub-factory "PopupContent")
+     :cljs (h/factory-apply PopupContent)))

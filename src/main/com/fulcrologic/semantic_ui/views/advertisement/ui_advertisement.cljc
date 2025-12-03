@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Advertisement" :as Advertisement])))
 
-  (def ui-advertisement
+(def ui-advertisement
   "An ad displays third-party promotional content.
 
   Props:
@@ -14,4 +14,5 @@
     - content (custom): Shorthand for primary content.
     - test (bool|number|string): Text to be displayed on the advertisement. ()
     - unit (enum): Varies the size of the advertisement. (medium rectangle, large rectangle, vertical rectangle, small rectangle, mobile banner, banner, vertical banner, top banner, half banner, button, square button, small button, skyscraper, wide skyscraper, leaderboard, large leaderboard, mobile leaderboard, billboard, panorama, netboard, half page, square, small square)"
-   #?(:cljs (h/factory-apply Advertisement)))
+  #?(:clj  (h/make-stub-factory "Advertisement")
+     :cljs (h/factory-apply Advertisement)))

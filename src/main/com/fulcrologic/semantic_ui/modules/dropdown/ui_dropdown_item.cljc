@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$DropdownItem" :as DropdownItem])))
 
-  (def ui-dropdown-item
+(def ui-dropdown-item
   "An item sub-component for Dropdown component.
 
   Props:
@@ -22,4 +22,5 @@
     - selected (bool): The item currently selected by keyboard shortcut.
     - text (custom): Display text.
     - value (bool|number|string): Stored value. ()"
-   #?(:cljs (h/factory-apply DropdownItem)))
+  #?(:clj  (h/make-stub-factory "DropdownItem")
+     :cljs (h/factory-apply DropdownItem)))

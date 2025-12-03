@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Tab" :as Tab])))
 
-  (def ui-tab
+(def ui-tab
   "A Tab is a hidden section of content activated by a Menu.
 
   Props:
@@ -16,4 +16,5 @@
     - onTabChange (func): Called on tab change.
     - panes (arrayOf): Array of objects describing each Menu.Item and Tab.Pane: ([:name \"shape\"], [:value {:menuItem {:name \"custom\", :raw \"customPropTypes.itemShorthand\", :required false}, :pane {:name \"custom\", :raw \"customPropTypes.itemShorthand\", :required false}, :render {:name \"func\", :required false}}])
     - renderActiveOnly (bool): A Tab can render only active pane."
-   #?(:cljs (h/factory-apply Tab)))
+  #?(:clj  (h/make-stub-factory "Tab")
+     :cljs (h/factory-apply Tab)))

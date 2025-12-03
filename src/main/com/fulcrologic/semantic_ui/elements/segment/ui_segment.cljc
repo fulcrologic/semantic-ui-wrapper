@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Segment" :as Segment])))
 
-  (def ui-segment
+(def ui-segment
   "A segment is used to create a grouping of related content.
 
   Props:
@@ -31,4 +31,5 @@
     - tertiary (bool): A segment can be formatted to appear even less noticeable.
     - textAlign (enum): Formats content to be aligned as part of a vertical group. (left, center, right)
     - vertical (bool): Formats content to be aligned vertically."
-   #?(:cljs (h/factory-apply Segment)))
+  #?(:clj  (h/make-stub-factory "Segment")
+     :cljs (h/factory-apply Segment)))

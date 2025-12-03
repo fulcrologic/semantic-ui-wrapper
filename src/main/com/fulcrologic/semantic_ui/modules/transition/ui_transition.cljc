@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Transition" :as Transition])))
 
-  (def ui-transition
+(def ui-transition
   "A transition is an animation usually used to move content in or out of view.
 
   Props:
@@ -20,4 +20,5 @@
     - transitionOnMount (bool): Run the enter animation when the component mounts, if it is initially shown.
     - unmountOnHide (bool): Unmount the component (remove it from the DOM) when it is not shown.
     - visible (bool): Show the component; triggers the enter or exit animation."
-   #?(:cljs (h/factory-apply Transition)))
+  #?(:clj  (h/make-stub-factory "Transition")
+     :cljs (h/factory-apply Transition)))

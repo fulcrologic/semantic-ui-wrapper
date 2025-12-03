@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$FeedDate" :as FeedDate])))
 
-  (def ui-feed-date
+(def ui-feed-date
   "An event or an event summary can contain a date.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply FeedDate)))
+  #?(:clj  (h/make-stub-factory "FeedDate")
+     :cljs (h/factory-apply FeedDate)))

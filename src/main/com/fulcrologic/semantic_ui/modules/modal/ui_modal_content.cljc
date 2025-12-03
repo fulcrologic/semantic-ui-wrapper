@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$ModalContent" :as ModalContent])))
 
-  (def ui-modal-content
+(def ui-modal-content
   "A modal can contain content.
 
   Props:
@@ -13,4 +13,5 @@
     - content (custom): Shorthand for primary content.
     - image (bool): A modal can contain image content.
     - scrolling (bool): A modal can use the entire size of the screen."
-   #?(:cljs (h/factory-apply ModalContent)))
+  #?(:clj  (h/make-stub-factory "ModalContent")
+     :cljs (h/factory-apply ModalContent)))

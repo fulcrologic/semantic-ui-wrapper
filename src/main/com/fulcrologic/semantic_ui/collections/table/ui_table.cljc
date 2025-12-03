@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Table" :as Table])))
 
-  (def ui-table
+(def ui-table
   "A table displays a collections of data grouped into rows.
 
   Props:
@@ -36,4 +36,5 @@
     - textAlign (enum): A table can adjust its text alignment. (left, center, right)
     - unstackable (bool): A table can specify how it stacks table content responsively.
     - verticalAlign (enum): A table can adjust its text alignment. (bottom, middle, top)"
-   #?(:cljs (h/factory-apply Table)))
+  #?(:clj  (h/make-stub-factory "Table")
+     :cljs (h/factory-apply Table)))

@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$SegmentInline" :as SegmentInline])))
 
-  (def ui-segment-inline
+(def ui-segment-inline
   "A placeholder segment can be inline.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply SegmentInline)))
+  #?(:clj  (h/make-stub-factory "SegmentInline")
+     :cljs (h/factory-apply SegmentInline)))

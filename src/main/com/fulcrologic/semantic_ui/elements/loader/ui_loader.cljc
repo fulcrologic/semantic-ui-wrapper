@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Loader" :as Loader])))
 
-  (def ui-loader
+(def ui-loader
   "A loader alerts a user to wait for an activity to complete.
 
   Props:
@@ -17,4 +17,5 @@
     - inline (bool|enum): Loaders can appear inline with content. (centered)
     - inverted (bool): Loaders can have their colors inverted.
     - size (enum): Loaders can have different sizes. (mini, tiny, small, medium, large, big, huge, massive)"
-   #?(:cljs (h/factory-apply Loader)))
+  #?(:clj  (h/make-stub-factory "Loader")
+     :cljs (h/factory-apply Loader)))

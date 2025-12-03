@@ -1,14 +1,13 @@
 (ns fulcrologic.semantic-ui.workspaces.dropdown
   (:require [com.fulcrologic.fulcro.components :as fp]
             [com.fulcrologic.fulcro.dom :as dom]
-            [nubank.workspaces.core :as ws]
-            [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
+            [com.fulcrologic.semantic-ui.icons :as i]
             [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown :refer [ui-dropdown]]
-            [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-menu :refer [ui-dropdown-menu]]
-            [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-item :refer [ui-dropdown-item]]
             [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-divider :refer [ui-dropdown-divider]]
-            [com.fulcrologic.semantic-ui.elements.icon.ui-icon :refer [ui-icon]]
-            [com.fulcrologic.semantic-ui.icons :as i]))
+            [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-item :refer [ui-dropdown-item]]
+            [com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-menu :refer [ui-dropdown-menu]]
+            [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
+            [nubank.workspaces.core :as ws]))
 
 (fp/defsc Dropdown
   [this {:keys [x]}]

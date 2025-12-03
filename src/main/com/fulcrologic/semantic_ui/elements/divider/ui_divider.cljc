@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Divider" :as Divider])))
 
-  (def ui-divider
+(def ui-divider
   "A divider visually segments content into groups.
 
   Props:
@@ -18,4 +18,5 @@
     - inverted (bool): Divider can have its colours inverted.
     - section (bool): Divider can provide greater margins to divide sections of content.
     - vertical (bool): Divider can segment content vertically."
-   #?(:cljs (h/factory-apply Divider)))
+  #?(:clj  (h/make-stub-factory "Divider")
+     :cljs (h/factory-apply Divider)))

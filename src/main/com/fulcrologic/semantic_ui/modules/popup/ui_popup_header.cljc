@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$PopupHeader" :as PopupHeader])))
 
-  (def ui-popup-header
+(def ui-popup-header
   "A PopupHeader displays a header in a Popover.
 
   Props:
@@ -11,4 +11,5 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content."
-   #?(:cljs (h/factory-apply PopupHeader)))
+  #?(:clj  (h/make-stub-factory "PopupHeader")
+     :cljs (h/factory-apply PopupHeader)))

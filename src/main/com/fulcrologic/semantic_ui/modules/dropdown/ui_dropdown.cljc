@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Dropdown" :as Dropdown])))
 
-  (def ui-dropdown
+(def ui-dropdown
   "A dropdown allows a user to select a value from a series of options.
 
   Props:
@@ -72,4 +72,5 @@
     - upward (bool): Controls whether the dropdown will open upward.
     - value (bool|string|number|arrayOf): Current value or value array if multiple. Creates a controlled component. ()
     - wrapSelection (bool): A dropdown will go to the last element when ArrowUp is pressed on the first,"
-   #?(:cljs (h/factory-apply Dropdown)))
+  #?(:clj  (h/make-stub-factory "Dropdown")
+     :cljs (h/factory-apply Dropdown)))

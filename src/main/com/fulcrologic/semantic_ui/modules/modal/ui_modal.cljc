@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$Modal" :as Modal])))
 
-  (def ui-modal
+(def ui-modal
   "A modal displays content that temporarily blocks interactions with the main view of a site.
 
   Props:
@@ -31,4 +31,5 @@
     - size (enum): A modal can vary in size (mini, tiny, small, large, fullscreen)
     - style (object): Custom styles.
     - trigger (node): Element to be rendered in-place where the modal is defined."
-   #?(:cljs (h/factory-apply Modal)))
+  #?(:clj  (h/make-modal-stub-factory "Modal")
+     :cljs (h/factory-apply Modal)))

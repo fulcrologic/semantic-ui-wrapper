@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$DropdownMenu" :as DropdownMenu])))
 
-  (def ui-dropdown-menu
+(def ui-dropdown-menu
   "A dropdown menu can contain a menu.
 
   Props:
@@ -14,4 +14,5 @@
     - direction (enum): A dropdown menu can open to the left or to the right. (left, right)
     - open (bool): Whether or not the dropdown menu is displayed.
     - scrolling (bool): A dropdown menu can scroll."
-   #?(:cljs (h/factory-apply DropdownMenu)))
+  #?(:clj  (h/make-stub-factory "DropdownMenu")
+     :cljs (h/factory-apply DropdownMenu)))

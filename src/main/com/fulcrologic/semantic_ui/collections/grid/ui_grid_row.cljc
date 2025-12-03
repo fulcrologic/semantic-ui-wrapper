@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$GridRow" :as GridRow])))
 
-  (def ui-grid-row
+(def ui-grid-row
   "A row sub-component for Grid.
 
   Props:
@@ -19,4 +19,5 @@
     - stretched (bool): A row can stretch its contents to take up the entire column height.
     - textAlign (enum): A row can specify its text alignment. (left, center, right, justified)
     - verticalAlign (enum): A row can specify its vertical alignment to have all its columns vertically centered. (bottom, middle, top)"
-   #?(:cljs (h/factory-apply GridRow)))
+  #?(:clj  (h/make-stub-factory "GridRow")
+     :cljs (h/factory-apply GridRow)))

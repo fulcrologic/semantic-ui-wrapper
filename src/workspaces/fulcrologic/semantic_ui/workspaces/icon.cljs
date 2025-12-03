@@ -1,12 +1,10 @@
 (ns fulcrologic.semantic-ui.workspaces.icon
-  (:require [com.fulcrologic.fulcro.components :as fp]
+  (:require [clojure.string :as string]
+            [com.fulcrologic.fulcro.components :as fp]
             [com.fulcrologic.fulcro.dom :as dom]
-            [nubank.workspaces.core :as ws]
-            [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
             [com.fulcrologic.semantic-ui.elements.icon.ui-icon :refer [ui-icon]]
-            [clojure.string :as string]
-            [cljs.tools.reader :refer [read-string]]
-            [cljs.js :refer [empty-state eval js-eval]]))
+            [nubank.workspaces.card-types.fulcro3 :as ct.fulcro]
+            [nubank.workspaces.core :as ws]))
 
 (fp/defsc Icons
   [this {:keys [x]}]

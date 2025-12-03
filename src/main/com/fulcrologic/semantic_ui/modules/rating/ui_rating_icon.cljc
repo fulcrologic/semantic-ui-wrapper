@@ -3,7 +3,7 @@
     [com.fulcrologic.semantic-ui.factory-helpers :as h]
     #?(:cljs ["semantic-ui-react$RatingIcon" :as RatingIcon])))
 
-  (def ui-rating-icon
+(def ui-rating-icon
   "An internal icon sub-component for Rating component
 
   Props:
@@ -15,4 +15,5 @@
     - onKeyUp (func): Called on keyup.
     - onMouseEnter (func): Called on mouseenter.
     - selected (bool): Indicates selection of an icon."
-   #?(:cljs (h/factory-apply RatingIcon)))
+  #?(:clj  (h/make-stub-factory "RatingIcon")
+     :cljs (h/factory-apply RatingIcon)))
