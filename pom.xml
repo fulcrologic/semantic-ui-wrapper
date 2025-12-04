@@ -16,7 +16,7 @@
     </licenses>
     <scm>
         <url>https://github.com/fulcrologic/semantic-ui-wrappers</url>
-        <connection>scm:git:git://github.com/fulcrologic/semantic-ui-wrapper.git</connection>
+	<connection>scm:git:ssh://git@github.com:fulcrologic/semantic-ui-wrapper</connection>
         <developerConnection>scm:git:ssh://git@github.com/fulcrologic/semantic-ui-wrapper.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
