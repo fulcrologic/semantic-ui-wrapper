@@ -2,3 +2,4 @@ saveExact: true
 minimumReleaseAge: 10080   # minutes = 7 days
 allowBuilds:
   highlight.js: false
+shamefullyHoist: true   # shadow-cljs resolves npm deps from the root node_modules only
