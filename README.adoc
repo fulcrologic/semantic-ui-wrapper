@@ -29,7 +29,7 @@ Add this library to your Fulcro project, and add `semantic-ui-react` to your `pa
 
 [source]
 -----
-$ npm install --save-dev semantic-ui-react
+$ pnpm add --save-dev semantic-ui-react
 -----
 
 NOTE: Semantic UI CSS supplies the layout of everything.
@@ -128,8 +128,8 @@ To play with them live clone this repo, and start the compiler:
 [source]
 -----
 cd semantic-ui-wrapper
-npm install
-npx shadow-cljs server
+pnpm install --frozen-lockfile
+pnpm exec shadow-cljs server
 -----
 
 Navigate to http://localhost:9630 and start the workspaces build
